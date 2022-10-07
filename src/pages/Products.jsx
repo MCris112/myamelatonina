@@ -1,6 +1,7 @@
 import React from 'react'
 
-import {vproducts} from '../assets/products';
+import { Link } from 'react-router-dom';
+import {vproducts, categories, companies} from '../assets/products';
 
 const Products = () => {
 
@@ -18,16 +19,35 @@ const Products = () => {
         <div className="w-1/4">
             {sideTitle('Marca')}
 
-            {sideTitle('Caregorias')}
-        </div>
-        <div className="w-3/4">
             {
-                Object.keys(vproducts).map((key) => (
-                    <div key={key} className="">
-                        {vproducts[key].title}
-                    </div>
+                Object.keys(companies).map((key) => (
+                    <div className="">{companies[key].name}</div>
                 ))
             }
+
+            {sideTitle('Caregorias')}
+
+            {
+                Object.keys(categories).map((key) => (
+                    <div className="">{categories[key].title}</div>
+                ))
+            }
+        </div>
+        <div className="w-3/4">
+            <div className="grid grid-cols-3">
+            {
+                Object.keys(vproducts).map((key) => (
+                    <Link key={key} className="text-center w-full h-full grid">
+                        <img src={vproducts[key].image} alt="" />
+                        <p className="text-primary font-bold">{vproducts[key].title}</p>
+                        <span>Contiene 240 tabletas</span>
+                        <p>s/.150</p>
+
+                        <div className="btn">Más Información</div>
+                    </Link>
+                ))
+            }
+            </div>
         </div>
     </div>
   )
