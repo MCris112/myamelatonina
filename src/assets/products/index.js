@@ -76,16 +76,20 @@ export const vproducts = {
     ],
     company: "",
     content: {
-      text: ["Contiene 240 tabletas"],
-      type: "",
-      size: "",
-      size_type: "",
+      text: "3",
+      type: "mg",
+      size: "240",
+      size_type: "tabletas",
     },
-    benefits: [],
-    categories: [],
+    benefits: [
+      "Ayuda a mejorar la calidad de sueño.",
+      "Te ayuda a dormir rápido y disfrutar del sueño.",
+      "Contiene para 120 días de suplementos para varias noches tranquilas."
+    ],
+    categories: ["suplementos-para-dormir", "tabletas"],
     image:
       "https://myamelatonina.com/wp-content/uploads/2022/02/melatonina_blue_3mg_240_tabletas.png",
-    price: ["150"],
+    price: "150",
     sale_price: "",
     sale_price_date: "",
   },
