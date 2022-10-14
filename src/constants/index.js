@@ -26,24 +26,35 @@ export const sitevars = {
     ]
 }
 
-export const navLinks = {
-    'inicio': {
-        slug: 'incio',
+export const navLinks = [
+    {
+        slug: '',
         text: 'Inicio',
     },
 
-    'productos': {
+    {
         slug: '/productos',
         text: 'Productos',
     },
 
-    'sobre-nosotros': {
+    {
         slug: 'sobre-nosotros',
         text: 'Sobre Nosotros',
     },
 
-    'contactanos': {
+    {
         slug: 'contactanos',
         text: 'Contáctanos',
     }
-}
+]
+
+export const homeProducts = [
+    'melatonina-3mg', 
+    'melatonina-5mg',
+    'melatonina-10mg',
+    'natrol-melatonina-sublingual-3mg',
+    'natrol-melatonina-sublingual-5mg',
+    'natrol-melatonina-sublingual-10mg'
+]
+
+export const homeProduct = "melatonina-10mg"
