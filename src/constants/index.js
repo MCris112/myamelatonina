@@ -1,4 +1,9 @@
+import logo from "../assets/logo.png";
+import heroBg from "../assets/hero-bg.jpg";
+import footerProductBg from '../assets/footerproduct-bg.jpg';
+
 export const sitevars = {
+    logo: logo,
     phone: '+51 902 904 357',
     phone_url: '51902904357',
     site_name: 'M&A Melatonina Amerícana - Perú',
@@ -26,6 +31,16 @@ export const sitevars = {
     ]
 }
 
+export const homevars = {
+    hero: {
+        bg: heroBg,
+    },
+    footerproducts: {
+        id: '5-htp-l-5-hydroxy-tryptophan',
+        videoid: '5rlloagQHs4',
+        bg: footerProductBg,
+    }
+}
 export const navLinks = [
     {
         slug: '',

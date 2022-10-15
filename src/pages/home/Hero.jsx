@@ -1,7 +1,6 @@
 import React from "react";
-import logo from "../../assets/logo.png";
-import heroBg from "../../assets/hero-bg.jpg";
 
+import { sitevars, homevars } from '../../constants';
 import { Button } from "../../components";
 
 const Hero = () => {
@@ -9,7 +8,7 @@ const Hero = () => {
     <div class="relative w-full h-[80vh]">
       <div className="relative top-0 left-0 w-full h-full">
         <img
-          src={heroBg}
+          src={homevars.hero.bg}
           alt=""
           className="bg-primary w-full h-full object-cover"
         />
@@ -18,7 +17,7 @@ const Hero = () => {
       <div className="absolute top-10 left-0 w-full">
         <div className="container">
           <div className="logo">
-            <img src={logo} alt="" className="w-1/2 mx-auto mb-6"/>
+            <img src={sitevars.logo} alt="" className="w-1/2 mx-auto mb-6"/>
           </div>
           <div className="text-white text-center">
             <span className="tracking-[6px]">SUPLEMENTOS Y VITAMINAS</span>

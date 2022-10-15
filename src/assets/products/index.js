@@ -470,8 +470,7 @@ export const vproducts = {
     },
     benefits: [],
     categories: [],
-    image:
-      "https://myamelatonina.com/wp-content/uploads/2022/02/5-HTP-L-5-Hydroxy-Tryptophan.png",
+    image: "https://myamelatonina.com/wp-content/uploads/2022/02/5-HTP-L-5-Hydroxy-Tryptophan.png",
     price: ["150"],
     sale_price: "",
     sale_price_date: "",
