@@ -5,8 +5,8 @@ import { Button } from "../../components";
 
 const Hero = () => {
   return (
-    <div class="relative w-full h-[80vh]">
-      <div className="relative top-0 left-0 w-full h-full">
+    <div class="relative w-full min-h-[80vh] h-fit py-6">
+      <div className="absolute top-0 left-0 w-full h-full z-[-1]">
         <img
           src={homevars.hero.bg}
           alt=""
@@ -14,10 +14,10 @@ const Hero = () => {
         />
         <div className="absolute top-0 left-0 w-full h-full bg-black opacity-60 object"></div>
       </div>
-      <div className="absolute top-10 left-0 w-full">
+      <div className="w-full py-6">
         <div className="container">
           <div className="logo">
-            <img src={sitevars.logo} alt="" className="w-1/2 mx-auto mb-6"/>
+            <img src={homevars.hero.img} alt="" className="w-1/2 mx-auto mb-6"/>
           </div>
           <div className="text-white text-center">
             <span className="tracking-[6px]">SUPLEMENTOS Y VITAMINAS</span>

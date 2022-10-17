@@ -1,10 +1,13 @@
 import logo from "../assets/logo.png";
+import logoVertical from "../assets/logo-vertical.png";
 import heroBg from "../assets/hero-bg.jpg";
+import aboutImg from "../assets/mission.jpg";
 import footerProductBg from '../assets/footerproduct-bg.jpg';
 
 export const sitevars = {
     logo: logo,
     phone: '+51 902 904 357',
+    email: 'ventas@myamelatonina.com',
     phone_url: '51902904357',
     site_name: 'M&A Melatonina Amerícana - Perú',
     social: [
@@ -34,11 +37,23 @@ export const sitevars = {
 export const homevars = {
     hero: {
         bg: heroBg,
+        img: logoVertical,
     },
     footerproducts: {
         id: '5-htp-l-5-hydroxy-tryptophan',
         videoid: '5rlloagQHs4',
         bg: footerProductBg,
+    }
+}
+
+export const aboutusvars = {
+    logo: logoVertical,
+    title: '¿Quiénes Somos?',
+    text: 'Somos una empresa importadora de melatonina americana. Estamos comprometidos a mejorar la salud y esperanza de vida aprovechando los beneficios que ofrece lapropia naturaleza.',
+    mission: {
+        title: 'Nuestra Misión',
+        text: 'Poder ofrecerte productos de calidad  y natural, por lo que te proporcionaremos información detallada para que puedas escoger el mejor producto que se adapte a tus necesidades.',
+        img: aboutImg,
     }
 }
 export const navLinks = [

@@ -40,9 +40,6 @@ const Navbar = () => {
                   </a>
                 </li>
               ))}
-              <li>
-                <a href=""></a>
-              </li>
             </ul>
           </div>
         </div>
@@ -79,6 +76,7 @@ const Navbar = () => {
                         location.pathname == "/" + key ? "text-accent" : ""
                       } block text-[1.6rem] py-3 sm:text-lg sm:py-0`}
                       to={value.slug}
+                      onClick={() => {setMenuOpen(false)}}
                     >
                       {value.text}
                     </Link>
