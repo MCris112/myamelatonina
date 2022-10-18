@@ -19,36 +19,36 @@ const Features = () => {
         <div className="container py-6">
           <Title content="¿Qué ofrecemos?" />
 
-          <div className="flex flex-col gap-10">
+          <div className="flex flex-col gap-10 sm:flex-row sm:items-start sm:gap-6">
             <div className="flex flex-col items-center justify-center">
-              <div className="bg-accent w-[20vw] h-[20vw] flex items-center justify-center rounded-full text-white mb-4">
+              <div className="bg-accent w-[20vw] h-[20vw] sm:w-[15vw] sm:h-[15vw] flex items-center justify-center rounded-full text-white mb-4">
                 <box-icon type='solid' name='package' size='3rem'></box-icon>
               </div>
 
               <div className="text-white text-center">
-                <h3 className="font-bold text-3xl">PEDIDOS A TODO EL PERÚ</h3>
+                <h3 className="font-bold text-3xl sm:text-2xl">PEDIDOS A TODO EL PERÚ</h3>
                 <p>Llegamos estés donde estés en todo el país.</p>
               </div>
             </div>
 
             <div className="flex flex-col items-center justify-center">
-              <div className="bg-accent w-[20vw] h-[20vw] flex items-center justify-center rounded-full text-white mb-4">
+              <div className="bg-accent w-[20vw] h-[20vw] sm:w-[15vw] sm:h-[15vw] flex items-center justify-center rounded-full text-white mb-4">
                 <box-icon type='solid' name='truck' size='3rem'></box-icon>
               </div>
 
               <div className="text-white text-center">
-                <h3 className="font-bold text-3xl">CONTRA ENTREGA</h3>
+                <h3 className="font-bold text-3xl sm:text-2xl">CONTRA ENTREGA</h3>
                 <p>Paga en efectivo o con tarjeta, en la puerta de tu hogar.</p>
               </div>
             </div>
 
             <div className="flex flex-col items-center justify-center">
-              <div className="bg-accent w-[20vw] h-[20vw] flex items-center justify-center rounded-full text-white mb-4">
+              <div className="bg-accent w-[20vw] h-[20vw] sm:w-[15vw] sm:h-[15vw] flex items-center justify-center rounded-full text-white mb-4">
                 <box-icon type='solid' name='plane-land' size='3rem'></box-icon>
               </div>
 
               <div className="text-white text-center">
-                <h3 className="font-bold text-3xl">ENTREGA INMEIDATA</h3>
+                <h3 className="font-bold text-3xl sm:text-2xl">ENTREGA INMEIDATA</h3>
                 <p>Realiza tu pedido ahora y llegaremos lo más rapido posible a tu vivienda.</p>
               </div>
             </div>

@@ -13,8 +13,8 @@ const Home = () => {
 
       <Title content="¿Qué es la melatonina?" />
 
-      <div className="container">
-        <div className="video">
+      <div className="container sm:flex gap-[3rem] sm:mb-6">
+        <div className="video w-full lg:w-1/2">
           <iframe
             className="w-full aspect-video"
             src="https://www.youtube.com/embed/p2mhxdrTS54"
@@ -25,11 +25,11 @@ const Home = () => {
           ></iframe>
         </div>
 
-        <div className="">
+        <div className="lg:w-1/2">
           <img
             src={vproducts[homeProduct].image}
             alt="as"
-            className="aspect-square w-[600px] h-[600px] object-contain max-w-full"
+            className="aspect-square w-[600px] sm:w-[400px] object-contain max-w-full mb-1"
           />
 
           <Button
@@ -42,7 +42,7 @@ const Home = () => {
 
       <Title content="Nuestros Productos" />
 
-      <div className="container">
+      <div className="container py-6">
         <div className="grid grid-cols-2 gap-3 mb-6">
           {homeProducts.map((product) => {
             if (vproducts[product]) {
@@ -71,12 +71,12 @@ const Home = () => {
         </div>
 
         <div className="w-full">
-          <div className="container py-6 flex flex-col gap-6">
-            <div className="">
+          <div className="container py-6 flex flex-col gap-6 sm:flex-row items-center justify-center">
+            <div className="w-full sm:w-1/2">
               <img
                 src={vproducts[homevars.footerproducts.id].image ?? ''}
                 alt="as"
-                className="aspect-square w-[600px] h-[600px] object-contain max-w-full"
+                className="aspect-square w-full object-contain object-center mb-3"
               />
 
               <Button
@@ -86,7 +86,7 @@ const Home = () => {
               />
             </div>
 
-            <div className="video">
+            <div className="w-100 sm:w-1/2">
               <iframe
                 className="w-full aspect-video"
                 src={`https://www.youtube.com/embed/${homevars.footerproducts.videoid}`}
