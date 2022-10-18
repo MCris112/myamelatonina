@@ -11,10 +11,12 @@ const Home = () => {
     <div>
       <Hero />
 
+      <div className="md:py-[3rem]"></div>
+
       <Title content="¿Qué es la melatonina?" />
 
-      <div className="container sm:flex gap-[3rem] sm:mb-6">
-        <div className="video w-full lg:w-1/2">
+      <div className="container md:flex gap-[3rem] sm:mb-6">
+        <div className="video w-full md:w-2/3">
           <iframe
             className="w-full aspect-video"
             src="https://www.youtube.com/embed/p2mhxdrTS54"
@@ -25,11 +27,11 @@ const Home = () => {
           ></iframe>
         </div>
 
-        <div className="lg:w-1/2">
+        <div className="hidden w-full md:block md:w-1/3">
           <img
             src={vproducts[homeProduct].image}
             alt="as"
-            className="aspect-square w-[600px] sm:w-[400px] object-contain max-w-full mb-1"
+            className="aspect-square w-[600px] sm:w-[400px] object-contain max-w-full mb-1 mx-auto"
           />
 
           <Button
@@ -40,10 +42,12 @@ const Home = () => {
         </div>
       </div>
 
+      <div className="md:py-[3rem]"></div>
+
       <Title content="Nuestros Productos" />
 
       <div className="container py-6">
-        <div className="grid grid-cols-2 gap-3 mb-6">
+        <div className="grid grid-cols-2 gap-3 mb-6 md:grid-cols-3 md:gap-[2rem]">
           {homeProducts.map((product) => {
             if (vproducts[product]) {
               return <ProductItem product={vproducts[product]} />;
@@ -51,12 +55,20 @@ const Home = () => {
           })}
         </div>
 
-        <Button label="Todos Nuestros Productos" type="outline" />
+        <div className="w-full md:w-1/2 md:mx-auto md:py-9">
+          <Button label="Todos Nuestros Productos" type="outline" />
+        </div>
       </div>
+
+      <div className="md:py-[3rem]"></div>
 
       <Features />
 
+      <div className="md:py-[3rem]"></div>
+
       <WhyUs />
+
+      <div className="md:py-[3rem]"></div>
 
       {
       vproducts[homevars.footerproducts.id] ?
@@ -72,7 +84,7 @@ const Home = () => {
 
         <div className="w-full">
           <div className="container py-6 flex flex-col gap-6 sm:flex-row items-center justify-center">
-            <div className="w-full sm:w-1/2">
+            <div className="w-full sm:w-1/2 md:w-1/3">
               <img
                 src={vproducts[homevars.footerproducts.id].image ?? ''}
                 alt="as"
@@ -86,7 +98,7 @@ const Home = () => {
               />
             </div>
 
-            <div className="w-100 sm:w-1/2">
+            <div className="w-100 sm:w-1/2 md:w-2/3">
               <iframe
                 className="w-full aspect-video"
                 src={`https://www.youtube.com/embed/${homevars.footerproducts.videoid}`}

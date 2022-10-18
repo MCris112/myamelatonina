@@ -11,7 +11,7 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div className="navbar text-white">
+    <div className="navbar text-white sticky top-0 z-[99]">
       <div className="py-0 bg-[#03002A]">
         <div className="container">
           <div className="flex align-middle justify-between">

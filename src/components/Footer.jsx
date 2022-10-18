@@ -6,9 +6,9 @@ const Footer = () => {
   let location = useLocation();
 
   return (
-    <div className="bg-[#001c38] py-6 sm:py-[3rem]">
+    <div className="bg-[#001c38] py-6 sm:py-[3rem] md:pb-4">
       <div className="container pt-6 sm:flex flex-wrap">
-        <div className="mb-[4rem] sm:w-full">
+        <div className="mb-[4rem] sm:w-full md:w-1/3">
           <img src={sitevars.logo} alt="" className="w-1/2 mx-auto mb-6" />
           <p className="text-white text-center">
             Somos una empresa importadora de melatonina americana. Estamos
@@ -17,7 +17,7 @@ const Footer = () => {
           </p>
         </div>
 
-        <div className="text-center my-6 sm:w-1/2">
+        <div className="text-center my-6 sm:w-1/2 md:w-1/3">
           <h4 className="text-white text-3xl">Menu</h4>
           <ul className="text-white opacity-60">
                 {navLinks.map((value, key) => (
@@ -34,7 +34,7 @@ const Footer = () => {
                 ))}
               </ul>
         </div>
-        <div className="text-center my-6 w-1/2">
+        <div className="text-center my-6 w-1/2 md:w-1/3">
           <h4 className="text-white text-3xl">Más Información</h4>
           <ul className="text-white opacity-60">
             <li>
@@ -49,7 +49,7 @@ const Footer = () => {
 
       <hr />
 
-      <div className="container text-white text-center py-6 opacity-60 sm:w-full">
+      <div className="container text-white text-center py-6 opacity-60 sm:w-full md:pb-0">
         <p>© Todos los derechos reservados | <a href="" className="hover:text-accent underline">Desarrollado por Darkredgm</a></p>
       </div>
     </div>

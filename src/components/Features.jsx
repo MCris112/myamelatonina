@@ -15,13 +15,13 @@ const Features = () => {
         <div className="absolute top-0 left-0 w-full h-full bg-black opacity-60 object"></div>
       </div>
 
-      <div className="w-full">
+      <div className="w-full md:min-h-[60vh] md:flex md:items-center md:justify-center">
         <div className="container py-6">
           <Title content="¿Qué ofrecemos?" />
 
-          <div className="flex flex-col gap-10 sm:flex-row sm:items-start sm:gap-6">
+          <div className="flex flex-col gap-10 sm:flex-row sm:items-start sm:gap-6 md:grid md:grid-cols-3 pb-9">
             <div className="flex flex-col items-center justify-center">
-              <div className="bg-accent w-[20vw] h-[20vw] sm:w-[15vw] sm:h-[15vw] flex items-center justify-center rounded-full text-white mb-4">
+              <div className="bg-accent w-[20vw] h-[20vw] sm:w-[15vw] sm:h-[15vw] md:w-[9rem] md:h-[9rem] flex items-center justify-center rounded-full text-white mb-4">
                 <box-icon type='solid' name='package' size='3rem'></box-icon>
               </div>
 
@@ -32,7 +32,7 @@ const Features = () => {
             </div>
 
             <div className="flex flex-col items-center justify-center">
-              <div className="bg-accent w-[20vw] h-[20vw] sm:w-[15vw] sm:h-[15vw] flex items-center justify-center rounded-full text-white mb-4">
+              <div className="bg-accent w-[20vw] h-[20vw] sm:w-[15vw] sm:h-[15vw] md:w-[9rem] md:h-[9rem] flex items-center justify-center rounded-full text-white mb-4">
                 <box-icon type='solid' name='truck' size='3rem'></box-icon>
               </div>
 
@@ -43,7 +43,7 @@ const Features = () => {
             </div>
 
             <div className="flex flex-col items-center justify-center">
-              <div className="bg-accent w-[20vw] h-[20vw] sm:w-[15vw] sm:h-[15vw] flex items-center justify-center rounded-full text-white mb-4">
+              <div className="bg-accent w-[20vw] h-[20vw] sm:w-[15vw] sm:h-[15vw] md:w-[9rem] md:h-[9rem] flex items-center justify-center rounded-full text-white mb-4">
                 <box-icon type='solid' name='plane-land' size='3rem'></box-icon>
               </div>
 
