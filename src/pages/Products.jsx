@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import { Link } from "react-router-dom";
 import { vproducts, categories, companies } from "../assets/products";
+import { ProductItem } from "../components";
 
 const Products = () => {
   let [showProducts, setShowProducts] = useState(vproducts);
@@ -90,18 +91,9 @@ const Products = () => {
         ))}
       </div>
       <div className="w-3/4">
-        <div className="grid grid-cols-3">
+        <div className="grid grid-cols-3 gap-10">
           {Object.keys(showProducts).map((key) => (
-            <Link key={key} className="text-center w-full h-full grid">
-              <img src={showProducts[key].image} alt="" />
-              <p className="text-primary font-bold">
-                {showProducts[key].title}
-              </p>
-              <span>Contiene 240 tabletas</span>
-              <p>s/.150</p>
-
-              <div className="btn">Más Información</div>
-            </Link>
+            <ProductItem product={vproducts[key]} />
           ))}
         </div>
       </div>

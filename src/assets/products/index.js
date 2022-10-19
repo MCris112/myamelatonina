@@ -1,4 +1,33 @@
-import { melatonina_3mg_240_tb, melatonina_10mg_120_cp } from "./images";
+import {
+  melatonina_3mg_240_tb,
+  melatonina_10mg_120_cp,
+  boricLife,
+  collagen,
+  biotin,
+  multivitaminicosKidsPrincesas,
+  multivitaminicosKidsAvengers,
+  allDatInmune,
+  dhea25mg,
+  magnesioCitrate,
+  glucosamineChondroitinMsm,
+  megaPotencyVitaminD3,
+  sawPalmettoExtract,
+  c100mg,
+  cinamomdecanela400mg,
+  ABCPlusSeniourMulti,
+  milkThistleExtract,
+  biotin10000mcg,
+  cincoHTPLHydroxyTryptophan,
+  BCOMPLEXyB12,
+  natrolMelatoninaSublengual3mg,
+  natrolMelatoninaSublengual5mg,
+  natrolmelatoninasleep10mg,
+  natrolKidsMelatoninagomitas,
+  natrolmelatonina5mggomitas,
+  melatonina_blue_3mg,
+  melatonina_5mg_puri,
+  melatonina_blue_transparent_less
+} from "./images";
 
 export const categories = {
   "suplementos-para-dormir": {
@@ -55,16 +84,19 @@ export const categories = {
 };
 
 export const companies = {
-    'natrol' : {
-        name: 'Natrol',
-        image: 'https://myamelatonina.com/wp-content/uploads/2022/02/Natrol-Logo-png.png'
-    },
+  natrol: {
+    name: "Natrol",
+    image:
+      "https://myamelatonina.com/wp-content/uploads/2022/02/Natrol-Logo-png.png",
+  },
 
-    'puritians-pride': {
-        name: 'Puritians Pride',
-        image: 'https://myamelatonina.com/wp-content/uploads/2022/02/puritians_pride_white.png'
-    }
-}
+  "puritians-pride": {
+    name: "Puritians Pride",
+    image:
+      "https://myamelatonina.com/wp-content/uploads/2022/02/puritians_pride_white.png",
+  },
+};
+
 export const vproducts = {
   "melatonina-3mg-240-tabletas": {
     title: "Melatonina 3mg – 240 tabletas",
@@ -84,11 +116,10 @@ export const vproducts = {
     benefits: [
       "Ayuda a mejorar la calidad de sueño.",
       "Te ayuda a dormir rápido y disfrutar del sueño.",
-      "Contiene para 120 días de suplementos para varias noches tranquilas."
+      "Contiene para 120 días de suplementos para varias noches tranquilas.",
     ],
     categories: ["suplementos-para-dormir", "tabletas"],
-    image:
-      "https://myamelatonina.com/wp-content/uploads/2022/02/melatonina_blue_3mg_240_tabletas.png",
+    image: melatonina_3mg_240_tb,
     price: "150",
     sale_price: "",
     sale_price_date: "",
@@ -110,9 +141,8 @@ export const vproducts = {
     },
     benefits: [],
     categories: [],
-    image:
-      "https://myamelatonina.com/wp-content/uploads/2022/02/Boric-Life.png",
-    price: ["170"],
+    image: boricLife,
+    price: 170,
     sale_price: "",
     sale_price_date: "",
   },
@@ -133,8 +163,8 @@ export const vproducts = {
     },
     benefits: [],
     categories: [],
-    image: "https://myamelatonina.com/wp-content/uploads/2022/02/Collagen.png",
-    price: ["190"],
+    image: collagen,
+    price: "190",
     sale_price: "",
     sale_price_date: "",
   },
@@ -155,8 +185,8 @@ export const vproducts = {
     },
     benefits: [],
     categories: [],
-    image: "https://myamelatonina.com/wp-content/uploads/2022/02/Biotin.png",
-    price: ["100"],
+    image: biotin,
+    price: "100",
     sale_price: "",
     sale_price_date: "",
   },
@@ -177,8 +207,7 @@ export const vproducts = {
     },
     benefits: [],
     categories: [],
-    image:
-      "https://myamelatonina.com/wp-content/uploads/2022/02/Multivitaminicos-Kids-Princesas.png",
+    image: multivitaminicosKidsPrincesas,
     price: ["150"],
     sale_price: "",
     sale_price_date: "",
@@ -200,8 +229,7 @@ export const vproducts = {
     },
     benefits: [],
     categories: [],
-    image:
-      "https://myamelatonina.com/wp-content/uploads/2022/02/Multivitaminicos-Kids.png",
+    image: multivitaminicosKidsAvengers,
     price: ["150"],
     sale_price: "",
     sale_price_date: "",
@@ -223,8 +251,7 @@ export const vproducts = {
     },
     benefits: [],
     categories: [],
-    image:
-      "https://myamelatonina.com/wp-content/uploads/2022/02/All-Day-Inmune-Support.png",
+    image: allDatInmune,
     price: ["150"],
     sale_price: "",
     sale_price_date: "",
@@ -246,7 +273,7 @@ export const vproducts = {
     },
     benefits: [],
     categories: [],
-    image: "https://myamelatonina.com/wp-content/uploads/2022/02/DHEA-25mg.png",
+    image: dhea25mg,
     price: ["120"],
     sale_price: "",
     sale_price_date: "",
@@ -268,8 +295,7 @@ export const vproducts = {
     },
     benefits: [],
     categories: [],
-    image:
-      "https://myamelatonina.com/wp-content/uploads/2022/02/Magnesio-Citrate.png",
+    image: magnesioCitrate,
     price: ["140"],
     sale_price: "",
     sale_price_date: "",
@@ -291,8 +317,7 @@ export const vproducts = {
     },
     benefits: [],
     categories: [],
-    image:
-      "https://myamelatonina.com/wp-content/uploads/2022/02/Glucosamine-Chondroitin-Msm.png",
+    image: glucosamineChondroitinMsm,
     price: ["140"],
     sale_price: "",
     sale_price_date: "",
@@ -314,8 +339,7 @@ export const vproducts = {
     },
     benefits: [],
     categories: [],
-    image:
-      "https://myamelatonina.com/wp-content/uploads/2022/02/Mega-Potency-Vitamin-D3.png",
+    image: megaPotencyVitaminD3,
     price: ["100"],
     sale_price: "",
     sale_price_date: "",
@@ -335,8 +359,7 @@ export const vproducts = {
     },
     benefits: [],
     categories: [],
-    image:
-      "https://myamelatonina.com/wp-content/uploads/2022/02/Saw-Palmetto-Extract.png",
+    image: sawPalmettoExtract,
     price: ["120"],
     sale_price: "",
     sale_price_date: "",
@@ -358,7 +381,7 @@ export const vproducts = {
     },
     benefits: [],
     categories: [],
-    image: "https://myamelatonina.com/wp-content/uploads/2022/02/c-100mg.png",
+    image: c100mg,
     price: ["100"],
     sale_price: "",
     sale_price_date: "",
@@ -380,8 +403,7 @@ export const vproducts = {
     },
     benefits: [],
     categories: [],
-    image:
-      "https://myamelatonina.com/wp-content/uploads/2022/02/Cinamom-de-canela-400mg.png",
+    image: cinamomdecanela400mg,
     price: ["150"],
     sale_price: "",
     sale_price_date: "",
@@ -403,8 +425,7 @@ export const vproducts = {
     },
     benefits: [],
     categories: [],
-    image:
-      "https://myamelatonina.com/wp-content/uploads/2022/02/ABC-Plus-Seniour-Multi.png",
+    image: ABCPlusSeniourMulti,
     price: ["140"],
     sale_price: "",
     sale_price_date: "",
@@ -426,8 +447,7 @@ export const vproducts = {
     },
     benefits: [],
     categories: [],
-    image:
-      "https://myamelatonina.com/wp-content/uploads/2022/02/Milk-Thistle-Extract.png",
+    image: milkThistleExtract,
     price: ["100"],
     sale_price: "",
     sale_price_date: "",
@@ -447,8 +467,7 @@ export const vproducts = {
     },
     benefits: [],
     categories: [],
-    image:
-      "https://myamelatonina.com/wp-content/uploads/2022/02/Biotin-10-000mcg.png",
+    image: biotin10000mcg,
     price: ["100"],
     sale_price: "",
     sale_price_date: "",
@@ -470,7 +489,7 @@ export const vproducts = {
     },
     benefits: [],
     categories: [],
-    image: "https://myamelatonina.com/wp-content/uploads/2022/02/5-HTP-L-5-Hydroxy-Tryptophan.png",
+    image: cincoHTPLHydroxyTryptophan,
     price: ["150"],
     sale_price: "",
     sale_price_date: "",
@@ -492,8 +511,7 @@ export const vproducts = {
     },
     benefits: [],
     categories: [],
-    image:
-      "https://myamelatonina.com/wp-content/uploads/2022/02/B-COMPLEX-y-B-12.png",
+    image: BCOMPLEXyB12,
     price: ["150"],
     sale_price: "",
     sale_price_date: "",
@@ -515,8 +533,7 @@ export const vproducts = {
     },
     benefits: [],
     categories: [],
-    image:
-      "https://myamelatonina.com/wp-content/uploads/2022/02/Natrol-Melatonina-Sublengual-3mg.png",
+    image: natrolMelatoninaSublengual3mg,
     price: ["100"],
     sale_price: "",
     sale_price_date: "",
@@ -538,8 +555,7 @@ export const vproducts = {
     },
     benefits: [],
     categories: [],
-    image:
-      "https://myamelatonina.com/wp-content/uploads/2022/02/Natrol-Melatonina-Sublengual-5mg.png",
+    image: natrolMelatoninaSublengual5mg,
     price: ["120"],
     sale_price: "",
     sale_price_date: "",
@@ -561,8 +577,7 @@ export const vproducts = {
     },
     benefits: [],
     categories: [],
-    image:
-      "https://myamelatonina.com/wp-content/uploads/2022/02/natrol-melatonina-sleep-10mg.png",
+    image: natrolmelatoninasleep10mg,
     price: ["130"],
     sale_price: "",
     sale_price_date: "",
@@ -584,8 +599,7 @@ export const vproducts = {
     },
     benefits: [],
     categories: [],
-    image:
-      "https://myamelatonina.com/wp-content/uploads/2022/02/Natrol-Kids-Melatonina-gomitas.png",
+    image: natrolKidsMelatoninagomitas,
     price: ["150"],
     sale_price: "",
     sale_price_date: "",
@@ -607,8 +621,7 @@ export const vproducts = {
     },
     benefits: [],
     categories: [],
-    image:
-      "https://myamelatonina.com/wp-content/uploads/2022/02/natrol_melatonina_5mg_gomitas.png",
+    image: natrolmelatonina5mggomitas,
     price: ["140"],
     sale_price: "",
     sale_price_date: "",
@@ -630,8 +643,7 @@ export const vproducts = {
     },
     benefits: [],
     categories: [],
-    image:
-      "https://myamelatonina.com/wp-content/uploads/2022/02/melatonina_blue_3mg.png",
+    image: melatonina_blue_3mg,
     price: ["120"],
     sale_price: "",
     sale_price_date: "",
@@ -653,8 +665,7 @@ export const vproducts = {
     },
     benefits: [],
     categories: [],
-    image:
-      "https://myamelatonina.com/wp-content/uploads/2022/02/melatonina_5mg_puri.png",
+    image: melatonina_5mg_puri,
     price: ["130"],
     sale_price: "",
     sale_price_date: "",
@@ -676,8 +687,7 @@ export const vproducts = {
     },
     benefits: [],
     categories: [],
-    image:
-      "https://myamelatonina.com/wp-content/uploads/2021/07/melatonina_blue_transparent_less.png",
+    image: melatonina_blue_transparent_less,
     price: ["140"],
     sale_price: "",
     sale_price_date: "",
