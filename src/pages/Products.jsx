@@ -67,8 +67,8 @@ const Products = () => {
     console.log("ShowCategories", showCategories);
   };
   return (
-    <div className="container flex gap-4">
-      <div className="w-1/4">
+    <div className="container flex flex-col gap-4 py-9 sm:flex-row">
+      <div className="w-full sm:w-1/4">
         {sideTitle("Marca")}
 
         {Object.keys(companies).map((key) => (
@@ -91,9 +91,13 @@ const Products = () => {
         ))}
       </div>
       <div className="w-3/4">
-        <div className="grid grid-cols-3 gap-10">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-10">
           {Object.keys(showProducts).map((key) => (
-            <ProductItem product={vproducts[key]} />
+            <div className="">
+              {
+              vproducts[key] ? <ProductItem product={vproducts[key]} /> : ''
+            }
+            </div>
           ))}
         </div>
       </div>

@@ -6,29 +6,29 @@ import { aboutusvars } from '../constants';
 const AboutUs = () => {
   return (
     <div>
-      <div className="container flex flex-col justify-center items-center py-9 pt-[6rem]">
+      <div className="container flex flex-col justify-center items-center py-9 pt-[6rem] sm:flex-row sm:gap-3">
         <div className="w-1/2">
           <img src={aboutusvars.logo} alt="" className="w-full" />
         </div>
 
-        <div className="w-full text-center">
-          <h1 className="text-primary text-4xl font-bold mb-6">{aboutusvars.title}</h1>
-          <hr className="border-t-[.6rem] border-accent w-60 mx-auto mb-9"/>
+        <div className="w-full text-center sm:order-first sm:text-start">
+          <h1 className="text-primary text-4xl font-bold mb-6 sm:text-[3rem] sm:pb-3">{aboutusvars.title}</h1>
+          <hr className="block border-t-[.6rem] border-accent w-60 mx-auto mb-9 sm:ml-0 sm:py-3 sm:mb-0"/>
 
-          <p>{ aboutusvars.text }</p>
+          <p className="w-full sm:max-w-[600px]">{ aboutusvars.text }</p>
         </div>
       </div>
 
-      <div className="container flex flex-col justify-center items-center py-9 pb-[6rem]">
+      <div className="container flex flex-col justify-center items-center py-9 pb-[6rem] sm:flex-row sm:gap-3">
         <div className="w-full mb-6">
           <img src={aboutusvars.mission.img} alt="" className="w-full" />
         </div>
 
-        <div className="w-full text-center">
+        <div className="w-full text-center sm:text-end">
           <h1 className="text-primary text-4xl font-bold mb-6">{ aboutusvars.mission.title }</h1>
-          <hr className="border-t-[.6rem] border-accent w-60 mx-auto mb-9"/>
+          <hr className="border-t-[.6rem] border-accent w-60 mx-auto mb-9 sm:mr-0 sm:py-3 sm:mb-0"/>
 
-          <p>{ aboutusvars.mission.text }</p>
+          <p className="w-full sm:max-w-[600px]">{ aboutusvars.mission.text }</p>
         </div>
       </div>
 
