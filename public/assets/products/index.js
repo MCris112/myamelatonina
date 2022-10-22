@@ -95,11 +95,17 @@ export const companies = {
     image:
       "https://myamelatonina.com/wp-content/uploads/2022/02/puritians_pride_white.png",
   },
+
+  "all-natural": {
+    name: "All Natural",
+    image:
+      "https://myamelatonina.com/wp-content/uploads/2022/02/puritians_pride_white.png",
+  },
 };
 
 export const vproducts = {
   "melatonina-3mg-240-tabletas": {
-    title: "Melatonina 3mg – 240 tabletas",
+    title: "Melatonina 3mg - 240 tabletas",
     desc: [
       "La melatonina es una hormona que se produce naturalmente en el cuerpo por la glándula pineal del cerebro. Esta hormona ayuda a regular el reloj natural de su cuerpo y está involucrada en el ciclo de sueño/vigilia.",
     ],
@@ -126,21 +132,25 @@ export const vproducts = {
   },
   "boric-life": {
     title: "Boric Life",
-    desc: [
-      "¡APOYO NATURAL SEGURO Y EFICAZ PARA LAS CONDICIONES VAGINALES! – ¿Está harta y cansada de luchar con olores, picazón, ardor, secreción desequilibrada, afecciones vaginales crónicas recurrentes, ",
-    ],
-    description: [
-      "¡APOYO NATURAL SEGURO Y EFICAZ PARA LAS CONDICIONES VAGINALES! – ¿Está harta y cansada de luchar con olores, picazón, ardor, secreción desequilibrada, afecciones vaginales crónicas recurrentes, vaginitis, vaginosis bacteriana, bv, Gardnerella vaginalis, fluido vaginal ácido, sequedad o cualquier otra condición de salud vaginal? No deje estos problemas sin tratar y restaure sus niveles normales de equilibrio de pH vaginal: ¡es hora de que se ocupe de su bienestar, de una vez por todas! Cada supositorio contiene 600 mg de ácido bórico puro, la dosis recomendada. Cuidadosamente formulados en colaboración con ginecólogos calificados, nuestros supositorios de ácido bórico saludables e hipoalergénicos están diseñados para equilibrar y limpiar su sistema de pH vaginal, ¡ayudando a aliviar el dolor y la incomodidad! Siéntase refrescado, aliviado y ¡Rejuvenece con nuestros supositorios de ácido bórico de primera calidad! ¡Toda la Defensa Personal Natural! ¡Siéntete limpio de nuevo! ¡Sé libre de preocupaciones! Los supositorios de ácido bórico NutraBlast brindan apoyo y alivio calmante para varias afecciones vaginales, ¡y lo ayudan a continuar con su día sin la más mínima irritación! Nuestras cápsulas de ácido bórico, saludables e hipoalergénicas, son ideales como apoyo contra la VB y pueden promover un nivel de pH vaginal equilibrado. ¡Tu bienestar es nuestra máxima prioridad! Sabemos que eres una mujer ocupada y que tu tiempo es valioso. ¡Es por eso que te hemos proporcionado una solución rápida y fácil para las afecciones vaginales! Comodidad en 3 pasos simples: simplemente use 1 supositorio de ácido bórico NutraBlast por día antes de acostarse durante 7 días consecutivos. ¡La poderosa fórmula calmante del supositorio comienza a funcionar en un solo día! Puede insertar con un aplicador de supositorios o con los dedos. Si los síntomas persisten, repita durante otra semana. Para el mantenimiento recurrente se puede utilizar una vez a la semana. Nuestra botella contiene 30 supositorios de acción rápida y de alta calidad, ¡así que estará cubierto durante semanas! Nuestros productos y suplementos se fabrican en una instalación registrada e inspeccionada por la FDA con una certificación GMP con todos los estándares de seguridad.",
-    ],
-    company: "",
+    desc: "¡APOYO NATURAL SEGURO Y EFICAZ PARA LAS CONDICIONES VAGINALES! - ¿Está harta y cansada de luchar con olores, picazón, ardor, secreción desequilibrada, afecciones vaginales crónicas recurrentes, ",
+    description:"¡APOYO NATURAL SEGURO Y EFICAZ PARA LAS CONDICIONES VAGINALES! - ¿Está harta y cansada de luchar con olores, picazón, ardor, secreción desequilibrada, afecciones vaginales crónicas recurrentes, vaginitis, vaginosis bacteriana, bv, Gardnerella vaginalis, fluido vaginal ácido, sequedad o cualquier otra condición de salud vaginal? No deje estos problemas sin tratar y restaure sus niveles normales de equilibrio de pH vaginal: ¡es hora de que se ocupe de su bienestar, de una vez por todas! Cada supositorio contiene 600 mg de ácido bórico puro, la dosis recomendada. Cuidadosamente formulados en colaboración con ginecólogos calificados, nuestros supositorios de ácido bórico saludables e hipoalergénicos están diseñados para equilibrar y limpiar su sistema de pH vaginal, ¡ayudando a aliviar el dolor y la incomodidad! Siéntase refrescado, aliviado y ¡Rejuvenece con nuestros supositorios de ácido bórico de primera calidad! ¡Toda la Defensa Personal Natural! ¡Siéntete limpio de nuevo! ¡Sé libre de preocupaciones! Los supositorios de ácido bórico NutraBlast brindan apoyo y alivio calmante para varias afecciones vaginales, ¡y lo ayudan a continuar con su día sin la más mínima irritación! Nuestras cápsulas de ácido bórico, saludables e hipoalergénicas, son ideales como apoyo contra la VB y pueden promover un nivel de pH vaginal equilibrado. ¡Tu bienestar es nuestra máxima prioridad! Sabemos que eres una mujer ocupada y que tu tiempo es valioso. ¡Es por eso que te hemos proporcionado una solución rápida y fácil para las afecciones vaginales! Comodidad en 3 pasos simples: simplemente use 1 supositorio de ácido bórico NutraBlast por día antes de acostarse durante 7 días consecutivos. ¡La poderosa fórmula calmante del supositorio comienza a funcionar en un solo día! Puede insertar con un aplicador de supositorios o con los dedos. Si los síntomas persisten, repita durante otra semana. Para el mantenimiento recurrente se puede utilizar una vez a la semana. Nuestra botella contiene 30 supositorios de acción rápida y de alta calidad, ¡así que estará cubierto durante semanas! Nuestros productos y suplementos se fabrican en una instalación registrada e inspeccionada por la FDA con una certificación GMP con todos los estándares de seguridad.",
+    company: "all-natural",
     content: {
-      text: ["Contiene 30 supositorios"],
-      type: "",
+      text: "30",
+      type: "supositorios",
       size: "",
       size_type: "",
     },
-    benefits: [],
-    categories: [],
+    benefits: [
+      "Apoyo contra la VB.",
+      "Restaure sus niveles normales de equilibrio de PH vaginal.",
+      "Contra el ardor.",
+      "Elimina el mal olor.",
+      "Contra afecciones vaginales crónicas recurrentes.",
+      "Lucha contra varias infeciones vaginales, tales como: vaginitis, vaginosis bacteriana, bv, Gardnerella vaginalis, fluido vaginal ácido, sequedad.",
+      "Anti la secreción desequilibrada.",
+    ],
+    categories: ["apoyo-vaginal-ph", "supositorios"],
     image: boricLife,
     price: 170,
     sale_price: "",

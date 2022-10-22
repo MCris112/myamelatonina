@@ -3,8 +3,16 @@
 @tailwind utilities;
 
 .container{
-    width: 1200px;
-    max-width: 90vw;
-  
-    margin: 0 auto;
-  }
+  width: 1200px;
+  max-width: 90vw;
+
+  margin: 0 auto;
+}
+
+.loading_screen{
+  animation: loading_screen 1s ease-in-out infinite alternate;
+}
+
+@keyframes loading_screen{
+  from { transform: scale(1)} to { transform: scale(.8)}
+}

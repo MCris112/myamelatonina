@@ -1,7 +1,14 @@
 import React from "react";
+import { useRouter } from 'next/router'
 
 const Button = (props) => {
-  var styles = "p-2 border block w-100 text-center ease-in duration-150 hover:bg-primary hover:text-white hover:border-primary ";
+  let router = useRouter();
+  var styles = "flex items-center justify-center cursor-pointer p-2 border block w-100 text-center ease-in duration-150 hover:bg-primary hover:text-white hover:border-primary ";
+
+  const handleClick = (e, href) => {
+    e.preventDefault()
+    router.push(href)
+  }
 
   switch (props.type) {
     case 'outline':
@@ -20,7 +27,8 @@ const Button = (props) => {
     );
   } else {
     return (
-      <a to={props.link} className={styles}>
+      <a href={props.link} className={styles} onClick={(e) => {handleClick(e, props.link)}}>
+        {props.icon ? <div className="mr-1 flex"><box-icon type='logo' name={props.icon }></box-icon></div> : null}
         {props.label}
       </a>
     );

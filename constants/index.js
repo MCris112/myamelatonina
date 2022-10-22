@@ -5,7 +5,9 @@ import aboutImg from "../public/assets/mission.jpg";
 import footerProductBg from '../public/assets/footerproduct-bg.jpg';
 
 export const sitevars = {
+    production: false,
     url: 'https://myamelatonina.com/',
+    url_dev: 'http://localhost:3000/',
     logo: logo,
     phone: '+51 902 904 357',
     email: 'ventas@myamelatonina.com',

@@ -6,7 +6,7 @@ import { Button } from "../../components";
 
 const Hero = () => {
   return (
-    <div class="relative w-full min-h-[80vh] h-fit py-6 sm:flex items-center justify-center">
+    <div className="relative w-full min-h-[80vh] h-fit py-6 sm:flex items-center justify-center">
       <div className="absolute top-0 left-0 w-full h-full z-[-1]">
         <Image
           src={homevars.hero.bg}

@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
-import { vproducts, categories, companies } from "../public/assets/products";
-import { ProductItem } from "../components";
-import { Navbar } from "../components";
+import { vproducts, categories, companies } from "../../public/assets/products";
+import { ProductItem } from "../../components";
+import { Navbar } from "../../components";
 
-const Products = () => {
+const Productos = () => {
   let [showProducts, setShowProducts] = useState(vproducts);
   let showCategories = [];
 
@@ -97,7 +97,7 @@ const Products = () => {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-10">
             {Object.keys(showProducts).map((key) => (
               <div className="">
-                {vproducts[key] ? <ProductItem product={vproducts[key]} /> : ""}
+                {vproducts[key] ? <ProductItem product={vproducts[key]} slug={key} /> : ""}
               </div>
             ))}
           </div>
@@ -107,4 +107,4 @@ const Products = () => {
   );
 };
 
-export default Products;
+export default Productos;

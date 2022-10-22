@@ -1,10 +1,11 @@
 import React from "react";
-import { Features, WhyUs, Footer } from "../components";
+import { Navbar, Features, WhyUs, Footer } from "../components";
 import { sitevars } from "../constants";
 
 const ContactUs = () => {
   return (
     <div>
+      <Navbar />
       <div className="container py-9 pt-[3rem]">
         <div className="text-center">
           <h1 className="text-primary text-4xl font-bold mb-6">

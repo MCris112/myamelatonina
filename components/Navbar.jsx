@@ -76,7 +76,7 @@ const Navbar = () => {
                   <li key={key}>
                     <a
                       className={`hover:text-accent ${
-                        router.pathname == "/" + key ? "text-accent" : ""
+                        router.pathname == value.slug ? "text-accent" : ""
                       } block text-[1.6rem] py-3 sm:text-lg sm:py-0`}
                       href={value.slug}
                       onClick={(e) => {setMenuOpen(false); handleClick(e, value.slug)}}

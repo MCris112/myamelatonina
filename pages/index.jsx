@@ -2,6 +2,8 @@ import Head from "next/head";
 import Image from "next/image";
 import Hero from "../components/home/Hero";
 
+import { useState, useEffect } from 'react'
+
 import {
   Navbar,
   Title,
@@ -15,10 +17,11 @@ import { homeProducts, homeProduct, homevars } from "../constants";
 import { vproducts } from "../public/assets/products";
 
 export default function Home() {
-  const handleClick = (e) => {
-    e.preventDefault();
-    router.push(href);
-  };
+  const [showProducts, setShowProducts] = useState(false)
+
+  useEffect(() => {
+    setShowProducts(true)
+  }, [])
 
   return (
     <div>
@@ -42,9 +45,9 @@ export default function Home() {
             className="w-full aspect-video"
             src="https://www.youtube.com/embed/p2mhxdrTS54"
             title="Beneficios de la melatonina"
-            frameborder="0"
+            frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
+            allowFullScreen
           ></iframe>
         </div>
 
@@ -69,11 +72,13 @@ export default function Home() {
 
       <div className="container py-6">
         <div className="grid grid-cols-2 gap-3 mb-6 md:grid-cols-3 md:gap-[2rem]">
-          {homeProducts.map((product) => {
-            if (vproducts[product]) {
-              return <ProductItem product={vproducts[product]} />;
-            }
-          })}
+          {showProducts ?
+            homeProducts.map((product) => {
+              if (vproducts[product]) {
+                return <ProductItem product={vproducts[product]} key={product} slug={product} />;
+              }
+            }) : null
+          }
         </div>
 
         <div className="w-full md:w-1/2 md:mx-auto md:py-9">
@@ -124,9 +129,9 @@ export default function Home() {
                   className="w-full aspect-video"
                   src={`https://www.youtube.com/embed/${homevars.footerproducts.videoid}`}
                   title="Beneficios de la melatonina"
-                  frameborder="0"
+                  frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
+                  allowFullScreen
                 ></iframe>
               </div>
             </div>

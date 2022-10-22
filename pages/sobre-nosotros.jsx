@@ -1,14 +1,17 @@
 import React from 'react';
+import Image from "next/image";
 
-import { Features, WhyUs, Footer } from '../components';
+import { Navbar, Features, WhyUs, Footer } from '../components';
 import { aboutusvars } from '../constants';
 
 const AboutUs = () => {
   return (
     <div>
+      <Navbar />
+
       <div className="container flex flex-col justify-center items-center py-9 pt-[6rem] sm:flex-row sm:gap-3">
         <div className="w-1/2">
-          <img src={aboutusvars.logo} alt="" className="w-full" />
+          <Image src={aboutusvars.logo} alt="" className="w-full" />
         </div>
 
         <div className="w-full text-center sm:order-first sm:text-start">
@@ -21,7 +24,7 @@ const AboutUs = () => {
 
       <div className="container flex flex-col justify-center items-center py-9 pb-[6rem] sm:flex-row sm:gap-3">
         <div className="w-full mb-6">
-          <img src={aboutusvars.mission.img} alt="" className="w-full" />
+          <Image src={aboutusvars.mission.img} alt="" className="w-full" />
         </div>
 
         <div className="w-full text-center sm:text-end">

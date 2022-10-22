@@ -26,7 +26,7 @@ const Footer = () => {
                   <li key={key}>
                     <a
                       className={`block hover:text-accent py-2 ${
-                        location.pathname == "/" + key ? "text-accent" : ""
+                        location.asPath == value.slug ? "text-accent" : ""
                       } `}
                       to={value.slug}
                     >
