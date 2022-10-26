@@ -5,7 +5,7 @@ import Button from "./Button";
 
 const ProductItem = ({product, slug}) => {
   return (
-    <div className="">
+    <>
       <a className="text-center w-full h-full grid">
         <Image
           src={product.image ?? ""}
@@ -17,7 +17,7 @@ const ProductItem = ({product, slug}) => {
         <p className="text-primary font-bold text-2xl">{product.title}</p>
         <span className="text-primary">
           Contiene {product.content.text + product.content.type}{" "}
-          {product.content.size + product.content.size_type}
+          {product.content.size + " " + product.content.size_type}
         </span>
         <p className="text-accent text-2xl font-bold mb-3">
           s/.{product.price}
@@ -29,7 +29,7 @@ const ProductItem = ({product, slug}) => {
           link={`/productos/${slug ?? ""}`}
         />
       </a>
-    </div>
+    </>
   );
 };
 

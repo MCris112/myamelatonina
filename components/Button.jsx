@@ -27,10 +27,12 @@ const Button = (props) => {
     );
   } else {
     return (
+      <>
       <a href={props.link} className={styles} onClick={(e) => {handleClick(e, props.link)}}>
         {props.icon ? <div className="mr-1 flex"><box-icon type='logo' name={props.icon }></box-icon></div> : null}
         {props.label}
       </a>
+      </>
     );
   }
 };

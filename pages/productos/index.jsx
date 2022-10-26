@@ -1,35 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import { vproducts, categories, companies } from "../../public/assets/products";
 import { ProductItem } from "../../components";
 import { Navbar } from "../../components";
 
 const Productos = () => {
-  let [showProducts, setShowProducts] = useState(vproducts);
-  let showCategories = [];
+  const [showProducts, setShowProducts] = useState({})
+  const [showCategories, setShowCategories] = useState({})
+  const [showCompanies, setShowCompanies] = useState({})
 
-  const handleCategories = () => {
-    console.log("categories", showCategories);
+  useEffect(() => {
+    setShowCategories(categories)
+    setShowProducts(vproducts)
 
-    if (showCategories.length == 0) {
-      console.log("categories false", showCategories.length);
-      setShowProducts(vproducts);
-      return true;
-    }
+    console.log(showCategories)
+  }, [vproducts, categories])
 
-    let newProducts = Object.values(vproducts).filter((product) => {
-      var is_in = false;
-
-      showCategories.map((value, index) => {
-        if (product["categories"].includes(value)) is_in = true;
-      });
-
-      return is_in;
-    });
-
-    console.log(newProducts);
-    setShowProducts(newProducts);
-  };
+  
 
   const sideTitle = (title) => {
     return (
@@ -40,31 +27,26 @@ const Productos = () => {
     );
   };
 
+  const setCompany = (event) => {
+    var slugCompany = event.target.getAttribute("cri-data-com-id");
+
+    if (event.target.checked) {
+      let items = Object.values(vproducts).filter((product) => {
+        return product.company == slugCompany
+      })
+
+      console.log("items", items)
+
+      setShowProducts(vproducts)
+    }
+  }
+
   const addCategory = (event) => {
     var slugCategory = event.target.getAttribute("cri-data-cat-id");
 
     if (event.target.checked) {
-      console.log("true");
-      if (!showCategories.includes(slugCategory)) {
-        console.log("no incluye");
-        showCategories.push(slugCategory);
-      }
-
-      handleCategories();
-      return;
+      setShowCategories({slugCategory});
     }
-
-    console.log("incluye");
-    const index = showCategories.indexOf(slugCategory);
-
-    if (index > -1) {
-      // only splice array when item is found
-      showCategories.splice(index, 1); // 2nd parameter means remove one item only
-    }
-
-    handleCategories();
-
-    console.log("ShowCategories", showCategories);
   };
   return (
     <div className="">
@@ -76,6 +58,11 @@ const Productos = () => {
 
           {Object.keys(companies).map((key) => (
             <div key={key} className="">
+              <input
+                type="checkbox"
+                onChange={setCompany}
+                cri-data-com-id={key}
+              />
               {companies[key].name}
             </div>
           ))}
@@ -96,7 +83,7 @@ const Productos = () => {
         <div className="w-3/4">
           <div className="grid grid-cols-2 md:grid-cols-3 gap-10">
             {Object.keys(showProducts).map((key) => (
-              <div className="">
+              <div key={key} className={` ${vproducts[key]['categories'].includes(showCategories) ? 'block' : 'hidden'} `}>
                 {vproducts[key] ? <ProductItem product={vproducts[key]} slug={key} /> : ""}
               </div>
             ))}
