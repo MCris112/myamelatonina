@@ -1,10 +1,13 @@
 import React from "react";
-import { Navbar, Features, WhyUs, Footer } from "../components";
+import { Navbar, Footer, HeadComponent } from "../components";
 import { sitevars } from "../constants";
 
 const ContactUs = () => {
   return (
     <div>
+
+      <HeadComponent page="Inicio" description="Somos una empresa importadora de melatonina americana. Estamos comprometidos a mejorar la salud y esperanza de vida aprovechando los beneficios que ofrece la propia naturaleza." keywords="suplementos para dormir, melatonina, natrol, medicina, no puedo dormir, antibioticos, medicina a delivery, todo el peru" />
+
       <Navbar />
       <div className="container py-9 pt-[3rem]">
         <div className="text-center">

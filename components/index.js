@@ -6,6 +6,8 @@ import Features from './Features';
 import WhyUs from './WhyUs';
 import Footer from './Footer';
 
+import HeadComponent from './HeadComponent';
+
 export {
     Navbar,
     Button,
@@ -13,5 +15,6 @@ export {
     ProductItem,
     Features,
     WhyUs,
-    Footer
+    Footer,
+    HeadComponent
 }

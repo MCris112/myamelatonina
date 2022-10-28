@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { Navbar, Footer, Button } from "../../components";
+import { Navbar, Footer, Button, HeadComponent } from "../../components";
 import { vproducts } from "../../public/assets/products";
 
 export async function getStaticPaths() {
@@ -40,6 +40,8 @@ const Productos = ({product}) => {
   
   return (
     <>
+      <HeadComponent page={product.title} description={product.desc} keywords="suplementos para dormir, melatonina, natrol, medicina, no puedo dormir, antibioticos, medicina a delivery, todo el peru" />
+
       <Navbar />
 
       <div className="container py-9 flex flex-col md:flex-row md:justify-start">
