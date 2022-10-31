@@ -1,4 +1,3 @@
-import React from "react";
 import { useRouter } from 'next/router'
 
 const Button = (props) => {
@@ -21,9 +20,11 @@ const Button = (props) => {
 
   if (props.tag == "button") {
     return (
+      <>
       <button onClick={link} className={type}>
         {label}
       </button>
+      </>
     );
   } else {
     return (

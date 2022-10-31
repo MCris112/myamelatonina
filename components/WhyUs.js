@@ -1,4 +1,3 @@
-import React from "react";
 import Title from "./Title";
 import { sitevars } from "../constants";
 
@@ -19,7 +18,7 @@ const WhyUs = () => {
           <div className="hidden md:block">
             <box-icon name="whatsapp" type="logo" size="5rem"></box-icon>
           </div>
-          <a href={`https://wa.me/${sitevars.phone_url}`} target="_blank">
+          <a href={`https://wa.me/${sitevars.phone_url}`} target="_blank" rel="noreferrer">
             {sitevars.phone}
           </a>
         </div>

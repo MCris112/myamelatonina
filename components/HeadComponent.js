@@ -5,9 +5,7 @@ import { sitevars } from "../constants";
 
 const HeadComponent = ({ page, description, keywords }) => {
   const router = useRouter();
-
-  console.log(router);
-
+  
   const ogImage = `${
     sitevars.production ? sitevars.url : sitevars.url_dev
   }og-image.jpg`;
@@ -18,15 +16,15 @@ const HeadComponent = ({ page, description, keywords }) => {
   return (
     <>
       <Head>
-        <title>Myamelatonina | {page}</title>
+        <title>{`Myamelatonina | ${page}`}</title>
         <meta name="description" content={description} />
-        <a rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.ico" />
 
         <meta name="title" content={page} />
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
 
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="language" content="Spanish" />
         <meta name="author" content="Darkredgm" />
 

@@ -1,9 +1,8 @@
-import React from "react";
 import Image from 'next/image'
 
 import featureBg from "../public/assets/features-bg.jpg";
 
-import { Title } from '../components';
+import { Title } from '.';
 
 const Features = () => {
   return (

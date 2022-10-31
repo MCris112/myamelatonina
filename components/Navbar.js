@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { useState } from "react";
 
 import { navLinks, sitevars } from "../constants";
 import { useRouter } from 'next/router'
@@ -10,6 +10,8 @@ const Navbar = () => {
 
   const handleClick = (e, href) => {
     e.preventDefault()
+
+    var url = sitevars.production ? sitevars.url : sitevars.url_dev
     router.push(href)
   }
 
@@ -21,6 +23,7 @@ const Navbar = () => {
             <a
               href={`https://wa.me/${sitevars.phone_url}`}
               target="_blank"
+              rel="noreferrer"
               className="flex text-white py-3"
             >
               <box-icon name="phone" color="white"></box-icon>

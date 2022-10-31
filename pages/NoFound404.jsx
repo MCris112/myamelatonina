@@ -1,8 +1,15 @@
-import React from 'react'
+import { Navbar, Footer, } from "../components";
 
 const NoFound404 = () => {
   return (
-    <div>NoFound404</div>
+    <>
+      <Navbar />
+      
+      <div className="container">
+        <p className="text-center">No se ha encontrado resultados</p>
+      </div>
+      <Footer />
+    </>
   )
 }
 

@@ -24,7 +24,7 @@ export default function Home() {
   }, [])
 
   return (
-    <div>
+    <>
       <HeadComponent page="Inicio" description="Somos una empresa importadora de melatonina americana. Estamos comprometidos a mejorar la salud y esperanza de vida aprovechando los beneficios que ofrece la propia naturaleza." keywords="suplementos para dormir, melatonina, natrol, medicina, no puedo dormir, antibioticos, medicina a delivery, todo el peru" />
 
       <Navbar />
@@ -136,6 +136,6 @@ export default function Home() {
       ) : null}
 
       <Footer />
-    </div>
+    </>
   );
 }

@@ -10,11 +10,9 @@ const Productos = () => {
 
   var showCategories = []
 
-  const [showCompanies, setShowCompanies] = useState({})
-
   useEffect(() => {
     setShowProducts(vproducts)
-  }, [vproducts, categories])
+  }, [vproducts])
 
   const updateProducts = () => {
     var productsReturn = {}

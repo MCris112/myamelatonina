@@ -1,4 +1,3 @@
-import React from "react";
 import Image from 'next/image'
 
 import { sitevars, navLinks } from "../constants";
@@ -52,10 +51,10 @@ const Footer = () => {
       <hr />
 
       <div className="container text-white text-center py-6 opacity-60 sm:w-full md:pb-0">
-        <p>© Todos los derechos reservados | <a href="" className="hover:text-accent underline">Desarrollado por Darkredgm</a></p>
+        <p>© Todos los derechos reservados | <a href="https://darkredgm.com" className="hover:text-accent underline">Desarrollado por Darkredgm</a></p>
       </div>
 
-      <script src="https://unpkg.com/boxicons@2.1.3/dist/boxicons.js"></script> 
+      <script src="https://unpkg.com/boxicons@2.1.3/dist/boxicons.js" defer ></script> 
 
     </div>
   );

@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Title = (props) => {
   return (
     <div className="container text-center py-9">
