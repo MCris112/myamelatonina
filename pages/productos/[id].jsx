@@ -65,20 +65,26 @@ const Productos = ({product}) => {
           <p className="mb-6">{product.description}</p>
           <Button label="Pedir ahora" icon="whatsapp" />
 
-          <h2 className="mt-6 text-primary font-bold text-5xl mb-3">
-            Beneficios
-          </h2>
-          <ul className="flex flex-col gap-3">
-            {product.benefits.map((feature, index) => (
-              <li
-                key={index}
-                className="flex items-center justify-center md:justify-start"
-              >
-                <box-icon name="chevron-right" type="solid"></box-icon>
-                {feature}
-              </li>
-            ))}
-          </ul>
+          {
+            product.benefits ? 
+            () => {
+              return (
+                <><h2 className="mt-6 text-primary font-bold text-5xl mb-3">
+                  Beneficios
+                </h2><ul className="flex flex-col gap-3">
+                    {product.benefits.map((feature, index) => (
+                      <li
+                        key={index}
+                        className="flex items-center justify-center md:justify-start"
+                      >
+                        <box-icon name="chevron-right" type="solid"></box-icon>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul></>
+              )
+            } : undefined
+          }
         </div>
       </div>
 

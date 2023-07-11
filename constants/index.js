@@ -8,6 +8,7 @@ export const sitevars = {
     production: false,
     url: 'https://myamelatonina.com/',
     url_dev: 'http://localhost:3000/',
+    ruc: '1463922905',
     logo: logo,
     phone: '+51 902 904 357',
     email: 'ventas@myamelatonina.com',

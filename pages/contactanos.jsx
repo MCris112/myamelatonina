@@ -40,7 +40,7 @@ const ContactUs = () => {
           </button>
         </form>
 
-        <div className="flex flex-col gap-10 sm:gap-6 sm:grid sm:grid-cols-2 py-9">
+        <div className="flex flex-col gap-10 sm:gap-6 sm:grid sm:grid-cols-2 md:grid-cols-3 py-9">
           <div className="flex flex-col items-center justify-center">
             <div className="bg-primary w-[20vw] h-[20vw] sm:w-[15vw] sm:h-[15vw] md:w-[9rem] md:h-[9rem] flex items-center justify-center rounded-full text-white mb-4">
               <box-icon type="solid" name="phone" size="3rem" color="white"></box-icon>
@@ -62,6 +62,20 @@ const ContactUs = () => {
             <div className="text-primary text-center">
               <h3 className="font-bold text-3xl sm:text-2xl">Nuestro Correo</h3>
               <p>{sitevars.email}</p>
+            </div>
+          </div>
+
+          <div className="flex flex-col items-center justify-center">
+            <div className="bg-primary w-[20vw] h-[20vw] sm:w-[15vw] sm:h-[15vw] md:w-[9rem] md:h-[9rem] flex items-center justify-center rounded-full text-white mb-4">
+              <box-icon type="solid" name="id-card" size="3rem" color="white"></box-icon>
+            </div>
+
+            <div className="text-primary text-center">
+              <h3 className="font-bold text-3xl sm:text-2xl">
+                Ruc
+              </h3>
+              <p>{sitevars.ruc}</p>
+              <p className="text-sm">Lizbeth Barragán Samame</p>
             </div>
           </div>
         </div>

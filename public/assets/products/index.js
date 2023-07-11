@@ -26,7 +26,19 @@ import {
   natrolmelatonina5mggomitas,
   melatonina_blue_3mg,
   melatonina_5mg_puri,
-  melatonina_blue_transparent_less
+  melatonina_blue_transparent_less,
+
+  piping_rock_melatonina_3mg_250_tabletas,
+  piping_rock_melatonina_5mg_200_tabletas,
+  piping_rock_melatonina_10mg_120_tabletas,
+  piping_rock_melatonina_12mg_180_tabletas,
+  piping_rock_melatonina_kids_1mg_120_tabletas,
+  bronson_melatonina_12mg_fast_dissolve,
+  melatonina_liquida_10mg,
+  sawPalmettoExtract180Softgels,
+  megaPotencyVitaminD3200Capsules,
+  magnesioCitatre99mg180,
+
 } from "./images";
 
 import { natrolimg, puritiansPrideWhiteImg } from '../marcas'
@@ -327,6 +339,29 @@ export const vproducts = {
     sale_price: "",
     sale_price_date: "",
   },
+  "magnesio-citrate-99mg-180-capsulas": {
+    title: "Magnesio Citrate 99mg",
+    desc: "El magnesio es un mineral fundamental para la producción de energía y el metabolismo, la contracción muscular, la transmisión de impulsos nerviosos y la mineralización ósea.",
+    description: "El magnesio es un mineral fundamental para la producción de energía y el metabolismo, la contracción muscular, la transmisión de impulsos nerviosos y la mineralización ósea. Es un cofactor necesario para unas 300 enzimas. Entre las reacciones catalizadas por estas enzimas se encuentran la síntesis de ácidos grasos, proteínas síntesis y metabolismo de la glucosa. El estado del magnesio también es importante para la regulación del equilibrio del calcio a través de sus efectos sobre la glándula paratiroides. Este producto puede presentar una variación de color natural.\r\nEl magnesio es un mineral fundamental para la producción y el metabolismo de la energía, la contracción muscular, la transmisión de impulsos nerviosos y la mineralización ósea.",
+    company: "now",
+    content: {
+      text: "",
+      type: "",
+      size: 180,
+      size_type: "cápsulas",
+    },
+    benefits: [
+      "Apoya la producción de energía.",
+      "Apoya la transmisión de impulsos nerviosos.",
+      "Contra la contracción muscular.", 
+    ],
+    categories: ["capsulas", "suplementos", "vitaminas"],
+    image: magnesioCitatre99mg180,
+    price: '',
+    sale_price: "",
+    sale_price_date: "",
+  },
+
   "glucosamine-chondroitin-msm": {
     title: "Glucosamine Chondroitin Msm",
     desc: "ayuda a la movilidad de las articulaciones, estructura articular, y puede aumentar la flexibilidad de las articulaciones mientras protege el tejido articular.",
@@ -369,7 +404,29 @@ export const vproducts = {
     sale_price: "",
     sale_price_date: "",
   },
-  "saw-palmetto-extract": {
+  "mega-potency-vitamin-d3-200-capsulas": {
+    title: "Mega-Potency Vitamin D3 - 200 capsulas",
+    desc: "Esta nueva fórmula contiene 250 MCG de vitamina D. La vitamina D es conocida como esencial cuando se trata de desarrollar dientes y huesos fuertes. ",
+    description: "Esta nueva fórmula contiene 250 MCG de vitamina D. La vitamina D es conocida como esencial cuando se trata de desarrollar dientes y huesos fuertes. La vitamina D3 es una forma más potente y biodisponible en comparación con la D2. Ayuda al cuerpo con la absorción de calcio. En los días inmediatamente posteriores a un entrenamiento intenso, la fuerza muscular puede disminuir temporalmente a medida que su cuerpo se recupera, lo que puede afectar el rendimiento. La vitamina D puede ayudar a mejorar la recuperación de la fuerza muscular para que pueda volver a entrenar duro.\r\nLa vitamina D3 es una forma más potente y biodisponible en comparación con la D2.",
+    company: "puritians-pride",
+    content: {
+      text: "",
+      type: "",
+      size: 200,
+      size_type: "cápsulas",
+    },
+    benefits: [
+      "Apoyo estructural - 5.000 UI de mayor potencia - Ayuda a mantener huesos fuertes.",
+      "La vitamina D3 es conocida por interactuar con más de 200 genes diferentes y por lo tanto juega un papel regulador crucial como activador metabólico para una multitud de procesos metabólicos.",
+      "Este producto ha sido fabricado con ingredientes de la más alta calidad disponible.",
+    ],
+    categories: ["capsulas", "suplementos", "vitaminas"],
+    image: megaPotencyVitaminD3200Capsules,
+    price: '',
+    sale_price: "",
+    sale_price_date: "",
+  },
+  "saw-palmetto-extract-90-softgels": {
     title: "Saw Palmetto Extract",
     desc: "Saw Palmetto es un extracto derivado de la baya del árbol Saw Palmetto y es una de las principales hierbas tradicionales para la salud masculina. Saw Palmetto se ha utilizado tradicionalmente para apoyar la próstata y la salud urinaria en los hombres.",
     description: "Saw Palmetto es un extracto derivado de la baya del árbol Saw Palmetto y es una de las principales hierbas tradicionales para la salud masculina. Saw Palmetto se ha utilizado tradicionalmente para apoyar la próstata y la salud urinaria en los hombres. Los hombres adultos pueden tomar una cápsula blanda una o dos veces al día\r\nEl saw palmetto se ha indicado de forma tradicional para aliviar algunos de los síntomas de la hiperplasia benigna de próstata o agrandamiento de próstata, como son la necesidad de orinar con frecuencia, la nicturia o micción nocturna, la urgencia con que se presenta, la micción escasa o entrecortada y las molestias",
@@ -391,6 +448,31 @@ export const vproducts = {
     categories: ["capsulas", "suplementos", "vitaminas"],
     image: sawPalmettoExtract,
     price: 120,
+    sale_price: "",
+    sale_price_date: "",
+  },
+  "saw-palmetto-extract-180-softgels": {
+    title: "Saw Palmetto Extract 180 Softgels",
+    desc: "Saw Palmetto es un extracto derivado de la baya del árbol Saw Palmetto y es una de las principales hierbas tradicionales para la salud masculina. Saw Palmetto se ha utilizado tradicionalmente para apoyar la próstata y la salud urinaria en los hombres.",
+    description: "Saw Palmetto es un extracto derivado de la baya del árbol Saw Palmetto y es una de las principales hierbas tradicionales para la salud masculina. Saw Palmetto se ha utilizado tradicionalmente para apoyar la próstata y la salud urinaria en los hombres. Los hombres adultos pueden tomar una cápsula blanda una o dos veces al día\r\nEl saw palmetto se ha indicado de forma tradicional para aliviar algunos de los síntomas de la hiperplasia benigna de próstata o agrandamiento de próstata, como son la necesidad de orinar con frecuencia, la nicturia o micción nocturna, la urgencia con que se presenta, la micción escasa o entrecortada y las molestias",
+    company: "puritians-pride",
+    content: {
+      text: "",
+      type: "",
+      size: 180,
+      size_type: "cápsulas líquidas",
+    },
+    benefits: [
+      "Contra el agrandamiento de la próstata.",
+      "Contra la Inflamación de la próstata.",
+      "Contra problemas Urinarios.",
+      "Contra la Cistitis.",
+      "Contra la Eyaculación precoz.",
+      "Contra la Impotencia sexual.",
+    ],
+    categories: ["capsulas", "suplementos", "vitaminas"],
+    image: sawPalmettoExtract180Softgels,
+    price: "",
     sale_price: "",
     sale_price_date: "",
   },
@@ -722,6 +804,240 @@ export const vproducts = {
     categories: ["capsulas", "suplementos-para-dormir"],
     image: melatonina_blue_transparent_less,
     price: 140,
+    sale_price: "",
+    sale_price_date: "",
+  },
+
+  //START
+  "piping-rock-melatonina-3mg-250-tabletas": {
+    title: "Melatonina 3mg - 250 tabletas",
+    desc: [
+      "La melatonina es una hormona que se produce naturalmente en el cuerpo por la glándula pineal del cerebro. Esta hormona ayuda a regular el reloj natural de su cuerpo y está involucrada en el ciclo de sueño/vigilia.",
+    ],
+    description: [
+      "La melatonina es una hormona que se produce naturalmente en el cuerpo por la glándula pineal del cerebro. Esta hormona ayuda a regular el reloj natural de su cuerpo y está involucrada en el ciclo de sueño/vigilia.* Desafortunadamente, nuestras vidas ocupadas pueden interferir con la producción de melatonina, ya sea por trabajar hasta tarde, dormir con las luces encendidas o experimentar un desfase horario. Muchos de nosotros deseamos dormir como un bebé, pero no queremos una pastilla para dormir que genere hábito. Puritan's Pride no crea hábito. Ya es hora de que libere sus frustraciones ocasionales sobre el sueño y pruebe algo que promueva un mejor descanso.* Es importante despertarse sintiéndose fresco y rejuvenecido por la mañana para comenzar bien el día.",
+    ],
+    company: "piping-rock",
+    content: {
+      text: "3",
+      type: "mg",
+      size: "250",
+      size_type: "tabletas",
+    },
+    benefits: [
+      "Ayuda a mejorar la calidad de sueño.",
+      "Te ayuda a dormir rápido y disfrutar del sueño.",
+      "Contiene para 120 días de suplementos para varias noches tranquilas.",
+    ],
+    categories: ["suplementos-para-dormir", "tabletas"],
+    image: piping_rock_melatonina_3mg_250_tabletas,
+    price: "",
+    sale_price: "",
+    sale_price_date: "",
+  },
+  "piping-rock-melatonina-5mg-200-tabletas": {
+    title: "Melatonina 5mg - 200 tabletas",
+    desc: [
+      "La melatonina es una hormona que se produce naturalmente en el cuerpo por la glándula pineal del cerebro. Esta hormona ayuda a regular el reloj natural de su cuerpo y está involucrada en el ciclo de sueño/vigilia.",
+    ],
+    description: [
+      "La melatonina es una hormona que se produce naturalmente en el cuerpo por la glándula pineal del cerebro. Esta hormona ayuda a regular el reloj natural de su cuerpo y está involucrada en el ciclo de sueño/vigilia.* Desafortunadamente, nuestras vidas ocupadas pueden interferir con la producción de melatonina, ya sea por trabajar hasta tarde, dormir con las luces encendidas o experimentar un desfase horario. Muchos de nosotros deseamos dormir como un bebé, pero no queremos una pastilla para dormir que genere hábito. Puritan's Pride no crea hábito. Ya es hora de que libere sus frustraciones ocasionales sobre el sueño y pruebe algo que promueva un mejor descanso.* Es importante despertarse sintiéndose fresco y rejuvenecido por la mañana para comenzar bien el día.",
+    ],
+    company: "piping-rock",
+    content: {
+      text: "5",
+      type: "mg",
+      size: "200",
+      size_type: "tabletas",
+    },
+    benefits: [
+      "Ayuda a mejorar la calidad de sueño.",
+      "Te ayuda a dormir rápido y disfrutar del sueño.",
+      "Contiene para 120 días de suplementos para varias noches tranquilas.",
+    ],
+    categories: ["suplementos-para-dormir", "tabletas"],
+    image: piping_rock_melatonina_5mg_200_tabletas,
+    price: "",
+    sale_price: "",
+    sale_price_date: "",
+  },
+  "piping-rock-melatonina-10mg-120-tabletas": {
+    title: "Melatonina 10mg - 120 tabletas",
+    desc: [
+      "La melatonina es una hormona que se produce naturalmente en el cuerpo por la glándula pineal del cerebro. Esta hormona ayuda a regular el reloj natural de su cuerpo y está involucrada en el ciclo de sueño/vigilia.",
+    ],
+    description: [
+      "La melatonina es una hormona que se produce naturalmente en el cuerpo por la glándula pineal del cerebro. Esta hormona ayuda a regular el reloj natural de su cuerpo y está involucrada en el ciclo de sueño/vigilia.* Desafortunadamente, nuestras vidas ocupadas pueden interferir con la producción de melatonina, ya sea por trabajar hasta tarde, dormir con las luces encendidas o experimentar un desfase horario. Muchos de nosotros deseamos dormir como un bebé, pero no queremos una pastilla para dormir que genere hábito. Puritan's Pride no crea hábito. Ya es hora de que libere sus frustraciones ocasionales sobre el sueño y pruebe algo que promueva un mejor descanso.* Es importante despertarse sintiéndose fresco y rejuvenecido por la mañana para comenzar bien el día.",
+    ],
+    company: "piping-rock",
+    content: {
+      text: "10",
+      type: "mg",
+      size: "120",
+      size_type: "tabletas",
+    },
+    benefits: [
+      "Ayuda a mejorar la calidad de sueño.",
+      "Te ayuda a dormir rápido y disfrutar del sueño.",
+      "Contiene para 120 días de suplementos para varias noches tranquilas.",
+    ],
+    categories: ["suplementos-para-dormir", "tabletas"],
+    image: piping_rock_melatonina_10mg_120_tabletas,
+    price: "",
+    sale_price: "",
+    sale_price_date: "",
+  },
+  "piping-rock-melatonina-12mg-180-tabletas": {
+    title: "Melatonina 12mg - 180 tabletas",
+    desc: [
+      "La melatonina es una hormona que se produce naturalmente en el cuerpo por la glándula pineal del cerebro. Esta hormona ayuda a regular el reloj natural de su cuerpo y está involucrada en el ciclo de sueño/vigilia.",
+    ],
+    description: [
+      "La melatonina es una hormona que se produce naturalmente en el cuerpo por la glándula pineal del cerebro. Esta hormona ayuda a regular el reloj natural de su cuerpo y está involucrada en el ciclo de sueño/vigilia.* Desafortunadamente, nuestras vidas ocupadas pueden interferir con la producción de melatonina, ya sea por trabajar hasta tarde, dormir con las luces encendidas o experimentar un desfase horario. Muchos de nosotros deseamos dormir como un bebé, pero no queremos una pastilla para dormir que genere hábito. Puritan's Pride no crea hábito. Ya es hora de que libere sus frustraciones ocasionales sobre el sueño y pruebe algo que promueva un mejor descanso.* Es importante despertarse sintiéndose fresco y rejuvenecido por la mañana para comenzar bien el día.",
+    ],
+    company: "piping-rock",
+    content: {
+      text: "12",
+      type: "mg",
+      size: "180",
+      size_type: "tabletas",
+    },
+    benefits: [
+      "Ayuda a mejorar la calidad de sueño.",
+      "Te ayuda a dormir rápido y disfrutar del sueño.",
+      "Contiene para 120 días de suplementos para varias noches tranquilas.",
+    ],
+    categories: ["suplementos-para-dormir", "tabletas"],
+    image: piping_rock_melatonina_12mg_180_tabletas,
+    price: "",
+    sale_price: "",
+    sale_price_date: "",
+  },
+  "piping-rock-melatonina-kids-1mg-120-tabletas": {
+    title: "Melatonina 1mg - 120 tabletas",
+    desc: [
+      "La melatonina es una hormona que se produce naturalmente en el cuerpo por la glándula pineal del cerebro. Esta hormona ayuda a regular el reloj natural de su cuerpo y está involucrada en el ciclo de sueño/vigilia.",
+    ],
+    description: [
+      "Los niños necesitan muchos nutrientes para sus cuerpos en crecimiento. Una nutrición de alta calidad es el primer paso para que estén sanos. Sin embargo, la excelencia nutricional es difícil de lograr solo con alimentos saludables. Un suplemento puede ofrecer una amplia gama adicional de nutrientes de una sola fuente para un apoyo completo durante todo el año."
+    ],
+    company: "piping-rock",
+    content: {
+      text: "1",
+      type: "mg",
+      size: "120",
+      size_type: "tabletas",
+    },
+    benefits: [
+      "Ayuda a mejorar la calidad de sueño.",
+      "Te ayuda a dormir rápido y disfrutar del sueño.",
+      "Contiene para 120 días de suplementos para varias noches tranquilas.",
+    ],
+    categories: ["suplementos-para-dormir", "tabletas", "kids"],
+    image: piping_rock_melatonina_kids_1mg_120_tabletas,
+    price: "",
+    sale_price: "",
+    sale_price_date: "",
+  },
+  "bronson-melatonina-12mg-fast-dissolve": {
+    title: "Melatonina 12mg - 360 cápsulas",
+    desc: [
+      "Desde 1960, Bronson ha brindado a las familias productos de la más alta calidad y el mejor servicio al cliente disponible. Esta herencia de 60 años habla por sí misma. Pero con tantas tiendas de vitaminas en línea, ¿por qué debería comprar suplementos de Bronson?",
+    ],
+    description: [
+      "Desde 1960, Bronson ha brindado a las familias productos de la más alta calidad y el mejor servicio al cliente disponible. Esta herencia de 60 años habla por sí misma. Pero con tantas tiendas de vitaminas en línea, ¿por qué debería comprar suplementos de Bronson?",
+      "En resumen, nuestra empresa está probada por el tiempo y ofrece las vitaminas más puras y de alta calidad respaldadas por la ciencia. Confíe en Bronson para brindarle los mejores productos naturales para la salud a usted y su familia. Las vitaminas Bronson han sido mencionadas constantemente por los mejores profesionales médicos desde nuestros inicios en 1960."
+    ],
+    company: "bronson",
+    content: {
+      text: "12",
+      type: "mg",
+      size: "360",
+      size_type: "capsulas",
+    },
+    benefits: [
+      "Ayuda a mejorar la calidad de sueño.",
+      "Te ayuda a dormir rápido y disfrutar del sueño.",
+      "Contiene para 120 días de suplementos para varias noches tranquilas.",
+    ],
+    categories: ["suplementos-para-dormir", "capsulas"],
+    image: bronson_melatonina_12mg_fast_dissolve,
+    price: "",
+    sale_price: "",
+    sale_price_date: "",
+  },
+  "melatonina-liquida-10mg": {
+    title: "Melatonina Líquida 10mg",
+    desc: [
+      "Nuestro líquido de melatonina proporciona un apoyo conveniente para un sueño profundo y de calidad."
+    ],
+    description: [
+      "Nuestro líquido de melatonina proporciona un apoyo conveniente para un sueño profundo y de calidad.",
+      "La melatonina puede ser una opción especialmente inteligente para las personas que experimentan insomnio ocasional y aquellos con desfase horario.",
+      "La melatonina funciona en armonía con el ciclo natural del sueño para apoyar el descanso tranquilo, para que pueda despierta sintiéndote renovado y revitalizado.",
+      "La melatonina te ayuda a conciliar el sueño rápidamente y permanecer dormido por más tiempo.* Incluye 2 onzas líquidas."
+    ],
+    company: "puritians-pride",
+    content: {
+      text: "10",
+      type: "mg",
+      size: "",
+      size_type: "liquida",
+    },
+    benefits: [
+      "Ayuda a mejorar la calidad de sueño.",
+      "Te ayuda a dormir rápido y disfrutar del sueño.",
+      "Contiene para 120 días de suplementos para varias noches tranquilas.",
+    ],
+    categories: ["suplementos-para-dormir", "tabletas"],
+    image: melatonina_liquida_10mg,
+    price: "",
+    sale_price: "",
+    sale_price_date: "",
+  },
+
+  //CHANGE IMAGE
+  "piping-rock-hyaluronic-acid": {
+    title: "HYALURONIC ACID",
+    desc: [
+      "El ácido hialurónico es una sustancia natural que se encuentra en nuestro cuerpo y que se ha vuelto muy popular en el cuidado de la piel. También está presente en fuentes alimenticias como los cítricos y las verduras de hoja. Ahora, puede obtener los beneficios del ácido hialurónico a través de agentes tópicos para el cuidado de la piel.",
+    ],
+    description: [
+      "El ácido hialurónico es una sustancia natural que se encuentra en nuestro cuerpo y que se ha vuelto muy popular en el cuidado de la piel. También está presente en fuentes alimenticias como los cítricos y las verduras de hoja. Ahora, puede obtener los beneficios del ácido hialurónico a través de agentes tópicos para el cuidado de la piel.",
+      "Hemos elaborado un suero de ácido hialurónico de fuerza profesional que brinda hidratación duradera a todo tipo de piel. Promueva una tez vibrante aplicando suavemente en las áreas deseadas después de la limpieza. Se utiliza mejor por la mañana y por la noche para un brillo natural y uniforme. ¡Agréguelo hoy a su régimen de cuidado de la piel para darle un toque de lujo!"
+    ],
+    company: "piping-rock",
+    content: {
+      text: "237",
+      type: "ml",
+      size: "",
+      size_type: "",
+    },
+    categories: ["suplementos-para-dormir", "tabletas"],
+    image: piping_rock_melatonina_5mg_200_tabletas,
+    price: "",
+    sale_price: "",
+    sale_price_date: "",
+  },
+  "high-potency-vitamin-d3-250-softgels": {
+    title: "Mega-Potency Vitamin D3",
+    desc: "Esta nueva fórmula contiene 10,000 UI de vitamina D. La vitamina D es conocida como esencial cuando se trata de desarrollar dientes y huesos fuertes. ",
+    description: "Esta nueva fórmula contiene 10,000 UI de vitamina D. La vitamina D es conocida como esencial cuando se trata de desarrollar dientes y huesos fuertes. La vitamina D3 es una forma más potente y biodisponible en comparación con la D2. Ayuda al cuerpo con la absorción de calcio. En los días inmediatamente posteriores a un entrenamiento intenso, la fuerza muscular puede disminuir temporalmente a medida que su cuerpo se recupera, lo que puede afectar el rendimiento. La vitamina D puede ayudar a mejorar la recuperación de la fuerza muscular para que pueda volver a entrenar duro.\r\nLa vitamina D3 es una forma más potente y biodisponible en comparación con la D2.",
+    company: "puritians-pride",
+    content: {
+      text: "",
+      type: "",
+      size: 100,
+      size_type: "cápsulas",
+    },
+    benefits: [
+      "Apoyo estructural - 5.000 UI de mayor potencia - Ayuda a mantener huesos fuertes.",
+      "La vitamina D3 es conocida por interactuar con más de 200 genes diferentes y por lo tanto juega un papel regulador crucial como activador metabólico para una multitud de procesos metabólicos.",
+      "Este producto ha sido fabricado con ingredientes de la más alta calidad disponible.",
+    ],
+    categories: ["capsulas", "suplementos", "vitaminas"],
+    image: megaPotencyVitaminD3,
+    price: 100,
     sale_price: "",
     sale_price_date: "",
   },
