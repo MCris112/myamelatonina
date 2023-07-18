@@ -63,7 +63,7 @@ const Productos = ({product}) => {
             {product.content.size + " " + product.content.size_type}
           </span>
           <p className="mb-6">{product.description}</p>
-          <Button label="Pedir ahora" icon="whatsapp" />
+          <Button label="Pedir ahora" icon="whatsapp" link="https://wa.me/51902904357" />
 
           {
             product.benefits ? 

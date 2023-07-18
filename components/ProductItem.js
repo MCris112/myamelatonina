@@ -26,7 +26,7 @@ const ProductItem = ({product, slug}) => {
           {`Contiene ${product.content.text + product.content.type} ${product.content.size + " " + product.content.size_type}`}
         </span>
         <p className="text-accent text-2xl font-bold mb-3">
-          {`s/. ${product.price}`}
+        {product.price ? `s/. ${product.price}` : ''}
         </p>
       </a>
 

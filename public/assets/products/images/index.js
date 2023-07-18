@@ -40,7 +40,46 @@ import piping_rock_melatonina_kids_1mg_120_tabletas from './piping-rock-melatoni
 
 import bronson_melatonina_12mg_fast_dissolve from './bronson-melatonina-12mg-fast-dissolve.png';
 import melatonina_liquida_10mg from './melatonina-liquida-10mg.png';
+
+
+import piping_rock_hyaluronic_acid from './piping-rock-hyaluronic-acid.png';
+import piping_rock_high_potency_vitamin_d3_250_softgels from './piping-rock-high-potency-vitamin-d3-250-softgels.png';
+import piping_rock_ultra_papaya_supreme from './piping-rock-ultra-papaya-supreme.png';
+import piping_rock_magnesium_citrate from './piping-rock-magnesium-citrate.png';
+import piping_rock_vitamina_c from './piping-rock-vitamina-c.png';
+import puritians_pride_lutein from './puritians-pride-lutein.png';
+import kirkland_super_b_complex from './kirkland-super-b-complex.png';
+import puritians_pride_omega_3_fish_oil from './puritians-pride-omega-3-fish-oil.png'; 
+import puritians_pride_gaba_gamma_aminobutyric_acid from './puritians-pride-gaba-gamma-aminobutyric-acid.png';
+import puritians_pride_zinc from './puritians-pride-zinc.png';
+import puritians_pride_resveratrol from './puritians-pride-resveratrol.png';
+import piping_rock_glucosamine_chondroitin from './piping-rock-glucosamine-chondroitin.png';
+import puritians_pride_l_glutathione_reduced from './puritians-pride-l-glutathione-reduced.png';
+import puritians_pride_diabetic_support_formula from './puritians-pride-diabetic-support-formula.png'; 
+import puritians_pride_probiotic_acidophilus from './puritians-pride-probiotic-acidophilus.png';
+import kirkland_e_180_mg from './kirkland-e-180-mg.png';
+import horbaach_magnesium_glycinate from './horbaach-magnesium-glycinate.png';
+import horbaach_chelated_copper from './horbaach-chelated-copper.png';
+
 export {
+    piping_rock_hyaluronic_acid,
+    piping_rock_high_potency_vitamin_d3_250_softgels,
+    piping_rock_ultra_papaya_supreme,
+    piping_rock_magnesium_citrate,
+    piping_rock_vitamina_c,
+    puritians_pride_lutein,
+    kirkland_super_b_complex,
+    puritians_pride_omega_3_fish_oil,
+    puritians_pride_gaba_gamma_aminobutyric_acid,
+    puritians_pride_zinc,
+    puritians_pride_resveratrol,
+    piping_rock_glucosamine_chondroitin,
+    puritians_pride_l_glutathione_reduced,
+    puritians_pride_diabetic_support_formula,
+    puritians_pride_probiotic_acidophilus,
+    kirkland_e_180_mg,
+    horbaach_magnesium_glycinate,
+    horbaach_chelated_copper,
 
     piping_rock_melatonina_3mg_250_tabletas,
     piping_rock_melatonina_5mg_200_tabletas,

@@ -6,6 +6,8 @@ const Button = (props) => {
 
   const handleClick = (e, href) => {
     e.preventDefault()
+
+    if(href)
     router.push(href)
   }
 

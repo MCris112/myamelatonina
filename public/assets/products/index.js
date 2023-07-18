@@ -38,6 +38,25 @@ import {
   sawPalmettoExtract180Softgels,
   megaPotencyVitaminD3200Capsules,
   magnesioCitatre99mg180,
+  piping_rock_high_potency_vitamin_d3_250_softgels,
+  piping_rock_ultra_papaya_supreme,
+  piping_rock_magnesium_citrate,
+  piping_rock_vitamina_c,
+  puritians_pride_lutein,
+  kirkland_super_b_complex,
+  puritians_pride_omega_3_fish_oil,
+  puritians_pride_gaba_gamma_aminobutyric_acid,
+  puritians_pride_zinc,
+  puritians_pride_resveratrol,
+  piping_rock_glucosamine_chondroitin,
+  puritians_pride_l_glutathione_reduced,
+  puritians_pride_diabetic_support_formula,
+  puritians_pride_probiotic_acidophilus,
+  kirkland_e_180_mg,
+  horbaach_magnesium_glycinate,
+  horbaach_chelated_copper,
+  
+  piping_rock_hyaluronic_acid,
 
 } from "./images";
 
@@ -1014,30 +1033,390 @@ export const vproducts = {
       size_type: "",
     },
     categories: ["suplementos-para-dormir", "tabletas"],
-    image: piping_rock_melatonina_5mg_200_tabletas,
+    image: piping_rock_hyaluronic_acid,
     price: "",
     sale_price: "",
     sale_price_date: "",
   },
-  "high-potency-vitamin-d3-250-softgels": {
-    title: "Mega-Potency Vitamin D3",
-    desc: "Esta nueva fórmula contiene 10,000 UI de vitamina D. La vitamina D es conocida como esencial cuando se trata de desarrollar dientes y huesos fuertes. ",
-    description: "Esta nueva fórmula contiene 10,000 UI de vitamina D. La vitamina D es conocida como esencial cuando se trata de desarrollar dientes y huesos fuertes. La vitamina D3 es una forma más potente y biodisponible en comparación con la D2. Ayuda al cuerpo con la absorción de calcio. En los días inmediatamente posteriores a un entrenamiento intenso, la fuerza muscular puede disminuir temporalmente a medida que su cuerpo se recupera, lo que puede afectar el rendimiento. La vitamina D puede ayudar a mejorar la recuperación de la fuerza muscular para que pueda volver a entrenar duro.\r\nLa vitamina D3 es una forma más potente y biodisponible en comparación con la D2.",
-    company: "puritians-pride",
+  "piping-rock-high-potency-vitamin-d3-250-softgels": {
+    title: "High-Potency Vitamin D3",
+    desc: "La vitamina D se asocia comúnmente con ser la \"vitamina del sol\", ya que la produce el cuerpo una vez que se expone a los rayos del sol. Es un nutriente vital del que lamentablemente no obtenemos suficiente cuando llega el clima más frío y la luz solar es más escasa. Para garantizar que sus niveles sean siempre óptimos, la vitamina D3 de alta potencia de PipingRock proporciona una manera conveniente de ingerir esta sustancia diariamente. Al proporcionarle 5000 UI por cápsula blanda de liberación rápida, puede estar seguro, sol o no, está cubierto.",
+    description: "La vitamina D se asocia comúnmente con ser la \"vitamina del sol\", ya que la produce el cuerpo una vez que se expone a los rayos del sol. Es un nutriente vital del que lamentablemente no obtenemos suficiente cuando llega el clima más frío y la luz solar es más escasa. Para garantizar que sus niveles sean siempre óptimos, la vitamina D3 de alta potencia de PipingRock proporciona una manera conveniente de ingerir esta sustancia diariamente. Al proporcionarle 5000 UI por cápsula blanda de liberación rápida, puede estar seguro, sol o no, está cubierto.",
+    company: "piping-rock",
     content: {
       text: "",
       type: "",
-      size: 100,
-      size_type: "cápsulas",
+      size: 250,
+      size_type: "softgels",
     },
     benefits: [
       "Apoyo estructural - 5.000 UI de mayor potencia - Ayuda a mantener huesos fuertes.",
       "La vitamina D3 es conocida por interactuar con más de 200 genes diferentes y por lo tanto juega un papel regulador crucial como activador metabólico para una multitud de procesos metabólicos.",
       "Este producto ha sido fabricado con ingredientes de la más alta calidad disponible.",
     ],
-    categories: ["capsulas", "suplementos", "vitaminas"],
-    image: megaPotencyVitaminD3,
-    price: 100,
+    categories: ["softgels", "suplementos", "vitaminas"],
+    image: piping_rock_high_potency_vitamin_d3_250_softgels,
+    price: "",
+    sale_price: "",
+    sale_price_date: "",
+  },
+  "piping-rock-ultra-papaya-supreme": {
+    title: "Ultra Papaya Enzyme Supreme",
+    desc: [
+      "Las tabletas de suplemento Ultra Papaya Enzyme Supreme de PipingRock brindan un soporte digestivo superior a través de enzimas de fuentes naturales.",
+    ],
+    description: [
+      "Las tabletas de suplemento Ultra Papaya Enzyme Supreme de PipingRock brindan un soporte digestivo superior a través de enzimas de fuentes naturales.",
+      "¡Las papayas son una fuente natural de la enzima papaína, que es la estrella de estos deliciosos masticables! Hemos mejorado esta fórmula con bromelina, que son enzimas de la piña y extractos pancreáticos, en particular proteasa (que descompone las proteínas), alfa-amilasa (que descompone los almidones) y lipasa (que descompone las grasas).** Digestión saludable y cómoda de forma natural con cada tableta masticable, ¡disponible a un valor fantástico!"
+    ],
+    company: "piping-rock",
+    content: {
+      text: "",
+      type: "",
+      size: 180,
+      size_type: "tabletas",
+    },
+    categories: ["tabletas"],
+    image: piping_rock_ultra_papaya_supreme,
+    price: "",
+    sale_price: "",
+    sale_price_date: "",
+  },
+  "piping-rock-magnesium-citrate": {
+    title: "Magnesium Citrate",
+    desc: [
+      "El magnesio, un mineral abundante en el cuerpo, se encuentra en varios alimentos integrales, como verduras, nueces y semillas y legumbres. Los estudios sugieren que muchas personas no obtienen el valor diario recomendado de este mineral esencial. El citrato de magnesio es una forma popular de magnesio que el cuerpo absorbe mejor y es suave para los estómagos sensibles."
+    ],
+    description: [
+      "El magnesio, un mineral abundante en el cuerpo, se encuentra en varios alimentos integrales, como verduras, nueces y semillas y legumbres. Los estudios sugieren que muchas personas no obtienen el valor diario recomendado de este mineral esencial. El citrato de magnesio es una forma popular de magnesio que el cuerpo absorbe mejor y es suave para los estómagos sensibles."
+    ],
+    company: "piping-rock",
+    content: {
+      text: 250,
+      type: "mg",
+      size: 200,
+      size_type: "capsulas",
+    },
+    categories: ["capsulas"],
+    image: piping_rock_magnesium_citrate,
+    price: "",
+    sale_price: "",
+    sale_price_date: "",
+  },
+  "piping-rock-vitamina-c": {
+    title: "Vitamina C",
+    desc: [
+      "¡PipingRock Vitamin C 500 mg promueve una excelente protección antioxidante al mismo tiempo que brinda un estimulante bienestar para todo el cuerpo! cartílago."
+    ],
+    description: [
+      "¡PipingRock Vitamin C 500 mg promueve una excelente protección antioxidante al mismo tiempo que brinda un estimulante bienestar para todo el cuerpo! cartílago.",
+      "Estamos orgullosos de ofrecerle nuestra selección cada vez mayor de productos de vitaminas y suplementos diseñados para ayudarlo a lograr sus objetivos de bienestar al costo más bajo de la industria. La belleza reside en la profundidad de nuestro surtido. PipingRock ofrece cientos de productos de vitaminas y suplementos para la salud de hombres y mujeres. Ofrecemos cápsulas, polvos, cápsulas blandas, líquidos, fórmulas orgánicas y mucho más. Nuestros productos están repletos de ingredientes de primera calidad, provenientes de todo el mundo. ¡Nuestra sólida línea de productos evoluciona todos los días para satisfacer sus necesidades de bienestar!"
+    ],
+    company: "piping-rock",
+    content: {
+      text: 500,
+      type: "mg",
+      size: 200,
+      size_type: "capsulas",
+    },
+    categories: ["capsulas"],
+    image: piping_rock_vitamina_c,
+    price: "",
+    sale_price: "",
+    sale_price_date: "",
+  },
+  "puritians-pride-lutein": {
+    title: "Lutein",
+    desc: [
+      "La luteína apoya la salud ocular de los adultos. Es uno de los carotenoides más abundantes que se encuentran en frutas, verduras e incluso plantas como la caléndula. La luteína también tiene propiedades antioxidantes para adultos. La luteína es un nutriente importante que se ha agregado recientemente a ciertas fórmulas infantiles. La luteína se encuentra naturalmente en la leche materna, y las mujeres que están amamantando pueden complementar con luteína durante este período de tiempo crítico. Tome uno al día para uso posnatal."
+    ],
+    description: [
+      "La luteína apoya la salud ocular de los adultos. Es uno de los carotenoides más abundantes que se encuentran en frutas, verduras e incluso plantas como la caléndula. La luteína también tiene propiedades antioxidantes para adultos. La luteína es un nutriente importante que se ha agregado recientemente a ciertas fórmulas infantiles. La luteína se encuentra naturalmente en la leche materna, y las mujeres que están amamantando pueden complementar con luteína durante este período de tiempo crítico. Tome uno al día para uso posnatal."
+    ],
+    company: "puritians-pride",
+    content: {
+      text: 6,
+      type: "mg",
+      size: 200,
+      size_type: "capsulas",
+    },
+    categories: ["capsulas"],
+    image: puritians_pride_lutein,
+    price: "",
+    sale_price: "",
+    sale_price_date: "",
+  },
+  "kirkland-super-b-complex": {
+    title: "Super B Complex",
+    desc: [
+      "Kirkland Signature Super-B Complex, 500 tabletas Suministro para 16 meses Suplemento alimenticio"
+    ],
+    description: [
+      "Kirkland Signature Super-B Complex, 500 tabletas Suministro para 16 meses Suplemento alimenticio",
+      "Kirkland Signature uno por día Super-B Complex es una formulación perfectamente equilibrada de vitaminas B para apoyar su metabolismo energético, la función del sistema inmunológico, la salud antioxidante y la salud del sistema nervioso."
+    ],
+    company: "kirkland",
+    content: {
+      text: "",
+      type: "",
+      size: 500,
+      size_type: "tabletas",
+    },
+    categories: ["tabletas"],
+    image: kirkland_super_b_complex,
+    price: "",
+    sale_price: "",
+    sale_price_date: "",
+  },
+  "puritians-pride-omega-3-fish-oil": {
+    title: "Omega 3 Fish Oil",
+    desc: [
+      "A principios de la década de 1970, los investigadores daneses fueron los primeros en generar conciencia sobre los posibles beneficios del aceite de pescado después de publicar su informe sobre la baja incidencia de enfermedades cardiovasculares en la población inuit de Groenlandia a pesar de sus dietas ricas en grasas.4,5 Solo por una corazonada, el Los científicos habían propuesto que una posible explicación eran las \"grandes cantidades de grasas poliinsaturadas\" que se encuentran en los tejidos grasos del pescado y la carne de foca que formaban parte habitual de las comidas de los inuit.4,5"
+    ],
+    description: [
+      "A principios de la década de 1970, los investigadores daneses fueron los primeros en generar conciencia sobre los posibles beneficios del aceite de pescado después de publicar su informe sobre la baja incidencia de enfermedades cardiovasculares en la población inuit de Groenlandia a pesar de sus dietas ricas en grasas.4,5 Solo por una corazonada, el Los científicos habían propuesto que una posible explicación eran las \"grandes cantidades de grasas poliinsaturadas\" que se encuentran en los tejidos grasos del pescado y la carne de foca que formaban parte habitual de las comidas de los inuit.4,5",
+      "Casi medio siglo después, se han publicado más de 36 000 artículos, incluidos más de 4000 ensayos clínicos en humanos, sobre los beneficios de los ácidos grasos omega-3 EPA y DHA. Basado en la gran cantidad de evidencia, el consenso científico es que estos omega-3 de cadena larga tienen un impacto positivo en varios sistemas del cuerpo, incluidos el corazón, el cerebro, la piel y las articulaciones, y los ojos*. Estos beneficios pueden depender de las cantidades de omega-3 EPA y DHA consumidas diariamente."
+    ],
+    company: "puritians-pride",
+    content: {
+      text: 1200,
+      type: "mg",
+      size: 180,
+      size_type: "softgels",
+    },
+    categories: ["softgels"],
+    image: puritians_pride_omega_3_fish_oil,
+    price: "",
+    sale_price: "",
+    sale_price_date: "",
+  },
+  "puritians-pride-gaba-gamma-aminobutyric-acid": {
+    title: "GABA Gamma Aminobutyric Acid",
+    desc: [
+      "Lidiar con el estrés de la vida diaria requiere todas tus facultades, especialmente la salud óptima de tu cerebro y sistema nervioso. El ácido gamma-aminobutírico (GABA) es conocido por su importancia en el funcionamiento del sistema nervioso y por trabajar con los centros del estado de ánimo del cerebro.* GABA 750 mg puede ayudar a apoyar la relajación cuando se enfrenta a un estrés ocasional leve.* GABA es un aminoácido producido naturalmente por el cuerpo que funciona como un neurotransmisor en el sistema nervioso central.* Como neurotransmisor, el papel de GABA es apoyar la función celular."
+    ],
+    description: [
+      "Lidiar con el estrés de la vida diaria requiere todas tus facultades, especialmente la salud óptima de tu cerebro y sistema nervioso. El ácido gamma-aminobutírico (GABA) es conocido por su importancia en el funcionamiento del sistema nervioso y por trabajar con los centros del estado de ánimo del cerebro.* GABA 750 mg puede ayudar a apoyar la relajación cuando se enfrenta a un estrés ocasional leve.* GABA es un aminoácido producido naturalmente por el cuerpo que funciona como un neurotransmisor en el sistema nervioso central.* Como neurotransmisor, el papel de GABA es apoyar la función celular."
+    ],
+    company: "puritians-pride",
+    content: {
+      text: 750,
+      type: "mg",
+      size: 90,
+      size_type: "capsulas",
+    },
+    categories: ["capsulas"],
+    image: puritians_pride_gaba_gamma_aminobutyric_acid,
+    price: "",
+    sale_price: "",
+    sale_price_date: "",
+  },
+  "puritians-pride-zinc": {
+    title: "Zinc",
+    desc: [
+      "La piel crea una barrera física que actúa como la primera línea de defensa del cuerpo. El zinc es un nutriente esencial que apoya la salud y la integridad de la piel. Es una parte necesaria de la enzima colagenasa que participa en la remodelación del colágeno, el marco estructural de la piel.",
+    ],
+    description: [
+      "La piel crea una barrera física que actúa como la primera línea de defensa del cuerpo. El zinc es un nutriente esencial que apoya la salud y la integridad de la piel. Es una parte necesaria de la enzima colagenasa que participa en la remodelación del colágeno, el marco estructural de la piel.",
+      "El zinc también es importante para la estructura de las células de la piel y las mucosas, apoyando la integridad de la barrera más externa del cuerpo, la piel, así como la barrera interna creada por el tracto GI."
+    ],
+    company: "puritians-pride",
+    content: {
+      text: 50,
+      type: "mg",
+      size: 259,
+      size_type: "capsulas",
+    },
+    categories: ["capsulas"],
+    image: puritians_pride_zinc,
+    price: "",
+    sale_price: "",
+    sale_price_date: "",
+  },
+  "puritians-pride-resveratrol": {
+    title: "Resveratrol",
+    desc: [
+      "Resveratrol, 100 mg, es otra parte importante del compromiso de Puritan's Pride para ayudarle a reforzar la salud de su sistema inmunológico durante todo el año."
+    ],
+    description: [
+      "Resveratrol, 100 mg, es otra parte importante del compromiso de Puritan's Pride para ayudarle a reforzar la salud de su sistema inmunológico durante todo el año.",
+      "El resveratrol es un extracto de uva que contiene flavonoides, el ingrediente beneficioso del vino tinto. Tiene propiedades antioxidantes. Ayuda a combatir los efectos nocivos de los radicales libres que dañan las células. Una cápsula blanda de 100 mg contiene más resveratrol que toda una botella de vino tinto."
+    ],
+    company: "puritians-pride",
+    content: {
+      text: 100,
+      type: "mg",
+      size: 10,
+      size_type: "capsulas",
+    },
+    categories: ["capsulas"],
+    image: puritians_pride_resveratrol,
+    price: "",
+    sale_price: "",
+    sale_price_date: "",
+  },
+  "piping-rock-glucosamine-chondroitin": {
+    title: "Glucosamine Chondroitin",
+    desc: [
+      "La glucosamina y la condroitina son compuestos que ocurren naturalmente en el cuerpo y se encuentran en abundancia en nuestras articulaciones. Estos compuestos a menudo se denominan los componentes básicos de las articulaciones."
+    ],
+    description: [
+      "La glucosamina y la condroitina son compuestos que ocurren naturalmente en el cuerpo y se encuentran en abundancia en nuestras articulaciones. Estos compuestos a menudo se denominan los componentes básicos de las articulaciones.",
+      "Aunque nuestro cuerpo produce estos dos compuestos de forma natural, perdemos la capacidad a medida que envejecemos. Un suplemento de glucosamina/condroitina puede ayudar a agregar una dosis concentrada de estos compuestos para respaldar el suministro natural de nuestro cuerpo."
+    ],
+    company: "piping-rock",
+    content: {
+      text: "",
+      type: "",
+      size: 300,
+      size_type: "tabletas",
+    },
+    categories: ["tabletas"],
+    image: piping_rock_glucosamine_chondroitin,
+    price: "",
+    sale_price: "",
+    sale_price_date: "",
+  },
+  "puritians-pride-l-glutathione-reduced": {
+    title: "L-Glutathione (Reducido)",
+    desc: [
+      "El glutatión se puede encontrar en plantas y animales. Es un péptido formado por tres aminoácidos: ácido glutámico, cisteína y glicina. El glutatión es un importante antioxidante soluble en agua que desempeña un papel en el apoyo a los músculos de los radicales libres."
+    ],
+    description: [
+      "El glutatión se puede encontrar en plantas y animales. Es un péptido formado por tres aminoácidos: ácido glutámico, cisteína y glicina. El glutatión es un importante antioxidante soluble en agua que desempeña un papel en el apoyo a los músculos de los radicales libres."
+    ],
+    company: "puritians-pride",
+    content: {
+      text: 500,
+      type: "mg",
+      size: 30,
+      size_type: "capsulas",
+    },
+    categories: ["capsulas"],
+    image: puritians_pride_l_glutathione_reduced,
+    price: "",
+    sale_price: "",
+    sale_price_date: "",
+  },
+  "puritians-pride-diabetic-support-formula": {
+    title: "Diabetic Support Formula",
+    desc: [
+      "Estas tabletas de alta potencia contienen una mezcla sinérgica de picolinato de cromo, ácido alfa lipoico, canela, gimnema y otros nutrientes."
+    ],
+    description: [
+      "Estas tabletas de alta potencia contienen una mezcla sinérgica de picolinato de cromo, ácido alfa lipoico, canela, gimnema y otros nutrientes.",
+      "Apoyo nutricional para personas con diabetes, con Picolinato de Cromo, Biotina y Vitamina D"
+    ],
+    company: "puritians-pride",
+    content: {
+      text: "",
+      type: "",
+      size: 60,
+      size_type: "capsulas",
+    },
+    categories: ["capsulas"],
+    image: puritians_pride_diabetic_support_formula,
+    price: "",
+    sale_price: "",
+    sale_price_date: "",
+  },
+  "puritians-pride-probiotic-acidophilus": {
+    title: "Probiotic AcidoPhilus",
+    desc: [
+      "Acidophilus es un probiótico que se encuentra naturalmente en el tracto digestivo humano sano. Puritan's Pride® Probiotic Acidophilus proporciona 100 millones de Unidades Formadoras de Colonias (CFU) de cultivo vivo de la importante cepa de acidophilus, La-14 para un apoyo específico."
+    ],
+    description: [
+      "Acidophilus es un probiótico que se encuentra naturalmente en el tracto digestivo humano sano. Puritan's Pride® Probiotic Acidophilus proporciona 100 millones de Unidades Formadoras de Colonias (CFU) de cultivo vivo de la importante cepa de acidophilus, La-14 para un apoyo específico.",
+      "Estas tabletas que se toman una vez al día brindan bacterias amigables para los sistemas digestivo e inmunológico.",
+      "Cuando se almacenan continuamente según las indicaciones en el empaque original, la calidad y CFU están garantizadas hasta el vencimiento. Almacenar en un lugar fresco y seco lejos de la luz solar directa."
+    ],
+    company: "puritians-pride",
+    content: {
+      text: "",
+      type: "",
+      size: 250,
+      size_type: "tabletas",
+    },
+    categories: ["tabletas"],
+    image: puritians_pride_probiotic_acidophilus,
+    price: "",
+    sale_price: "",
+    sale_price_date: "",
+  },
+  "kirkland-e-180-mg": {
+    title: "Kirkland E",
+    desc: [
+      "La vitamina E 400 IU de Kirkland Signature brinda respaldo antioxidante, pero eso no es todo. Complementar con vitamina E diariamente puede ayudar a neutralizar los radicales libres en el cuerpo, así como ayudar a mantener el sistema inmunológico y ayudar a mantener un corazón saludable."
+    ],
+    description: [
+      "La vitamina E 400 IU de Kirkland Signature brinda respaldo antioxidante, pero eso no es todo. Complementar con vitamina E diariamente puede ayudar a neutralizar los radicales libres en el cuerpo, así como ayudar a mantener el sistema inmunológico y ayudar a mantener un corazón saludable.",
+      "Otros. También es buena para proteger la artritis reumática, ante las quemaduras de sol, y la degeneración macular."
+    ],
+    company: "puritians-pride",
+    content: {
+      text: 180,
+      type: "mg",
+      size: 500,
+      size_type: "capsulas",
+    },
+    benefits: [
+      "Nos protege frente al envejecimiento. Sus acciones antioxidantes la convierten en una vitamina que nos protege de los radicales libres y con ello mejora la piel y se frena el envejecimiento.",
+      "Mejora la piel y el cabello. Esta propiedad antioxidante además mejora el resultado de nuestra piel, además de actuar sobre el cabello para que crezca más fuerte. Y ello de paso refuerza las uñas.",
+      "Reduce el riesgo de padecer enfermedades cardiovasculares.",
+      "Nos protege el corazón y de desarrollar enfermedades relacionadas con este órgano.",
+      "Reduce el riesgo de padecer trombosis porque impide la coagulación de la sangre.",
+      "Regula los niveles de colesterol. La vitamina E es buena para reducir el colesterol malo. Por lo que está bien comer los alimentos que suelen llevarla.",
+      "Previene la demencia. Otro de los beneficios de la vitamina E es que va bien para retener la memoria y prevenir la demencia. Con ello se mejora el aprendizaje cognitivo.",
+      "Mejora el sistema nervioso. Como vemos, esta vitamina cuenta con gran cantidad de beneficios. En este caso, también es favorable para el buen funcionamiento del sistema nervioso.",
+      "Función cicatrizante. La vitamina es un nutriente que actúa en la cicatrización de las heridas y la vemos como principio activo en diferentes cremas de uso tópico gracias a sus diversas propiedades.",
+    ],
+    categories: ["capsulas"],
+    image: kirkland_e_180_mg,
+    price: "",
+    sale_price: "",
+    sale_price_date: "",
+  },
+  "horbaach-magnesium-glycinate": {
+    title: "Magnesium Glycinate",
+    desc: [
+      "Muchos tipos de suplementos de magnesio están disponibles en el mercado. De todos estos, el óxido de magnesio es el más asequible. Sin embargo, el sistema digestivo no absorbe bien el óxido de magnesio y se usa más comúnmente para aliviar la acidez estomacal o el estreñimiento."
+    ],
+    description: [
+      "Muchos tipos de suplementos de magnesio están disponibles en el mercado. De todos estos, el óxido de magnesio es el más asequible. Sin embargo, el sistema digestivo no absorbe bien el óxido de magnesio y se usa más comúnmente para aliviar la acidez estomacal o el estreñimiento.",
+      "El glicinato de magnesio se forma combinando magnesio elemental con el aminoácido glicina. Esta forma de magnesio es altamente biodisponible, lo que significa que el magnesio se absorbe fácilmente a través del intestino delgado."
+    ],
+    company: "horbaach",
+    content: {
+      text: 1330,
+      type: "mg",
+      size: 250,
+      size_type: "capsulas",
+    },
+    categories: ["capsulas"],
+    image: horbaach_magnesium_glycinate,
+    price: "",
+    sale_price: "",
+    sale_price_date: "",
+  },
+  "horbaach-chelated-copper": {
+    title: "Cobre Quelado",
+    desc: [
+      "El cobre, un mineral esencial, se encuentra en varios alimentos integrales, como verduras, nueces y semillas, y legumbres. Los estudios sugieren que muchas personas no obtienen el valor diario recomendado de este nutriente esencial, que es donde entran los suplementos."
+    ],
+    description: [
+      "El cobre, un mineral esencial, se encuentra en varios alimentos integrales, como verduras, nueces y semillas, y legumbres. Los estudios sugieren que muchas personas no obtienen el valor diario recomendado de este nutriente esencial, que es donde entran los suplementos.",
+      "Horbaach Chelated Copper proporciona 6 mg de cobre (como quelato de aminoácidos) por porción, lo que proporciona la máxima absorción y biodisponibilidad en tabletas vegetarianas. Nuestra fórmula se somete a pruebas de pureza y potencia para garantizar una calidad excepcional, lo que la convierte en la mejor opción para un estilo de vida saludable."
+    ],
+    company: "horbaach",
+    content: {
+      text: 6,
+      type: "mg",
+      size: 300,
+      size_type: "tabletas",
+    },
+    categories: ["tabletas"],
+    image: horbaach_chelated_copper,
+    price: "",
     sale_price: "",
     sale_price_date: "",
   },
