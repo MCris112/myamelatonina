@@ -44,7 +44,8 @@ const Footer = () => {
             <li>
               <a href={ `mailto:${sitevars.email}` } className="block hover:text-accent py-2">{ sitevars.email }</a>
             </li>
-            <li>RUC: {sitevars.ruc}</li>
+            <li>RUC: {sitevars.ruc.number}</li>
+            <li>Rázon Social: {sitevars.ruc.name}</li>
           </ul>
         </div>
       </div>

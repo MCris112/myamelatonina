@@ -74,8 +74,8 @@ const ContactUs = () => {
               <h3 className="font-bold text-3xl sm:text-2xl">
                 Ruc
               </h3>
-              <p>{sitevars.ruc}</p>
-              <p className="text-sm">Lizbeth Barragán Samame</p>
+              <p>{sitevars.ruc.number}</p>
+              <p className="text-sm">{sitevars.ruc.name}</p>
             </div>
           </div>
         </div>

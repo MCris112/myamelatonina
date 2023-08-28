@@ -5,10 +5,13 @@ import aboutImg from "../public/assets/mission.jpg";
 import footerProductBg from '../public/assets/footerproduct-bg.jpg';
 
 export const sitevars = {
-    production: false,
+    production: true,
     url: 'https://myamelatonina.com/',
     url_dev: 'http://localhost:3000/',
-    ruc: '1463922905',
+    ruc: {
+        number: '10463922905',
+        name: 'Lizbeth Barragan samame'
+    },
     logo: logo,
     phone: '+51 902 904 357',
     email: 'ventas@myamelatonina.com',
@@ -83,7 +86,7 @@ export const navLinks = [
 ]
 
 export const homeProducts = [
-    'melatonina-3mg', 
+    'melatonina-3mg-240-tabletas', 
     'melatonina-5mg',
     'melatonina-10mg',
     'natrol-melatonina-sublingual-3mg',

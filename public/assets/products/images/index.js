@@ -24,6 +24,8 @@ import biotin10000mcg from './Biotin-10-000mcg.png';
 import cincoHTPLHydroxyTryptophan from './5-HTP-L-5-Hydroxy-Tryptophan.png';
 import BCOMPLEXyB12 from './B-COMPLEX-y-B-12.png';
 import natrolMelatoninaSublengual3mg from './Natrol-Melatonina-Sublengual-3mg.png';
+import natrolMelatoninaSublengual5mg250Tabletas from './Natrol-Melatonina-Sublengual-5mg-250-tabletas.png';
+
 import natrolMelatoninaSublengual5mg from './Natrol-Melatonina-Sublengual-5mg.png';
 import natrolmelatoninasleep10mg from './natrol-melatonina-sleep-10mg.png';
 import natrolKidsMelatoninagomitas from './Natrol-Kids-Melatonina-gomitas.png';
@@ -114,6 +116,7 @@ export {
     BCOMPLEXyB12,
     natrolMelatoninaSublengual3mg,
     natrolMelatoninaSublengual5mg,
+    natrolMelatoninaSublengual5mg250Tabletas,
     natrolmelatoninasleep10mg,
     natrolKidsMelatoninagomitas,
     natrolmelatonina5mggomitas,
