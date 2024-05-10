@@ -1,6 +1,6 @@
 import melatonina_3mg_240_tb from './melatonina_blue_3mg_240_tabletas.png';
 import melatonina_10mg_120_cp from './melatonina-blue-10mg-120-capsulas.png';
-import boricLife from './Boric-life.png';
+import boricLife from './Boric-Life.png';
 import collagen from './Collagen.png';
 import biotin from './Biotin.png';
 import multivitaminicosKidsPrincesas from './Multivitaminicos-Kids-Princesas.png';
