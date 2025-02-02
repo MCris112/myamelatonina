@@ -24,6 +24,9 @@ const commonEngine = new CommonEngine();
  * ```
  */
 
+app.get('/api/**', (req, res) => {
+   // Handle API request
+});
 /**
  * Serve static files from /browser
  */
