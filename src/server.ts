@@ -4,6 +4,7 @@ import express from 'express';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import bootstrap from './main.server';
+import apiRoutes from './api/api.routes';
 
 const serverDistFolder = dirname(fileURLToPath(import.meta.url));
 const browserDistFolder = resolve(serverDistFolder, '../browser');
@@ -24,9 +25,6 @@ const commonEngine = new CommonEngine();
  * ```
  */
 
-app.get('/api/**', (req, res) => {
-   // Handle API request
-});
 /**
  * Serve static files from /browser
  */

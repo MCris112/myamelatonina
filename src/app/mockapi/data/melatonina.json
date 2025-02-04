@@ -1,14 +1,13 @@
 [
   {
     "id": 1,
-    "name": "Melatonina 1mg",
-    "price": 10.0,
-    "stock": 10
-  },
-  {
-    "id": 2,
-    "name": "Melatonina 3mg",
-    "price": 20.0,
-    "stock": 5
+    "slug": "melatonina",
+    "name": "Melatonina",
+    "introduction": "",
+    "description": "description",
+
+    "image": "/assets/wasa.jpg",
+
+    "variations": []
   }
 ]
