@@ -5,9 +5,7 @@
     "name": "Melatonina",
     "introduction": "",
     "description": "description",
-
-    "image": "/assets/wasa.jpg",
-
+    "brand": "puritians-pride",
     "variations": [
       {
         "mg": 3,
@@ -26,6 +24,98 @@
         "pills": 120,
         "price": 120.99,
         "image": "/assets/images/products/melatonina-blue-10mg-120-capsulas.png"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "slug": "melatonina-natrol",
+    "name": "Melatonina Natrol",
+    "introduction": "",
+    "description": "",
+    "brand": "natrol",
+    "variations": [
+      {
+        "mg": 1,
+        "pills": 90,
+        "price": 120.99,
+        "image": "/assets/images/products/melatonina_blue_3mg.png"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "slug": "melatonina-carlyle",
+    "name": "Melatonina Carlyle",
+    "introduction": "",
+    "description": "",
+    "brand": "carlyle",
+    "variations": [
+      {
+        "mg": 1,
+        "pills": 120,
+        "price": 120.99,
+        "image": "/assets/images/products/melatonina_blue_3mg.png"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "slug": "melatonina-vitamatic",
+    "name": "Melatonina VitaMatic",
+    "introduction": "",
+    "description": "",
+    "brand": "vitamatic",
+    "variations": [
+      {
+        "mg": 3,
+        "pills": 120,
+        "price": 120.99,
+        "image": "/assets/images/products/melatonina_blue_3mg.png"
+      },
+      {
+        "mg": 5,
+        "pills": 120,
+        "price": 120.99,
+        "image": "/assets/images/products/melatonina_blue_3mg.png"
+      },
+      {
+        "mg": 10,
+        "pills": 120,
+        "price": 120.99,
+        "image": "/assets/images/products/melatonina_blue_3mg.png"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "slug": "melatonina-best-naturals",
+    "name": "Melatonina BestNaturals",
+    "introduction": "",
+    "description": "",
+    "brand": "best-naturals",
+    "variations": [
+      {
+        "mg": 12,
+        "pills": 365,
+        "price": 120.99,
+        "image": "/assets/images/products/melatonina_blue_3mg.png"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "slug": "melatonina-bronson",
+    "name": "Melatonina Bronson",
+    "introduction": "",
+    "description": "",
+    "brand": "bronson",
+    "variations": [
+      {
+        "mg": 12,
+        "pills": 360,
+        "price": 120.99,
+        "image": "/assets/images/products/melatonina_blue_3mg.png"
       }
     ]
   }

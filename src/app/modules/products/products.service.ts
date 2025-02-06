@@ -25,9 +25,15 @@ export class ProductService {
     )
   }
 
-  getAsItem(limit: number)
+  getAsItem(limit?: number)
   {
-    const data = this.products().slice(0, limit)
+    let data: Product[] = []
+    if(!this.list)
+    {
+      data = this.products()
+    }else{
+      data = this.products().slice(0, limit)
+    }
 
     let items: ProductItem[] = []
 

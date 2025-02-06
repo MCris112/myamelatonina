@@ -6,8 +6,9 @@ export type Product = {
   introduction: string;
   description: string;
 
-  image: string;
+  // image: string;
 
+  brand: string;
   variations: ProductVariation[]
   // image: string;
 }

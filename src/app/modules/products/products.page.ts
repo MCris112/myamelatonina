@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BreadcumbComponent } from '../../components/breadcumb/breadcumb.component';
 import { ProductItemComponent } from './components/item/product-item.component';
-import { Product } from './product.types';
+import { Product, ProductItem } from './product.types';
 import { ProductService } from './products.service';
 
 @Component({
@@ -14,7 +14,14 @@ import { ProductService } from './products.service';
 })
 export default class ProductsComponent implements OnInit {
 
-  products: Product[] = []
+  columnsToShow = 3
+  columns = [
+    "lg:grid-cols-2",
+    "lg:grid-cols-3",
+    "lg:grid-cols-4",
+  ];
+
+  products: ProductItem[] = []
 
   constructor(
     private _productService: ProductService
@@ -22,8 +29,6 @@ export default class ProductsComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this._productService.list().subscribe( res => {
-      console.log(res)
-    })
+    this.products = this._productService.getAsItem()
   }
 }
