@@ -6,124 +6,20 @@
   >
     <div class="flex animate-marquee play-state">
       <!--  -->
-      <div>
-        <a
-          href="#"
-          class="text-3xl text text-darkdeep2 hover:text-primaryColor dark:text-darkdeep2-dark dark:hover:text-primaryColor font-medium whitespace-nowrap px-4"
-          >Education Center</a
-        >
-      </div>
-      <div>
-        <a
-          href="#"
+      @for (item of marquee; track $index; let even = $even) {
+        @if (even) {
+          <div>
+            <span
+              href="#"
+              class="text-3xl text text-darkdeep2 hover:text-primaryColor dark:text-darkdeep2-dark dark:hover:text-primaryColor font-medium whitespace-nowrap px-4"
+              >{{ item }}</span>
+          </div>
+        }@else {
+          <span
           class="text-3xl text text-primaryColor hover:text-secondaryColor dark:hover:text-secondaryColor font-medium whitespace-nowrap px-4"
-          >Best Collection</a
-        >
-      </div>
-      <div>
-        <a
-          href="#"
-          class="text-3xl text text-darkdeep2 hover:text-primaryColor dark:text-darkdeep2-dark dark:hover:text-primaryColor font-medium whitespace-nowrap px-4"
-          >Online Course</a
-        >
-      </div>
-      <div>
-        <a
-          href="#"
-          class="text-3xl text text-primaryColor hover:text-secondaryColor dark:hover:text-secondaryColor font-medium whitespace-nowrap px-4"
-          >Offline Course</a
-        >
-      </div>
-      <div>
-        <a
-          href="#"
-          class="text-3xl text text-darkdeep2 hover:text-primaryColor dark:text-darkdeep2-dark dark:hover:text-primaryColor font-medium whitespace-nowrap px-4"
-        >
-          Online Course</a
-        >
-      </div>
-      <div>
-        <a
-          href="#"
-          class="text-3xl text text-primaryColor hover:text-secondaryColor dark:hover:text-secondaryColor font-medium whitespace-nowrap px-4"
-        >
-          Hot Deal</a
-        >
-      </div>
-      <div>
-        <a
-          href="#"
-          class="text-3xl text text-darkdeep2 hover:text-primaryColor dark:text-darkdeep2-dark dark:hover:text-primaryColor font-medium whitespace-nowrap px-4"
-          >Book Libary</a
-        >
-      </div>
-      <div>
-        <a
-          href="#"
-          class="text-3xl text text-primaryColor hover:text-secondaryColor dark:hover:text-secondaryColor font-medium whitespace-nowrap px-4"
-          >Hot Deal</a
-        >
-      </div>
-      <div>
-        <a
-          href="#"
-          class="text-3xl text text-darkdeep2 hover:text-primaryColor dark:text-darkdeep2-dark dark:hover:text-primaryColor font-medium whitespace-nowrap px-4"
-        >
-          University Area</a
-        >
-      </div>
-      <div>
-        <a
-          href="#"
-          class="text-3xl text text-primaryColor hover:text-secondaryColor dark:hover:text-secondaryColor font-medium whitespace-nowrap px-4"
-        >
-          Teacher Development</a
-        >
-      </div>
-      <div>
-        <a
-          href="#"
-          class="text-3xl text text-darkdeep2 hover:text-primaryColor dark:text-darkdeep2-dark dark:hover:text-primaryColor font-medium whitespace-nowrap px-4"
-        >
-          Student</a
-        >
-      </div>
-      <div>
-        <a
-          href="#"
-          class="text-3xl text text-primaryColor hover:text-secondaryColor dark:hover:text-secondaryColor font-medium whitespace-nowrap px-4"
-        >
-          New Arrival</a
-        >
-      </div>
-      <div>
-        <a
-          href="#"
-          class="text-3xl text text-darkdeep2 hover:text-primaryColor dark:text-darkdeep2-dark dark:hover:text-primaryColor font-medium whitespace-nowrap px-4"
-          >Best Collection</a
-        >
-      </div>
-      <div>
-        <a
-          href="#"
-          class="text-3xl text text-primaryColor hover:text-secondaryColor dark:hover:text-secondaryColor font-medium whitespace-nowrap px-4"
-          >Hot Deal</a
-        >
-      </div>
-      <div>
-        <a
-          href="#"
-          class="text-3xl text text-darkdeep2 hover:text-primaryColor dark:text-darkdeep2-dark dark:hover:text-primaryColor font-medium whitespace-nowrap px-4"
-          >Book Libary</a
-        >
-      </div>
-      <div>
-        <a
-          href="#"
-          class="text-3xl text text-primaryColor hover:text-secondaryColor dark:hover:text-secondaryColor font-medium whitespace-nowrap px-4"
-          >Hot Deal</a
-        >
-      </div>
+          >{{ item }}</span>
+        }
+      }
     </div>
   </div>
 </div>
