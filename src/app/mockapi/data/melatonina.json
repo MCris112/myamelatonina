@@ -8,6 +8,25 @@
 
     "image": "/assets/wasa.jpg",
 
-    "variations": []
+    "variations": [
+      {
+        "mg": 3,
+        "pills": 120,
+        "price": 120.99,
+        "image": "/assets/images/products/melatonina_blue_3mg.png"
+      },
+      {
+        "mg": 3,
+        "pills": 240,
+        "price": 120.99,
+        "image": "/assets/images/products/melatonina_blue_3mg_240_tabletas.png"
+      },
+      {
+        "mg": 10,
+        "pills": 120,
+        "price": 120.99,
+        "image": "/assets/images/products/melatonina-blue-10mg-120-capsulas.png"
+      }
+    ]
   }
 ]

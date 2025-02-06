@@ -2,298 +2,538 @@
 <section>
   <!-- banner section -->
   <div
-    class="hero bg-lightGrey11 dark:bg-lightGrey11-dark relative z-0 overflow-hidden py-50px md:py-100px lg:pt-100px lg:pb-150px 2xl:pt-70px 2xl:pb-30 4xl:pt-155px 4xl:pb-250px"
-  >
+    class="hero bg-lightGrey11 dark:bg-lightGrey11-dark relative z-0 overflow-hidden py-50px md:py-100px lg:pt-100px lg:pb-150px 2xl:pt-70px 2xl:pb-30 4xl:pt-155px 4xl:pb-250px">
     <!-- animated icons -->
     <div>
       <img
         class="absolute left-10 bottom-[233px] md:left-[248px] md:bottom-[143px] lg:left-10 lg:bottom-[112px] 3xl:bottom-[233px] animate-move-var opacity-35 z-10"
         src="./assets/images/herobanner/herobanner__1.png"
-        alt=""
-      ><img
+        alt /><img
         class="absolute left-0 top-0 md:left-[50px] md:top-[110px] lg:left-[30px] lg:top-[75px] 2xl:left-[50px] 2xl:top-16 3xl:top-[110px] animate-spin-slow"
         src="./assets/images/herobanner/herobanner__2.png"
-        alt=""
-      ><img
+        alt /><img
         class="absolute md:left-[210px] md:top-[50px] animate-move-var2 hidden md:block"
         src="./assets/images/herobanner/herobanner__3.png"
-        alt=""
-      >
+        alt />
       <img
         class="absolute top-20 left-[872px] md:left-[872px] lg:left-[595px] 2xl:left-[872px] hidden md:block animate-move-hor"
         src="./assets/images/herobanner/herobanner__4.png"
-        alt=""
-      >
+        alt />
       <img
         class="absolute top-0 right-0 md:right-[110px] md:top-[100px] lg:right-[13px] lg:top[90px] 2xl:right-[82px] 2xl:top-[100px] 3xl:right-[110px] animate-move-hor"
         src="./assets/images/herobanner/herobanner__5.png"
-        alt=""
-      >
+        alt />
     </div>
 
     <!-- Swiper -->
-    <div class="swiper ecommerce-slider">
-      <div class="swiper-wrapper">
-        <!-- Hero  1 -->
-        <div class="swiper-slide px-15px">
-          <div
-            class="container 2xl:container-secondary-md relative overflow-hidden"
-          >
+    <swiper-container class="ecommerce-slider" slidesPerView="1"
+      [grabCursor]="true" autoplay="true" loop="true">
+      @for (slider of sliders; track $index) {
+      <swiper-slide class="swiper-slide px-15px">
+        <div
+          class="container 2xl:container-secondary-md relative overflow-hidden">
+          <div class="grid grid-cols-1 md:grid-cols-12 items-center gap-30px">
+            <!-- banner Left -->
             <div
-              class="grid grid-cols-1 md:grid-cols-12 items-center gap-30px"
-            >
-              <!-- banner Left -->
-              <div
-                data-aos="fade-up"
-                class="md:col-start-1 md:col-span-12 lg:col-start-1 lg:col-span-7"
-              >
-                <div class="3xl:pr-135px">
-                  <h3
-                    class="uppercase text-secondaryColor text-size-15 mb-5px md:mb-15px font-inter tracking-[4px] font-semibold"
-                  >
-                    EDUCATION SOLUTION
-                  </h3>
-                  <h1
-                    class="text-size-35 md:text-size-65 lg:text-5xl 2xl:text-size-65 leading-42px md:leading-18 lg:leading-15 2xl:leading-18 text-blackColor dark:text-blackColor-dark md:tracking-half lg:tracking-normal 2xl:tracking-half font-bold mb-15px"
-                  >
-                    School Bag
-                    <span class="text-secondaryColor">Ninbn</span>
-                  </h1>
-                  <p
-                    class="text-size-15md:text-lg text-blackColor dark:text-blackColor-dark font-medium"
-                  >
-                    Lorem Ipsum is simply dummy text of the printing
-                    typesetting <br >
-                    industry. Lorem Ipsum has been
-                  </p>
-                  <p
-                    class="text-3xl md:text-size-40 font-bold text-primaryColor mt-30px mb-10 flex items-center justify-start"
-                  >
-                    $32.00
-                    <del
-                      class="text-3xl text-lightGrey4 dark:lightGrey-4-dark font-normal ml-10px"
-                    >
-                      $67.00</del
-                    >
-                    <span
-                      class="text-xs text-whiteColor bg-secondaryColor px-10px py-1 rounded ml-15px"
-                      >30% Off</span
-                    >
-                  </p>
-                  <div>
-                    <a
-                      href="#"
-                      class="text-sm md:text-size-15 text-whiteColor bg-primaryColor border border-primaryColor px-25px py-15px hover:text-primaryColor hover:bg-whiteColor rounded inline-block mr-6px md:mr-30px dark:hover:bg-whiteColor-dark dark:hover:text-whiteColor"
-                    >
-                      Buy Now
-                    </a>
-                    <a
-                      href="#"
-                      class="text-sm md:text-size-15 text-whiteColor bg-secondaryColor border border-secondaryColor px-25px py-15px hover:text-secondaryColor hover:bg-whiteColor rounded inline-block dark:hover:bg-whiteColor-dark dark:hover:text-secondaryColor"
-                    >
-                      Explore More
-                    </a>
-                  </div>
+              data-aos="fade-up"
+              class="md:col-start-1 md:col-span-12 lg:col-start-1 lg:col-span-7">
+              <div class="3xl:pr-135px">
+                <h3
+                  class="uppercase text-secondaryColor text-size-15 mb-5px md:mb-15px font-inter tracking-[4px] font-semibold">
+                  {{ slider.subtitle }}
+                </h3>
+                <h1
+                  [innerHTML]="slider.title | textParser"
+                  class="text-size-35 md:text-size-65 lg:text-5xl 2xl:text-size-65 leading-42px md:leading-18 lg:leading-15 2xl:leading-18 text-blackColor dark:text-blackColor-dark md:tracking-half lg:tracking-normal 2xl:tracking-half font-bold mb-15px">
+                </h1>
+                <p
+                  [innerHTML]="slider.description | textParser"
+                  class="text-size-15md:text-lg text-blackColor dark:text-blackColor-dark font-medium">
+                </p>
+                @if (slider.price) {
+                <p
+                  class="text-3xl md:text-size-40 font-bold text-primaryColor mt-30px mb-10 flex items-center justify-start">
+                  $32.00
+                  <del
+                    class="text-3xl text-lightGrey4 dark:lightGrey-4-dark font-normal ml-10px">
+                    $67.00</del>
+                  <span
+                    class="text-xs text-whiteColor bg-secondaryColor px-10px py-1 rounded ml-15px">30%
+                    Off</span>
+                </p>
+                }
+                <div>
+                  @for (btn of slider.buttons; track $index) {
+                  @if (btn.color == "primary") {
+                  <a
+                    [routerLink]="btn.route"
+                    class="text-sm md:text-size-15 text-whiteColor bg-primaryColor border border-primaryColor px-25px py-15px hover:text-primaryColor hover:bg-whiteColor rounded inline-block mr-6px md:mr-30px dark:hover:bg-whiteColor-dark dark:hover:text-whiteColor">
+                    {{ btn.label }}
+                  </a>
+                  }
+
+                  @if (btn.color == "secondary") {
+                  <a [routerLink]="btn.route"
+                    class="text-sm md:text-size-15 text-whiteColor bg-secondaryColor border border-secondaryColor px-25px py-15px hover:text-secondaryColor hover:bg-whiteColor rounded inline-block dark:hover:bg-whiteColor-dark dark:hover:text-secondaryColor">
+                    {{ btn.label }}
+                  </a>
+                  }
+                  }
+
                 </div>
               </div>
-              <!-- banner right -->
-              <div
-                data-aos="fade-up"
-                class="md:col-start-1 md:col-span-8 lg:col-start-8 lg:col-span-5"
-              >
-                <div class="tilt">
-                  <img
-                    class="w-full"
-                    src="./assets/images/herobanner/herobanner__slider.png"
-                    alt=""
-                  >
-                </div>
+            </div>
+            <!-- banner right -->
+            <div
+              data-aos="fade-up"
+              class="md:col-start-1 md:col-span-8 lg:col-start-8 lg:col-span-5">
+              <div class="tilt">
+                <img
+                  class="w-full"
+                  src="/assets/images/products/melatonina_blue_3mg.png"
+                  alt />
               </div>
             </div>
           </div>
         </div>
-        <!-- Hero  2 -->
-        <div class="swiper-slide px-15px">
-          <div
-            class="container 2xl:container-secondary-md relative overflow-hidden"
-          >
-            <div
-              class="grid grid-cols-1 md:grid-cols-12 items-center gap-30px"
-            >
-              <!-- banner Left -->
-              <div
-                data-aos="fade-up"
-                class="md:col-start-1 md:col-span-12 lg:col-start-1 lg:col-span-7"
-              >
-                <div class="3xl:pr-135px text-center">
-                  <h3
-                    class="uppercase text-secondaryColor text-size-15 mb-5px md:mb-15px font-inter tracking-[4px] font-semibold"
-                  >
-                    Coror Solution
-                  </h3>
-                  <h1
-                    class="text-size-35 md:text-size-65 lg:text-5xl 2xl:text-size-65 leading-42px md:leading-18 lg:leading-15 2xl:leading-18 text-blackColor dark:text-blackColor-dark md:tracking-half lg:tracking-normal 2xl:tracking-half font-bold mb-15px"
-                  >
-                    Best Colorful
-                    <span class="text-secondaryColor">Career</span>
-                  </h1>
-                  <p
-                    class="text-size-15md:text-lg text-blackColor dark:text-blackColor-dark font-medium"
-                  >
-                    Lorem Ipsum is simply dummy text of the printing
-                    typesetting <br >
-                    industry. Lorem Ipsum has been
-                  </p>
-                  <p
-                    class="text-3xl md:text-size-40 font-bold text-primaryColor mt-30px mb-10 flex items-center justify-center"
-                  >
-                    $32.00
-                    <del
-                      class="text-3xl text-lightGrey4 dark:lightGrey-4-dark font-normal ml-10px"
-                    >
-                      $67.00</del
-                    >
-                    <span
-                      class="text-xs text-whiteColor bg-secondaryColor px-10px py-1 rounded ml-15px"
-                      >30% Off</span
-                    >
-                  </p>
-                  <div>
-                    <a
-                      href="#"
-                      class="text-sm md:text-size-15 text-whiteColor bg-primaryColor border border-primaryColor px-25px py-15px hover:text-primaryColor hover:bg-whiteColor rounded inline-block mr-6px md:mr-30px dark:hover:bg-whiteColor-dark dark:hover:text-whiteColor"
-                    >
-                      Buy Now
-                    </a>
-                    <a
-                      href="#"
-                      class="text-sm md:text-size-15 text-whiteColor bg-secondaryColor border border-secondaryColor px-25px py-15px hover:text-secondaryColor hover:bg-whiteColor rounded inline-block dark:hover:bg-whiteColor-dark dark:hover:text-secondaryColor"
-                    >
-                      Explore More
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <!-- banner right -->
-              <div
-                data-aos="fade-up"
-                class="md:col-start-1 md:col-span-8 lg:col-start-8 lg:col-span-5"
-              >
-                <div class="tilt">
-                  <img
-                    class="w-full"
-                    src="./assets/images/herobanner/herobanner__slider__2.png"
-                    alt=""
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Hero  3 -->
-        <div class="swiper-slide px-15px">
-          <div
-            class="container 2xl:container-secondary-md relative overflow-hidden"
-          >
-            <div
-              class="grid grid-cols-1 md:grid-cols-12 items-center gap-30px"
-            >
-              <!-- banner Left -->
-              <div
-                data-aos="fade-up"
-                class="md:col-start-1 md:col-span-12 lg:col-start-1 lg:col-span-7"
-              >
-                <div class="3xl:pr-135px text-end">
-                  <h3
-                    class="uppercase text-secondaryColor text-size-15 mb-5px md:mb-15px font-inter tracking-[4px] font-semibold"
-                  >
-                    Minimal Solution
-                  </h3>
-                  <h1
-                    class="text-size-35 md:text-size-65 lg:text-5xl 2xl:text-size-65 leading-42px md:leading-18 lg:leading-15 2xl:leading-18 text-blackColor dark:text-blackColor-dark md:tracking-half lg:tracking-normal 2xl:tracking-half font-bold mb-15px"
-                  >
-                    Reading Table
-                    <span class="text-secondaryColor">Lamp</span>
-                  </h1>
-                  <p
-                    class="text-size-15md:text-lg text-blackColor dark:text-blackColor-dark font-medium"
-                  >
-                    Lorem Ipsum is simply dummy text of the printing
-                    typesetting <br >
-                    industry. Lorem Ipsum has been
-                  </p>
-                  <p
-                    class="text-3xl md:text-size-40 font-bold text-primaryColor mt-30px mb-10 flex items-center justify-end"
-                  >
-                    $32.00
-                    <del
-                      class="text-3xl text-lightGrey4 dark:lightGrey-4-dark font-normal ml-10px"
-                    >
-                      $67.00</del
-                    >
-                    <span
-                      class="text-xs text-whiteColor bg-secondaryColor px-10px py-1 rounded ml-15px"
-                      >30% Off</span
-                    >
-                  </p>
-                  <div>
-                    <a
-                      href="#"
-                      class="text-sm md:text-size-15 text-whiteColor bg-primaryColor border border-primaryColor px-25px py-15px hover:text-primaryColor hover:bg-whiteColor rounded inline-block mr-6px md:mr-30px dark:hover:bg-whiteColor-dark dark:hover:text-whiteColor"
-                    >
-                      Buy Now
-                    </a>
-                    <a
-                      href="#"
-                      class="text-sm md:text-size-15 text-whiteColor bg-secondaryColor border border-secondaryColor px-25px py-15px hover:text-secondaryColor hover:bg-whiteColor rounded inline-block dark:hover:bg-whiteColor-dark dark:hover:text-secondaryColor"
-                    >
-                      Explore More
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <!-- banner right -->
-              <div
-                data-aos="fade-up"
-                class="md:col-start-1 md:col-span-8 lg:col-start-8 lg:col-span-5"
-              >
-                <div class="tilt">
-                  <img
-                    class="w-full"
-                    src="./assets/images/herobanner/herobanner__slider__3.png"
-                    alt=""
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-    </div>
+      </swiper-slide>
+      }
+    </swiper-container>
     <div
-      class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"
-    >
+      class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal">
       <span
         class="swiper-pagination-bullet"
         tabindex="0"
         role="button"
-        aria-label="Go to slide 1"
-      ></span
-      ><span
+        aria-label="Go to slide 1"></span><span
         class="swiper-pagination-bullet swiper-pagination-bullet-active"
         tabindex="0"
         role="button"
         aria-label="Go to slide 2"
-        aria-current="true"
-      ></span
-      ><span
+        aria-current="true"></span><span
         class="swiper-pagination-bullet"
         tabindex="0"
         role="button"
-        aria-label="Go to slide 3"
-      ></span>
+        aria-label="Go to slide 3"></span>
     </div>
   </div>
 </section>
+
+<!--  brand section -->
+<brand-section />
+
+<section>
+  <div class="pt-30px pb-70px">
+    <div class="container-fluid-2">
+      <!-- heading -->
+      <div data-aos="fade-up">
+        <h3
+          class="text-3xl md:text-[35px] lg:text-size-42 leading-[45px] 2xl:leading-[45px] md:leading-[50px] font-bold mb-5 md:mb-10 text-blackColor dark:text-blackColor-dark"
+          data-aos="fade-up">
+          Suplementos para Dormir
+        </h3>
+      </div>
+
+      <!-- featured cards -->
+
+      <div data-aos="fade-up" class="modal-container sm:-mx-15px">
+        <!-- Swiper -->
+        <swiper-container class="swiper featured-courses" slides-per-view="3"
+          space-between="10" watch-slides-progress="true" free-mode="true">
+          @for (product of products; track product.id) {
+          <swiper-slide class="swiper-slide group">
+            <product-item [data]="product" />
+          </swiper-slide>
+          }
+        </swiper-container>
+
+        <!-- modal content -->
+        <div
+          class="modal hidden fixed top-0 left-0 w-full h-full z-xxsmall transition-all duration-500 bg-lightBlack opacity-0 overflow-y-auto">
+          <div
+            class="modal-close fixed md:absolute top-0 left-0 w-full h-full z-xsmall"></div>
+
+          <div
+            class="modal-content transition-all duration-500 -translate-y-20 bg-whiteColor dark:bg-whiteColor-dark p-15px max-w-250 mx-15px md:mx-auto mb-50px mt-110px md:my-150px relative z-small rounded-lg">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-30px">
+              <!-- delails left -->
+              <div class="relative">
+                <div class="md:sticky md:top-[100px]">
+                  <!-- Swiper -->
+                  <div class="swiper product-details">
+                    <div class="swiper-wrapper">
+                      <!-- product 1 -->
+                      <div class="swiper-slide">
+                        <div
+                          class="border border-borderColor dark:border-borderColor-dark">
+                          <img
+                            src="./assets/images/products/1.jpg"
+                            alt
+                            class="w-full">
+                        </div>
+                      </div>
+                      <!-- product 2 -->
+                      <div class="swiper-slide">
+                        <div
+                          class="border border-borderColor dark:border-borderColor-dark">
+                          <img
+                            src="./assets/images/products/2.jpg"
+                            alt
+                            class="w-full">
+                        </div>
+                      </div>
+                      <!-- product 3 -->
+                      <div class="swiper-slide">
+                        <div
+                          class="border border-borderColor dark:border-borderColor-dark">
+                          <img
+                            src="./assets/images/products/3.jpg"
+                            alt
+                            class="w-full">
+                        </div>
+                      </div>
+                      <!-- product 4 -->
+                      <div class="swiper-slide">
+                        <div
+                          class="border border-borderColor dark:border-borderColor-dark">
+                          <img
+                            src="./assets/images/products/4.jpg"
+                            alt
+                            class="w-full">
+                        </div>
+                      </div>
+                      <!-- product 5 -->
+                      <div class="swiper-slide">
+                        <div
+                          class="border border-borderColor dark:border-borderColor-dark">
+                          <img
+                            src="./assets/images/products/5.jpg"
+                            alt
+                            class="w-full">
+                        </div>
+                      </div>
+                      <!-- product 6 -->
+                      <div class="swiper-slide">
+                        <div
+                          class="border border-borderColor dark:border-borderColor-dark">
+                          <img
+                            src="./assets/images/products/6.jpg"
+                            alt
+                            class="w-full">
+                        </div>
+                      </div>
+                      <!-- product 7 -->
+                      <div class="swiper-slide">
+                        <div
+                          class="border border-borderColor dark:border-borderColor-dark">
+                          <img
+                            src="./assets/images/products/7.jpg"
+                            alt
+                            class="w-full">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="swiper swiper product-details-thumb pt-10px">
+                    <div class="swiper-wrapper">
+                      <div
+                        class="swiper-slide cursor-pointer border border-borderColor dark:border-borderColor-dark">
+                        <img
+                          class="w-full"
+                          loading="lazy"
+                          src="./assets/images/products/1.jpg"
+                          alt>
+                      </div>
+                      <div
+                        class="swiper-slide cursor-pointer border border-borderColor dark:border-borderColor-dark">
+                        <img
+                          class="w-full"
+                          loading="lazy"
+                          src="./assets/images/products/2.jpg"
+                          alt>
+                      </div>
+                      <div
+                        class="swiper-slide cursor-pointer border border-borderColor dark:border-borderColor-dark">
+                        <img
+                          class="w-full"
+                          loading="lazy"
+                          src="./assets/images/products/3.jpg"
+                          alt>
+                      </div>
+                      <div
+                        class="swiper-slide cursor-pointer border border-borderColor dark:border-borderColor-dark">
+                        <img
+                          class="w-full"
+                          loading="lazy"
+                          src="./assets/images/products/4.jpg"
+                          alt>
+                      </div>
+                      <div
+                        class="swiper-slide cursor-pointer border border-borderColor dark:border-borderColor-dark">
+                        <img
+                          class="w-full"
+                          loading="lazy"
+                          src="./assets/images/products/5.jpg"
+                          alt>
+                      </div>
+                      <div
+                        class="swiper-slide cursor-pointer border border-borderColor dark:border-borderColor-dark">
+                        <img
+                          class="w-full"
+                          loading="lazy"
+                          src="./assets/images/products/6.jpg"
+                          alt>
+                      </div>
+                      <div
+                        class="swiper-slide cursor-pointer border border-borderColor dark:border-borderColor-dark">
+                        <img
+                          class="w-full"
+                          loading="lazy"
+                          src="./assets/images/products/7.jpg"
+                          alt>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- details right -->
+              <div>
+                <div class="text-balckColor dark:text-blackColor-dark">
+                  <!-- title -->
+
+                  <div class="mb-15px mt-1">
+                    <p
+                      class="text-lg leading-1.2 text-blackColor dark:text-blackColor-dark">
+                      Book
+                    </p>
+                  </div>
+                  <h4
+                    class="text-size-21 md:text-size-26 lg:text-4xl font-bold mb-5">
+                    <a
+                      href="./pages/ecommerce/product-details.html"
+                      class="leading-1.2 text-contentColor dark:text-contentColor2-dark hover:text-primaryColor dark:hover:text-primaryColor">Book
+                      stand about Software</a>
+                  </h4>
+                  <!-- price -->
+                  <div class="flex items-center mb-5">
+                    <p
+                      class="text-lg leading-1.8 text-blackColor dark:text-blackColor-dark mr-6px">
+                      <del>$110.00 </del>
+                    </p>
+                    <p
+                      class="text-lg leading-1.8 text-blackColor dark:text-blackColor-dark mr-6px">
+                      $80.00
+                    </p>
+                    <p
+                      class="text-size-15 leading-1.8 text-whiteColor mr-6px px-10px bg-primaryColor rounded">
+                      SALE
+                    </p>
+                    <p
+                      class="text-size-15 leading-1.8 text-whiteColor dark:text-whiteColor-dark mr-6px px-10px bg-blackColor dark:bg-blackColor-dark rounded">
+                      -27%
+                    </p>
+                  </div>
+
+                  <!-- sizes -->
+                  <div>
+                    <p class="leading-1.8 mt-5 mb-7px">Size: X</p>
+                    <div class="flex items-center gap-x-5px text-center">
+                      <div>
+                        <button
+                          class="hover:bg-blackColor dark:hover:bg-blackColor-dark hover:text-whiteColor dark:hover:text-whiteColor-dark border border-borderColor dark:border-borderColor-dark w-10 h-10 leading-10 rounded">
+                          x
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          class="hover:bg-blackColor dark:hover:bg-blackColor-dark hover:text-whiteColor dark:hover:text-whiteColor-dark border border-borderColor dark:border-borderColor-dark w-10 h-10 leading-10 rounded">
+                          xl
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          class="hover:bg-blackColor dark:hover:bg-blackColor-dark hover:text-whiteColor dark:hover:text-whiteColor-dark border border-borderColor dark:border-borderColor-dark w-10 h-10 leading-10 rounded">
+                          m
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          class="hover:bg-blackColor dark:hover:bg-blackColor-dark hover:text-whiteColor dark:hover:text-whiteColor-dark border border-borderColor dark:border-borderColor-dark w-10 h-10 leading-10 rounded">
+                          s
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- colors -->
+                  <div>
+                    <p class="leading-1.8 mt-5 mb-7px">Color: violet</p>
+                    <div class="flex items-center gap-x-10px">
+                      <div
+                        class="cursor-pointer border border-borderColor dark:border-borderColor-dark max-w-9 md:max-w-10 lg:max-w-15">
+                        <img
+                          class="w-full"
+                          loading="lazy"
+                          src="./assets/images/products/1.jpg"
+                          alt>
+                      </div>
+                      <div
+                        class="cursor-pointer border border-borderColor dark:border-borderColor-dark max-w-9 md:max-w-10 lg:max-w-15">
+                        <img
+                          class="w-full"
+                          loading="lazy"
+                          src="./assets/images/products/2.jpg"
+                          alt>
+                      </div>
+                      <div
+                        class="cursor-pointer border border-borderColor dark:border-borderColor-dark max-w-9 md:max-w-10 lg:max-w-15">
+                        <img
+                          class="w-full"
+                          loading="lazy"
+                          src="./assets/images/products/3.jpg"
+                          alt>
+                      </div>
+                      <div
+                        class="swiper-slide cursor-pointer border border-borderColor dark:border-borderColor-dark max-w-9 md:max-w-10 lg:max-w-15">
+                        <img
+                          class="w-full"
+                          loading="lazy"
+                          src="./assets/images/products/4.jpg"
+                          alt>
+                      </div>
+                      <div
+                        class="swiper-slide cursor-pointer border border-borderColor dark:border-borderColor-dark max-w-9 md:max-w-10 lg:max-w-15">
+                        <img
+                          class="w-full"
+                          loading="lazy"
+                          src="./assets/images/products/5.jpg"
+                          alt>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- quantity -->
+                  <div class="mb-30px">
+                    <p class="leading-1.8 mt-5 mb-7px">Quantity</p>
+                    <div
+                      class="flex items-center gap-x-10px md:gap-x-5px lg:gap-x-10px 2xl:gap-x-5">
+                      <div
+                        class="count-container max-w-150px h-55px leading-55px border-2 border-borderColor2 dark:border-borderColor2-dark rounded-full relative overflow-hidden">
+                        <input
+                          type="number"
+                          value="1"
+                          class="w-full rounded-full focus:outline-none bg-transparent text-center">
+                        <div>
+                          <button
+                            class="mincount absolute left-[10px] top-1/2 -translate-y-1/2 text-blackColor dark:text-blackColor-dark p-x-10px leading-1.8 w-5 inline-block opacity-50">
+                            -</button><button
+                            class="maxcount absolute top-1/2 -translate-y-1/2 right-[10px] text-blackColor dark:text-blackColor-dark p-x-10px leading-1.8 w-5 inline-block">
+                            +
+                          </button>
+                        </div>
+                      </div>
+
+                      <div
+                        class="border-2 border-blackColor dark:border-blackColor-dark rounded-full">
+                        <button
+                          class="px-37px py-10px hover:text-primaryColor leading-1.8">
+                          Add to cart
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- action button -->
+                  <div>
+                    <button
+                      class="text-whiteColor dark:text-whiteColor-dark dark:hover:text-whiteColor leading-1.8 px-60px md:px-90px lg:px-110px py-3 md:py-15px bg-blackColor dark:bg-blackColor-dark hover:bg-primaryColor dark:hover:bg-primaryColor rounded-full">
+                      By it now
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- close button -->
+            <div class="absolute top-4 right-3 z-xxl">
+              <button
+                class="modal-close group dark:bg-whiteColor rounded focus:shadow-select opacity-50 hover:opacity-75 p-1 inline-block">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 16 16"
+                  class="w-4 h-4 fill-blackColor"
+                  fill="#000">
+                  <path
+                    d="M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- about  section -->
+<section>
+  <div class="container">
+    <!-- about section  -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-30px pb-30px">
+      <!-- about left -->
+      <div data-aos="fade-up">
+        <span
+          class="text-size-15 font-semibold text-secondaryColor inline-block uppercase mb-[13px] mt-30px lg:mt-0">
+          Sobre Nosotros
+        </span>
+        <h3
+          class="text-3xl md:text-size-35 lg:text-size-42 2xl:text-size-47 leading-10 md:leading-2xl font-bold text-blackColor dark:text-blackColor-dark mb-3">
+          Empresa Líder en Suplementos para Dormir
+        </h3>
+        <p
+          class="text-sm md:text-base leading-7 text-contentColor dark:text-contentColor-dark mb-6 pl-3 border-l-2 border-primaryColor">
+          Somos una empresa dedicada a la importación de melatonina americana,
+          comprometida a mejorar tu salud y calidad de sueño aprovechando los
+          beneficios de los mejores suplementos para dormir
+        </p>
+        <ul class="space-y-5">
+          <li class="flex items-center group">
+            <i
+              class="icofont-check px-2 py-2 text-primaryColor bg-whitegrey3 bg-opacity-40 group-hover:bg-primaryColor group-hover:text-white group-hover:opacity-100 mr-15px dark:bg-whitegrey1-dark"></i>
+            <p
+              class="text-sm md:text-base font-medium text-blackColor dark:text-blackColor-dark">
+              Calidad Garantizada
+            </p>
+          </li>
+          <li class="flex items-center group">
+            <i
+              class="icofont-check px-2 py-2 text-primaryColor bg-whitegrey3 bg-opacity-40 group-hover:bg-primaryColor group-hover:text-white group-hover:opacity-100 mr-15px dark:bg-whitegrey1-dark"></i>
+            <p
+              class="text-sm md:text-base font-medium text-blackColor dark:text-blackColor-dark">
+              Servicio Integral
+            </p>
+          </li>
+          <li class="flex items-center group">
+            <i
+              class="icofont-check px-2 py-2 text-primaryColor bg-whitegrey3 bg-opacity-40 group-hover:bg-primaryColor group-hover:text-white group-hover:opacity-100 mr-15px dark:bg-whitegrey1-dark"></i>
+            <p
+              class="text-sm md:text-base font-medium text-blackColor dark:text-blackColor-dark">
+              Confianza y Cercanía
+            </p>
+          </li>
+        </ul>
+      </div>
+      <!-- about right -->
+      <div class="overflow-visible" data-aos="fade-up">
+        <div class="tilt">
+          <img
+            src="./assets/images/about/about_online_store.png"
+            alt
+            class="w-full">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<features-section />
+
+<section-testimonial />

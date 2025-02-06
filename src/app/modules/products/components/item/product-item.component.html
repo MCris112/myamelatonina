@@ -10,7 +10,7 @@
           class="w-full overflow-hidden"
         >
           <img
-            src="../../assets/images/products/1.jpg"
+            [src]="product.image"
             alt
             class="w-full transition-all duration-300 group-hover:scale-110"
           />
@@ -129,15 +129,15 @@
           href="product-details.html"
           class="text-xl md:text-size-22 font-medium text-blackColor mb-10px mt-5 font-hind dark:text-blackColor-dark hover:text-primaryColor dark:hover:text-primaryColor"
         >
-          Book stand about Software
+          {{ product.name }}
         </a>
         <!-- price -->
         <div
           class="text-2xl font-semibold text-primaryColor font-inter mb-4"
         >
-          $32.00
+          {{ product.price | currency }}
           <del class="text-base text-lightGrey4 font-semibold"
-            >/ $67.00</del
+            >/ {{ (product.price + 60) | currency }}</del
           >
         </div>
         <!--  rating-->

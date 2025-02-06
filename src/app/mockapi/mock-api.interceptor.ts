@@ -9,9 +9,7 @@ export const mockApiInterceptor: HttpInterceptorFn = (req, next) => {
     const router = new MockApi();
 
     router.get("products", () => {
-      return {
-        data: productsData
-      }
+      return productsData
     });
 
     return of( router.response(req) );

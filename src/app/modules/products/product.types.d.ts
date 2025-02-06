@@ -16,7 +16,18 @@ export type ProductVariation = {
   mg: number;
   pills: number;
 
-  name: string;
   price: number;
   image: string;
+}
+
+export type ProductItem = {
+  id: string;
+  slug: string;
+  name: string;
+  introduction: string;
+  image: string;
+
+  mg: number;
+  pills: number;
+  price: number;
 }

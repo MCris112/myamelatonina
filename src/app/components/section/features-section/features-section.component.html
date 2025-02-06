@@ -1,0 +1,27 @@
+<section>
+  <div class="container-fluid-2">
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-30px pb-20">
+      <!-- feature 1 -->
+       @for (feature of features; track $index) {
+         <div
+           class="p-5 md:p-26px md:pr-30px transition-all duration-300 border border-borderColor5 hover:border-primaryColor hover:shadow-feature flex rounded"
+           data-aos="fade-up">
+           <div
+             class="w-71.94px h-69.44px leading-69.44px bg-primaryColor bg-opacity-5 border border-primaryColor text-center mr-35px rounded-100 border-opacity-10">
+             <i class="icofont-video-alt text-size-26 text-primaryColor"></i>
+           </div>
+           <div class>
+             <h3>
+               <a
+                 class="text-xl lg:text-lg 3xl:text-xl font-semibold text-contentColor mb-1 hover:text-primaryColor dark:text-contentColor-dark dark:hover:text-primaryColor"
+                 href="#">{{ feature.title }}
+               </a>
+             </h3>
+             <p class="text-sm text-lightGrey3">{{ feature.description }}</p>
+           </div>
+         </div>
+       }
+    </div>
+  </div>
+</section>
