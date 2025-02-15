@@ -16,6 +16,9 @@ export const routes: Routes = [
       },
       {
         path: "productos", loadComponent: () => import("./modules/products/products.page")
+      },
+      {
+        path: "productos/:slug", loadComponent: () => import("./modules/products/view/product-view.page")
       }
     ]
   },

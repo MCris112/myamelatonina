@@ -25,6 +25,10 @@ export class ProductService {
     )
   }
 
+  get( slug: string )
+  {
+    return this.products().find( p => p.slug == slug)
+  }
   getAsItem(limit?: number)
   {
     let data: Product[] = []
