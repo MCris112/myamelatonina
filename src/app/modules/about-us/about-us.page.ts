@@ -3,6 +3,7 @@ import { BreadcumbComponent } from '../../components/breadcumb/breadcumb.compone
 import { FeaturesSectionComponent } from '../../components/section/features-section/features-section.component';
 import { TestimonialSectionComponent } from '../../components/section/testimonial-section/testimonial-section.component';
 import { RouterLink } from '@angular/router';
+import { SeoService } from '../../core/seo/seo.service';
 
 @Component({
     selector: 'about-us-page',
@@ -12,7 +13,12 @@ import { RouterLink } from '@angular/router';
 
 export default class AboutUsPage implements OnInit {
 
-    constructor() { }
+    constructor(
+      private _seoService: SeoService
+    ) { }
 
-    ngOnInit() { }
+    ngOnInit() {
+
+      this._seoService.renderAboutUs()
+    }
 }

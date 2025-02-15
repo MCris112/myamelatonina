@@ -22,7 +22,6 @@
           <swiper-container class="swiper testimonial-2" autoplay="true" loop="true">
             @for (testimonial of testimonials; track $index) {
               <swiper-slide class="swiper-slide">
-                <div>
                   <p
                     class="md:text-xl md:leading-10 text-lightGrey dark:text-whiteColor">
                     <i
@@ -33,12 +32,6 @@
                   </p>
 
                   <div class="flex items-center pt-10">
-                    <div class="pr-18px">
-                      <img
-                        src="./assets/images/testimonial/testi_2.png"
-                        alt
-                        class="w-18 h-78 rounded-full">
-                    </div>
                     <div>
                       <p
                           class="text-size-22 font-semibold text-contentColor hover:text-primaryColor dark:hover:text-primaryColor dark:text-contentColor-dark">
@@ -46,7 +39,6 @@
                       </p>
                     </div>
                   </div>
-                </div>
               </swiper-slide>
             }
           </swiper-container>
@@ -68,7 +60,7 @@
           <div class="tilt pl-0 md:pl-70px">
             <img
               class="w-full"
-              src="./assets/images/testimonial/testi__group__1.png"
+              src="/assets/images/testimonials.png"
               alt>
           </div>
         </div>

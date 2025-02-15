@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuItem } from './header.types';
 import { RouterLink } from '@angular/router';
+import { CompanyConfig } from '../../../environments/environment.types';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-header',
@@ -11,6 +13,8 @@ import { RouterLink } from '@angular/router';
 })
 
 export class HeaderComponent implements OnInit {
+
+  company = environment.company
 
   menu: MenuItem[] = [
     {

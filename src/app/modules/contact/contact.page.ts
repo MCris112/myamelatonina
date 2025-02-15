@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BreadcumbComponent } from '../../components/breadcumb/breadcumb.component';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'contact-page',
@@ -12,17 +13,17 @@ export default class ContactPaget implements OnInit {
   information = [
     {
       title: "Télefono",
-      value: "+51 902 904 357",
+      value: environment.company.phone.text,
       icon: "phone"
     },
     {
       title: "Nuestro Correo",
-      value: "ventas@myamelatonina.com",
+      value: environment.company.email,
       icon: "email"
     },
     {
       title: "Ruc",
-      value: "10463922905 Lizbeth Barragan samame",
+      value: environment.company.legal.ruc + " " + environment.company.legal.name,
       icon: "location"
     }
   ]

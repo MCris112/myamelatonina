@@ -10,7 +10,7 @@
       <div
         class="tab-links transition-all duraton-300 text-blackColor dark:text-blackColor-dark flex gap-11px"
       >
-        <button class="inline-block hover:text-primaryColor">
+        <button class="inline-block hover:text-primaryColor" (click)="columnsToShow = 2">
           <svg
             fill="currentColor"
             xmlns="http://www.w3.org/2000/svg"
@@ -38,7 +38,7 @@
             </g>
           </svg>
         </button>
-        <button class="inline-block hover:text-primaryColor active">
+        <button class="inline-block hover:text-primaryColor active" (click)="columnsToShow = 3">
           <svg
             fill="currentColor"
             xmlns="http://www.w3.org/2000/svg"
@@ -77,7 +77,7 @@
             </g>
           </svg>
         </button>
-        <button class="inline-block hover:text-primaryColor">
+        <button class="inline-block hover:text-primaryColor" (click)="columnsToShow = 4">
           <svg
             fill="currentColor"
             xmlns="http://www.w3.org/2000/svg"

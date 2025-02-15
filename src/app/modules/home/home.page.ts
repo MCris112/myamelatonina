@@ -9,6 +9,9 @@ import { TestimonialSectionComponent } from '../../components/section/testimonia
 import { TextParserPipe } from '../../text-parser.pipe';
 import { FeaturesSectionComponent } from '../../components/section/features-section/features-section.component';
 import { BrandSectionComponent } from '../../components/section/brand-section/brand-section.component';
+import { SeoService } from '../../core/seo/seo.service';
+import { environment } from '../../../environments/environment.development';
+import { SchemaProduct } from '../../core/seo/seo.types';
 
 type Slider = {
   subtitle: string;
@@ -54,12 +57,48 @@ export default class HomePaqge implements OnInit {
 
   constructor(
     private activatedRoute: ActivatedRoute,
-    private _productService: ProductService
+    private _productService: ProductService,
+          private _seoService: SeoService
+
   ) { }
 
   ngOnInit() {
     this.products = this._productService.getAsItem(6)
-  }
 
+    this._seoService.updateJsonLd({
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      name: environment.site.name,
+      url: environment.site.url,
+      description: environment.company.introduction,
+      mainEntity: {
+        "@type": "ItemList",
+        numberOfItems: this.products.length,
+        itemListElement: this.products.map( product => {
+          let data: SchemaProduct = {
+            "@type": "Product",
+            name: product.name,
+            image: product.image,
+            sku: product.id,
+            url: "erst.com",
+            aggregateRating: {
+              "@type": "AggregateRating",
+              ratingValue: 4.5,
+              reviewCount: 10
+            },
+            offers: {
+              "@type": "Offer",
+              priceCurrency: "PEN",
+              price: product.price,
+              availability: "https://schema.org/InStock"
+            }
+          }
+
+          return data
+        })
+      }
+    })
+
+  }
 
 }

@@ -78,7 +78,7 @@
           <p
             class="text-base lg:text-sm 2xl:text-base text-darkgray mb-30px leading-1.8 2xl:leading-1.8"
           >
-          Somos una empresa importadora de melatonina americana. Estamos comprometidos a mejorar la salud y esperanza de vida aprovechando los beneficios que ofrece la propia naturaleza.
+          {{ company.introduction }}
           </p>
           <div class="flex items-center">
             <div>
@@ -325,6 +325,6 @@
   </div>
 </footer>
 
-<a href="https://api.whatsapp.com/send?phone=51955081075&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202." class="fixed bottom-3 right-3 bg-[#25d366] text-white rounded-full w-15 h-15 aspect-square shadow-lg z-50 flex items-center justify-center text-3xl" target="_blank">
+<a [href]="getWhatsappURL()" class="fixed bottom-3 right-3 bg-[#25d366] text-white rounded-full w-15 h-15 aspect-square shadow-lg z-50 flex items-center justify-center text-3xl" target="_blank">
   <i class='bx bxl-whatsapp'></i>
 </a>

@@ -6,7 +6,7 @@
     >
       <div class="flex justify-between items-center">
         <div>
-          <p>Call Us: +1 800 123 456 789 - Mail Us: Itcroc&#64;mail.com</p>
+          <p><i class="icofont-whatsapp"></i> {{ company.phone.text }} - <i class="icofont-email"></i> {{ company.email }}</p>
         </div>
         <div class="flex gap-37px items-center">
           <div>
@@ -14,32 +14,23 @@
               <i
                 class="icofont-location-pin text-primaryColor text-size-15 mr-5px"
               ></i>
-              <span>684 West College St. Sun City, USA</span>
+              <span>Lima, Perú</span>
             </p>
           </div>
           <div>
             <!-- header social list -->
             <ul class="flex gap-13px text-size-15">
-              <li>
-                <a class="hover:text-primaryColor" href="#"
-                  ><i class="icofont-facebook"></i
-                ></a>
-              </li>
-              <li>
-                <a class="hover:text-primaryColor" href="#"
-                  ><i class="icofont-twitter"></i
-                ></a>
-              </li>
-              <li>
-                <a class="hover:text-primaryColor" href="#"
-                  ><i class="icofont-instagram"></i
-                ></a>
-              </li>
-              <li>
-                <a class="hover:text-primaryColor" href="#"
-                  ><i class="icofont-youtube-play"></i
-                ></a>
-              </li>
+              @for (item of company.social; track $index) {
+                <li>
+                  <a class="hover:text-primaryColor" [href]="item.link" target="_blank">
+                    @if (item.social == "facebook") {
+                      <i class="icofont-facebook"></i>
+                      <!-- <i class="icofont-instagram"></i> -->
+                      <!-- <i class="icofont-youtube-play"></i> -->
+                    }
+                  </a>
+                </li>
+              }
             </ul>
           </div>
         </div>
