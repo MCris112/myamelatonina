@@ -130,7 +130,7 @@ export const companies = {
   "all-natural": {
     name: "All Natural",
     image:
-      "https://myamelatonina.com/wp-content/uploads/2022/02/puritians_pride_white.png",
+      puritiansPrideWhiteImg,
   },
 
   "youtheory":{

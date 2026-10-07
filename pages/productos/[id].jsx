@@ -2,6 +2,7 @@ import Image from "next/legacy/image";
 import { useRouter } from "next/router";
 import { Navbar, Footer, Button, HeadComponent } from "../../components";
 import { vproducts } from "../../public/assets/products";
+import { sitevars } from "../../constants";
 
 export async function getStaticPaths() {
     const products = Object.keys(vproducts)
@@ -63,7 +64,7 @@ const Productos = ({product}) => {
             {product.content.size + " " + product.content.size_type}
           </span>
           <p className="mb-6">{product.description}</p>
-          <Button label="Pedir ahora" icon="whatsapp" link="https://wa.me/51902904357" />
+          <Button label="Pedir ahora" icon="whatsapp" link={`https://wa.me/${sitevars.phone_url}`} />
 
           {
             product.benefits ? 

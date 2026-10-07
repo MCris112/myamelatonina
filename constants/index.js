@@ -6,21 +6,21 @@ import footerProductBg from '../public/assets/footerproduct-bg.jpg';
 
 export const sitevars = {
     production: true,
-    url: 'https://myamelatonina.com/',
+    url: '/',
     url_dev: 'http://localhost:3000/',
     ruc: {
-        number: '10463922905',
-        name: 'Lizbeth Barragan samame'
+        number: '20000000000',
+        name: 'Lunaria Suplementos S.A.C.'
     },
     logo: logo,
-    phone: '+51 902 904 357',
-    email: 'ventas@myamelatonina.com',
-    phone_url: '51902904357',
-    site_name: 'M&A Melatonina Amerícana - Perú',
+    phone: '+51 900 000 000',
+    email: 'contacto@example.com',
+    phone_url: '51900000000',
+    site_name: 'Lunaria Suplementos - Perú',
     social: [
         {
             text: 'Facebook',
-            url: 'http://www.facebook.com',
+            url: '#',
             icon: {
                 type: 'logo',
                 class: 'facebook-circle',
@@ -30,7 +30,7 @@ export const sitevars = {
         },
         {
             text: 'Whatsapp',
-            url: 'http://www.facebook.com',
+            url: '#',
             icon: {
                 type: 'logo',
                 class: 'whatsapp',
