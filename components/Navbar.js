@@ -1,99 +1,127 @@
 import { useState } from "react";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { HiOutlineMenuAlt3, HiX, HiOutlinePhone } from "react-icons/hi";
+import { FaFacebookF, FaWhatsapp } from "react-icons/fa";
 
 import { navLinks, sitevars } from "../constants";
-import { useRouter } from 'next/router'
+
+const socialIcons = {
+  Facebook: FaFacebookF,
+  Whatsapp: FaWhatsapp,
+};
 
 const Navbar = () => {
-  let router = useRouter();
-
+  const router = useRouter();
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const handleClick = (e, href) => {
-    e.preventDefault()
-
-    var url = sitevars.production ? sitevars.url : sitevars.url_dev
-    router.push(href)
-  }
+  const isActive = (slug) =>
+    slug === "/" ? router.pathname === "/" : router.pathname.startsWith(slug);
 
   return (
-    <div className="navbar text-white sticky top-0 z-[99]">
-      <div className="py-0 bg-[#03002A]">
-        <div className="container">
-          <div className="flex align-middle justify-between">
-            <a
-              href={`https://wa.me/${sitevars.phone_url}`}
-              target="_blank"
-              rel="noreferrer"
-              className="flex text-white py-3"
-            >
-              <box-icon name="phone" color="white"></box-icon>
-              {sitevars.phone}
-            </a>
-
-            <ul className="flex justify-end items-center">
-              {sitevars.social.map((value, index) => (
-                <li key={index} className="h-full">
+    <header className="sticky top-0 z-[99] text-white">
+      <div className="hidden bg-ink sm:block">
+        <div className="container flex h-10 items-center justify-between text-sm text-white/70">
+          <a
+            href={`https://wa.me/${sitevars.phone_url}`}
+            target="_blank"
+            rel="noreferrer"
+            className="flex items-center gap-2 transition-colors hover:text-white"
+          >
+            <HiOutlinePhone size={16} />
+            {sitevars.phone}
+          </a>
+          <p>Envíos a todo el Perú · Pago contra entrega</p>
+          <ul className="flex items-center gap-1">
+            {sitevars.social.map((value, index) => {
+              const Icon = socialIcons[value.text];
+              return (
+                <li key={index}>
                   <a
                     href={value.url}
-                    className={`flex min-w-[2rem] h-full items-center justify-center py-1 px-3 bg-[${value.icon.bg}] hover:bg-accent`}
-                    style={{ background: value.icon.bg }}
+                    aria-label={value.text}
+                    className="flex h-7 w-7 items-center justify-center rounded-sm transition-colors hover:bg-white/10 hover:text-white"
                   >
-                    <box-icon
-                      type={value.icon.type}
-                      name={value.icon.class}
-                      color={value.icon.color}
-                    ></box-icon>
+                    {Icon ? <Icon size={14} /> : value.text}
                   </a>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      </div>
+
+      <div className="border-b border-white/10 bg-ink-2/95 backdrop-blur">
+        <div className="container flex h-[72px] items-center justify-between">
+          <Link href="/" aria-label={`${sitevars.site_name} – Inicio`} onClick={() => setMenuOpen(false)}>
+            <img src={sitevars.logo.src} alt={sitevars.site_name} className="h-11 w-auto" />
+          </Link>
+
+          <nav className="hidden sm:block" aria-label="Principal">
+            <ul className="flex items-center gap-9">
+              {navLinks.map((value) => (
+                <li key={value.slug}>
+                  <Link
+                    href={value.slug}
+                    className={`relative py-2 text-[15px] font-medium transition-colors hover:text-accent ${
+                      isActive(value.slug) ? "text-accent" : "text-white/85"
+                    }`}
+                  >
+                    {value.text}
+                    {isActive(value.slug) ? (
+                      <span className="absolute inset-x-0 -bottom-[3px] h-[2px] bg-accent" />
+                    ) : null}
+                  </Link>
                 </li>
               ))}
             </ul>
-          </div>
-        </div>
-      </div>
-      <div className="py-5 bg-[#1F035B]">
-        <div className="container flex">
-          <a className="w-1/4">
-            <img src={sitevars.logo.src} alt="" className="max-w-[200px]" />
-          </a>
-          <div className="content w-3/4 flex justify-end items-center">
-            <div
-              className="cursor-pointer sm:hidden"
-              onClick={() => setMenuOpen(!menuOpen)}
-            >
-              <box-icon name="menu" color="white"></box-icon>
-            </div>
+          </nav>
 
-            <div
-              className={`${
-                menuOpen ? "flex" : "hidden"
-              } sm:flex flex-col justify-center items-center gap-[2rem] bg-primary fixed top-0 left-0 w-full h-screen z-[99] py-6 sm:relative sm:py-0 sm:h-fit sm:bg-transparent sm:justify-end sm:items-end`}
-            >
-              <div
-                className="cursor-pointer flex justify-center items-center sm:hidden"
-                onClick={() => setMenuOpen(!menuOpen)}
-              >
-                <box-icon name="x" color="white" size="lg"></box-icon>
-              </div>
-              <ul className={`sm:flex sm:justify-end gap-[2rem] m-6 text-center sm:m-0`}>
-                {navLinks.map((value, key) => (
-                  <li key={key}>
-                    <a
-                      className={`hover:text-accent ${
-                        router.pathname == value.slug ? "text-accent" : ""
-                      } block text-[1.6rem] py-3 sm:text-lg sm:py-0`}
-                      href={value.slug}
-                      onClick={(e) => {setMenuOpen(false); handleClick(e, value.slug)}}
-                    >
-                      {value.text}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
+          <button
+            type="button"
+            className="flex h-10 w-10 items-center justify-center rounded-sm hover:bg-white/10 sm:hidden"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label={menuOpen ? "Cerrar menú" : "Abrir menú"}
+            aria-expanded={menuOpen}
+          >
+            {menuOpen ? <HiX size={24} /> : <HiOutlineMenuAlt3 size={24} />}
+          </button>
         </div>
+
+        <nav
+          className={`overflow-hidden transition-[max-height] duration-300 sm:hidden ${
+            menuOpen ? "max-h-96" : "max-h-0"
+          }`}
+          aria-label="Principal móvil"
+        >
+          <ul className="container flex flex-col pb-5">
+            {navLinks.map((value) => (
+              <li key={value.slug}>
+                <Link
+                  href={value.slug}
+                  onClick={() => setMenuOpen(false)}
+                  className={`block border-t border-white/10 py-4 text-lg font-medium ${
+                    isActive(value.slug) ? "text-accent" : "text-white/85"
+                  }`}
+                >
+                  {value.text}
+                </Link>
+              </li>
+            ))}
+            <li className="border-t border-white/10 pt-5">
+              <a
+                href={`https://wa.me/${sitevars.phone_url}`}
+                target="_blank"
+                rel="noreferrer"
+                className="btn-primary w-full"
+              >
+                <FaWhatsapp size={18} /> {sitevars.phone}
+              </a>
+            </li>
+          </ul>
+        </nav>
       </div>
-    </div>
+    </header>
   );
 };
 

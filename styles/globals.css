@@ -2,17 +2,70 @@
 @tailwind components;
 @tailwind utilities;
 
-.container{
-  width: 1200px;
-  max-width: 90vw;
-
-  margin: 0 auto;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-white font-sans text-ink antialiased;
+  }
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
 }
 
-.loading_screen{
+@layer components {
+  .container {
+    @apply mx-auto w-full max-w-[1280px] px-5 sm:px-10;
+  }
+
+  .section {
+    @apply py-20 md:py-28;
+  }
+
+  .heading {
+    @apply font-serif text-3xl font-semibold leading-[1.1] tracking-tight sm:text-4xl md:text-[2.75rem];
+  }
+
+  .lead {
+    @apply text-base leading-relaxed text-muted md:text-lg;
+  }
+
+  .btn {
+    @apply inline-flex h-12 items-center justify-center gap-2 rounded-sm px-6 text-sm font-semibold transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent active:translate-y-px;
+  }
+
+  .btn-primary {
+    @apply btn bg-accent text-ink hover:bg-accent-dark;
+  }
+
+  .btn-dark {
+    @apply btn bg-primary text-white hover:bg-primary-dark;
+  }
+
+  .btn-outline {
+    @apply btn border border-white/30 text-white hover:bg-white/10;
+  }
+
+  .btn-line {
+    @apply btn border border-line text-ink hover:border-primary hover:text-primary;
+  }
+
+  .field {
+    @apply h-12 w-full rounded-sm border border-line bg-white px-4 text-ink transition-colors placeholder:text-muted/60 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/15;
+  }
+}
+
+.loading_screen {
   animation: loading_screen 1s ease-in-out infinite alternate;
 }
 
-@keyframes loading_screen{
-  from { transform: scale(1)} to { transform: scale(.8)}
+@keyframes loading_screen {
+  from { transform: scale(1) }
+  to { transform: scale(.9) }
 }

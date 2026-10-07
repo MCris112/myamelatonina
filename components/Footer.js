@@ -1,48 +1,66 @@
 import Image from 'next/legacy/image'
+import Link from 'next/link'
+import { FaFacebookF, FaWhatsapp } from 'react-icons/fa'
 
 import { sitevars, navLinks } from "../constants";
-import { useRouter } from 'next/router'
+
+const socialIcons = {
+  Facebook: FaFacebookF,
+  Whatsapp: FaWhatsapp,
+};
 
 const Footer = () => {
-  let location = useRouter();
-
   return (
-    <div className="bg-[#001c38] py-6 sm:py-[3rem] md:pb-4">
-      <div className="container pt-6 sm:flex flex-wrap">
-        <div className="mb-[4rem] sm:w-full md:w-1/3">
-          <Image src={sitevars.logo} alt="" className="w-1/2 mx-auto mb-6" />
-          <p className="text-white text-center">
+    <footer className="bg-ink text-white/60">
+      <div className="container grid gap-12 py-16 sm:grid-cols-2 md:grid-cols-[1.4fr_1fr_1fr] md:gap-16 md:py-20">
+        <div>
+          <div className="w-[200px]">
+            <Image src={sitevars.logo} alt={sitevars.site_name} />
+          </div>
+          <p className="mt-6 max-w-sm text-sm leading-relaxed">
             Somos una empresa importadora de melatonina americana. Estamos
             comprometidos a mejorar la salud y esperanza de vida aprovechando
             los beneficios que ofrece la propia naturaleza.
           </p>
+          <ul className="mt-6 flex gap-2">
+            {sitevars.social.map((value, index) => {
+              const Icon = socialIcons[value.text];
+              return (
+                <li key={index}>
+                  <a
+                    href={value.url}
+                    aria-label={value.text}
+                    className="flex h-10 w-10 items-center justify-center rounded-sm border border-white/15 text-white/80 transition-colors hover:border-accent hover:bg-accent hover:text-ink"
+                  >
+                    {Icon ? <Icon size={16} /> : value.text}
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
         </div>
 
-        <div className="text-center my-6 sm:w-1/2 md:w-1/3">
-          <h4 className="text-white text-3xl">Menu</h4>
-          <ul className="text-white opacity-60">
-                {navLinks.map((value, key) => (
-                  <li key={key}>
-                    <a
-                      className={`block hover:text-accent py-2 ${
-                        location.asPath == value.slug ? "text-accent" : ""
-                      } `}
-                      to={value.slug}
-                    >
-                      {value.text}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-        </div>
-        <div className="text-center my-6 w-1/2 md:w-1/3">
-          <h4 className="text-white text-3xl">Más Información</h4>
-          <ul className="text-white opacity-60">
+        <nav aria-label="Menú del pie de página">
+          <h4 className="text-sm font-semibold text-white">Menu</h4>
+          <ul className="mt-5 flex flex-col gap-3 text-sm">
+            {navLinks.map((value) => (
+              <li key={value.slug}>
+                <Link href={value.slug} className="transition-colors hover:text-accent">
+                  {value.text}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        <div>
+          <h4 className="text-sm font-semibold text-white">Más Información</h4>
+          <ul className="mt-5 flex flex-col gap-3 text-sm">
             <li>
-              <a href={ `https://wa.me/${sitevars.phone_url}` } className="block hover:text-accent py-2">{ sitevars.phone }</a>
+              <a href={`https://wa.me/${sitevars.phone_url}`} className="transition-colors hover:text-accent">{sitevars.phone}</a>
             </li>
             <li>
-              <a href={ `mailto:${sitevars.email}` } className="block hover:text-accent py-2">{ sitevars.email }</a>
+              <a href={`mailto:${sitevars.email}`} className="transition-colors hover:text-accent">{sitevars.email}</a>
             </li>
             <li>RUC: {sitevars.ruc.number}</li>
             <li>Rázon Social: {sitevars.ruc.name}</li>
@@ -50,15 +68,18 @@ const Footer = () => {
         </div>
       </div>
 
-      <hr />
-
-      <div className="container text-white text-center py-6 opacity-60 sm:w-full md:pb-0">
-        <p>© {new Date().getFullYear()} {sitevars.site_name}. Todos los derechos reservados | Desarrollado por <a href="https://www.darkredgm.com" target="_blank" rel="noopener" className="hover:text-accent underline">Darkredgm</a></p>
+      <div className="border-t border-white/10">
+        <div className="container flex flex-col gap-2 py-6 text-xs sm:flex-row sm:items-center sm:justify-between">
+          <p>© {new Date().getFullYear()} {sitevars.site_name}. Todos los derechos reservados.</p>
+          <p>
+            Desarrollado por{" "}
+            <a href="https://www.darkredgm.com" target="_blank" rel="noopener" className="text-white/80 transition-colors hover:text-accent">
+              Darkredgm
+            </a>
+          </p>
+        </div>
       </div>
-
-      <script src="https://unpkg.com/boxicons@2.1.3/dist/boxicons.js" defer ></script> 
-
-    </div>
+    </footer>
   );
 };
 

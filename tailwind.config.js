@@ -8,9 +8,19 @@ module.exports = {
     extend: {
       colors: {
         primary: "#3B4D96",
+        "primary-dark": "#2C3A78",
         secondary: "#96ABFF",
-
         accent: "#E3C56F",
+        "accent-dark": "#C9A84A",
+        ink: "#15123A",
+        "ink-2": "#1E1A4D",
+        surface: "#F6F5FB",
+        line: "#E6E4F0",
+        muted: "#64627A",
+      },
+      fontFamily: {
+        sans: ['"Plus Jakarta Sans"', "ui-sans-serif", "system-ui", "sans-serif"],
+        serif: ['"Fraunces"', "ui-serif", "Georgia", "serif"],
       },
     },
 

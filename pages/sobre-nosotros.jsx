@@ -2,40 +2,44 @@ import React from 'react';
 import Image from "next/legacy/image";
 
 import { Navbar, Features, WhyUs, Footer, HeadComponent } from '../components';
-import { aboutusvars } from '../constants';
+import { aboutusvars, sitevars } from '../constants';
 
 const AboutUs = () => {
   return (
     <div>
-      <HeadComponent page="Inicio" description="Somos una empresa importadora de melatonina americana. Estamos comprometidos a mejorar la salud y esperanza de vida aprovechando los beneficios que ofrece la propia naturaleza." keywords="suplementos para dormir, melatonina, natrol, medicina, no puedo dormir, antibioticos, medicina a delivery, todo el peru" />
+      <HeadComponent page="Sobre Nosotros" description="Somos una empresa importadora de melatonina americana. Estamos comprometidos a mejorar la salud y esperanza de vida aprovechando los beneficios que ofrece la propia naturaleza." keywords="suplementos para dormir, melatonina, natrol, medicina, no puedo dormir, antibioticos, medicina a delivery, todo el peru" />
 
       <Navbar />
 
-      <div className="container flex flex-col justify-center items-center py-9 pt-[6rem] sm:flex-row sm:gap-3">
-        <div className="w-1/2">
-          <Image src={aboutusvars.logo} alt="" className="w-full" />
+      <section className="section">
+        <div className="container grid items-center gap-12 sm:grid-cols-2 md:gap-20">
+          <div className="text-center sm:text-start">
+            <span className="mx-auto mb-5 block h-[3px] w-12 bg-accent sm:mx-0" />
+            <h1 className="heading text-ink md:text-5xl">{aboutusvars.title}</h1>
+            <p className="lead mx-auto mt-6 max-w-xl sm:mx-0">{aboutusvars.text}</p>
+          </div>
+
+          <div className="flex justify-center rounded-sm bg-ink p-12 md:p-16">
+            <div className="w-full max-w-[240px]">
+              <Image src={aboutusvars.logo} alt={sitevars.site_name} />
+            </div>
+          </div>
         </div>
+      </section>
 
-        <div className="w-full text-center sm:order-first sm:text-start">
-          <h1 className="text-primary text-4xl font-bold mb-6 sm:text-[3rem] sm:pb-3">{aboutusvars.title}</h1>
-          <hr className="block border-t-[.6rem] border-accent w-60 mx-auto mb-9 sm:ml-0 sm:py-3 sm:mb-0"/>
+      <section className="section border-t border-line bg-surface/60">
+        <div className="container grid items-center gap-12 sm:grid-cols-2 md:gap-20">
+          <div className="overflow-hidden rounded-sm">
+            <Image src={aboutusvars.mission.img} alt={aboutusvars.mission.title} layout="responsive" className="object-cover" />
+          </div>
 
-          <p className="w-full sm:max-w-[600px]">{ aboutusvars.text }</p>
+          <div className="text-center sm:text-start">
+            <span className="mx-auto mb-5 block h-[3px] w-12 bg-accent sm:mx-0" />
+            <h2 className="heading text-ink">{aboutusvars.mission.title}</h2>
+            <p className="lead mx-auto mt-6 max-w-xl sm:mx-0">{aboutusvars.mission.text}</p>
+          </div>
         </div>
-      </div>
-
-      <div className="container flex flex-col justify-center items-center py-9 pb-[6rem] sm:flex-row sm:gap-3">
-        <div className="w-full mb-6">
-          <Image src={aboutusvars.mission.img} alt="" className="w-full" />
-        </div>
-
-        <div className="w-full text-center sm:text-end">
-          <h1 className="text-primary text-4xl font-bold mb-6">{ aboutusvars.mission.title }</h1>
-          <hr className="border-t-[.6rem] border-accent w-60 mx-auto mb-9 sm:mr-0 sm:py-3 sm:mb-0"/>
-
-          <p className="w-full sm:max-w-[600px]">{ aboutusvars.mission.text }</p>
-        </div>
-      </div>
+      </section>
 
       <Features />
       <WhyUs />

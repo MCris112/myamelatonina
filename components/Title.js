@@ -1,8 +1,11 @@
-const Title = (props) => {
+const Title = ({ content, text, light = false, align = 'center' }) => {
+  const centered = align === 'center'
+
   return (
-    <div className="container text-center py-9">
-        <h2 className="text-primary text-4xl font-bold mb-4 md:text-5xl md:mb-10 uppercase">{props.content}</h2>
-        <hr className="bv-accent border-t-[6px] border-primary w-1/2 mx-auto md:w-[20%]" />
+    <div className={`mb-10 md:mb-14 ${centered ? 'mx-auto max-w-2xl text-center' : 'max-w-xl'}`}>
+      <span className={`mb-5 block h-[3px] w-12 bg-accent ${centered ? 'mx-auto' : ''}`} />
+      <h2 className={`heading ${light ? 'text-white' : 'text-ink'}`}>{content}</h2>
+      {text ? <p className={`lead mt-4 ${light ? 'text-white/70' : ''}`}>{text}</p> : null}
     </div>
   )
 }

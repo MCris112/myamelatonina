@@ -4,60 +4,43 @@ import featureBg from "../public/assets/features-bg.jpg";
 
 import { Title } from '.';
 
+const features = [
+  {
+    title: "Pedidos a todo el Perú",
+    text: "Llegamos estés donde estés en todo el país.",
+  },
+  {
+    title: "Contra entrega",
+    text: "Paga en efectivo o con tarjeta, en la puerta de tu hogar.",
+  },
+  {
+    title: "Entrega inmediata",
+    text: "Realiza tu pedido ahora y llegaremos lo más rapido posible a tu vivienda.",
+  },
+];
+
 const Features = () => {
   return (
-    <div className="relative py-6">
-      <div className="absolute top-0 left-0 w-full h-full z-[-1]">
-        <Image
-          src={featureBg}
-          alt=""
-          className="bg-primary w-full h-full object-cover"
-          layout='fill'
-        />
-        <div className="absolute top-0 left-0 w-full h-full bg-black opacity-60 object"></div>
+    <section className="relative isolate overflow-hidden bg-ink">
+      <div className="absolute inset-0 -z-10">
+        <Image src={featureBg} alt="" className="object-cover" layout='fill' />
+        <div className="absolute inset-0 bg-ink/85" />
       </div>
 
-      <div className="w-full md:min-h-[60vh] md:flex md:items-center md:justify-center">
-        <div className="container py-6">
-          <Title content="¿Qué ofrecemos?" />
+      <div className="container section">
+        <Title content="¿Qué ofrecemos?" light />
 
-          <div className="flex flex-col gap-10 sm:flex-row sm:items-start sm:gap-6 md:grid md:grid-cols-3 pb-9">
-            <div className="flex flex-col items-center justify-center">
-              <div className="bg-accent w-[20vw] h-[20vw] sm:w-[15vw] sm:h-[15vw] md:w-[9rem] md:h-[9rem] flex items-center justify-center rounded-full text-white mb-4">
-                <box-icon type='solid' name='package' size='3rem'></box-icon>
-              </div>
-
-              <div className="text-white text-center">
-                <h3 className="font-bold text-3xl sm:text-2xl">PEDIDOS A TODO EL PERÚ</h3>
-                <p>Llegamos estés donde estés en todo el país.</p>
-              </div>
+        <div className="grid gap-px overflow-hidden rounded-sm bg-white/10 sm:grid-cols-3">
+          {features.map((feature) => (
+            <div key={feature.title} className="group relative bg-ink/80 p-8 md:p-10">
+              <span className="absolute inset-x-0 top-0 h-[2px] origin-left scale-x-[0.15] bg-accent transition-transform duration-500 group-hover:scale-x-100" />
+              <h3 className="font-serif text-2xl font-semibold text-white">{feature.title}</h3>
+              <p className="mt-3 leading-relaxed text-white/65">{feature.text}</p>
             </div>
-
-            <div className="flex flex-col items-center justify-center">
-              <div className="bg-accent w-[20vw] h-[20vw] sm:w-[15vw] sm:h-[15vw] md:w-[9rem] md:h-[9rem] flex items-center justify-center rounded-full text-white mb-4">
-                <box-icon type='solid' name='truck' size='3rem'></box-icon>
-              </div>
-
-              <div className="text-white text-center">
-                <h3 className="font-bold text-3xl sm:text-2xl">CONTRA ENTREGA</h3>
-                <p>Paga en efectivo o con tarjeta, en la puerta de tu hogar.</p>
-              </div>
-            </div>
-
-            <div className="flex flex-col items-center justify-center">
-              <div className="bg-accent w-[20vw] h-[20vw] sm:w-[15vw] sm:h-[15vw] md:w-[9rem] md:h-[9rem] flex items-center justify-center rounded-full text-white mb-4">
-                <box-icon type='solid' name='plane-land' size='3rem'></box-icon>
-              </div>
-
-              <div className="text-white text-center">
-                <h3 className="font-bold text-3xl sm:text-2xl">ENTREGA INMEIDATA</h3>
-                <p>Realiza tu pedido ahora y llegaremos lo más rapido posible a tu vivienda.</p>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

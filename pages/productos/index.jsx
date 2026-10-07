@@ -1,131 +1,71 @@
-import React, { useState, useEffect } from "react";
+import React, { useMemo, useState } from "react";
 
-import { vproducts, categories, companies } from "../../public/assets/products";
+import { vproducts, categories } from "../../public/assets/products";
 import { ProductItem } from "../../components";
-import { Navbar, Footer, HeadComponent    } from "../../components";
-
+import { Navbar, Footer, HeadComponent } from "../../components";
 
 const Productos = () => {
-  const [showProducts, setShowProducts] = useState({})
+  const [category, setCategory] = useState("");
 
-  var showCategories = []
+  const productKeys = useMemo(
+    () =>
+      Object.keys(vproducts).filter(
+        (key) => !category || vproducts[key].categories?.includes(category)
+      ),
+    [category]
+  );
 
-  useEffect(() => {
-    setShowProducts(vproducts)
-  }, [vproducts])
+  const options = [["", "Todas"], ...Object.keys(categories).map((key) => [key, categories[key].title])];
 
-  const updateProducts = () => {
-    var productsReturn = {}
-
-    if(showCategories.length == 0) {
-      setShowProducts(vproducts)
-
-      return
-    }
-
-    Object.keys(vproducts).map((key) => {
-      const product = vproducts[key];
-      for(var i = 0; i < product['categories'].length; i++){
-        console.log("cat seleccionada: ", product['categories'][i]);
-        console.log("incluye? ", showCategories.includes(product['categories'][i]))
-        if( showCategories.includes(product['categories'][i]) ){
-          productsReturn[key] = product
-          return true
-        }
-      }
-    })
-
-    console.log("productsReturn", productsReturn)
-
-    setShowProducts(productsReturn)
-  }
-
-  const sideTitle = (title) => {
-    return (
-      <div className="flex items-center w-full gap-1">
-        <h2 className="font-bold text-primary">{title}</h2>
-        <hr className="w-full h-1 border-3 bg-primary" />
-      </div>
-    );
-  };
-
-  const setCompany = (event) => {
-    var slugCompany = event.target.getAttribute("cri-data-com-id");
-
-    if (event.target.checked) {
-      let items = Object.values(vproducts).filter((product) => {
-        return product.company == slugCompany
-      })
-
-      console.log("items", items)
-
-      setShowProducts(vproducts)
-    }
-  }
-
-  const addCategory = (event) => {
-    var slugCategory = event.target.getAttribute("cri-data-cat-id");
-
-    if (event.target.checked) {
-      showCategories.indexOf(slugCategory) === -1 ? showCategories.push(slugCategory) :  true
-    }
-
-    updateProducts()
-    console.log("categories", showCategories)
-  };
   return (
-    <div className="">
-
+    <div>
       <HeadComponent page="Productos" description="Somos una empresa importadora de melatonina americana. Estamos comprometidos a mejorar la salud y esperanza de vida aprovechando los beneficios que ofrece la propia naturaleza." keywords="suplementos para dormir, melatonina, natrol, medicina, no puedo dormir, antibioticos, medicina a delivery, todo el peru" />
 
       <Navbar />
 
-      <div className="container flex flex-col gap-4 py-9 sm:flex-row">
-        <div className="w-full sm:w-1/4">
-          {/* {sideTitle("Marca")}
-
-          {Object.keys(companies).map((key) => (
-            <div key={key} className="">
-              <input
-                type="checkbox"
-                onChange={setCompany}
-                cri-data-com-id={key}
-
-                id={`com-${key}`}
-              />
-
-              <label htmlFor={`com-${key}`}>{companies[key].name}</label>
-              
-            </div>
-          ))} */}
-
-          {sideTitle("Categorias")}
-
-          <form action="#" className="pl-3 mt-3">
-          {Object.keys(categories).map((key) => (
-            <div key={key} className="flex gap-1">
-              <input
-                type="radio"
-                onChange={addCategory}
-                cri-data-cat-id={key}
-
-                name="category"
-                id={`cat-${key}`}
-                value={key}
-              />
-
-              <label htmlFor={`cat-${key}`} className="cursor-pointer">{categories[key].title}</label>
-            </div>
-          ))}
-          </form>
-          
+      <section className="border-b border-line bg-surface/60">
+        <div className="container py-14 md:py-20">
+          <span className="mb-5 block h-[3px] w-12 bg-accent" />
+          <h1 className="heading text-ink md:text-5xl">Productos</h1>
+          <p className="lead mt-4">{productKeys.length} productos disponibles</p>
         </div>
-        <div className="w-3/4">
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-10">
-            {Object.keys(showProducts).map((key) => (
-                vproducts[key] ? <ProductItem product={vproducts[key]} slug={key} key={key} /> : ""
-            ))}
-          </div>
+      </section>
+
+      <div className="container grid gap-10 py-12 sm:grid-cols-[220px_1fr] md:grid-cols-[240px_1fr] md:gap-14 md:py-16">
+        <aside className="sm:sticky sm:top-32 sm:self-start">
+          <h2 className="text-sm font-semibold text-ink">Categorias</h2>
+          <ul className="-mx-5 mt-4 flex gap-2 overflow-x-auto px-5 pb-2 sm:mx-0 sm:flex-col sm:gap-0.5 sm:overflow-visible sm:px-0">
+            {options.map(([key, title]) => {
+              const active = category === key;
+              return (
+                <li key={key || "all"} className="shrink-0">
+                  <button
+                    type="button"
+                    onClick={() => setCategory(key)}
+                    aria-pressed={active}
+                    className={`w-full whitespace-nowrap rounded-sm border px-3 py-2 text-left text-sm capitalize transition-colors sm:border-transparent ${
+                      active
+                        ? "border-primary bg-primary text-white sm:border-primary"
+                        : "border-line text-muted hover:bg-surface hover:text-ink"
+                    }`}
+                  >
+                    {title}
+                  </button>
+                </li>
+              );
+            })}
+          </ul>
+        </aside>
+
+        <div className="grid grid-cols-2 content-start gap-4 sm:gap-6 md:grid-cols-3">
+          {productKeys.map((key) => (
+            <ProductItem product={vproducts[key]} slug={key} key={key} />
+          ))}
+          {productKeys.length === 0 ? (
+            <p className="col-span-full rounded-sm bg-surface p-10 text-center text-muted">
+              No se ha encontrado resultados
+            </p>
+          ) : null}
         </div>
       </div>
 

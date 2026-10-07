@@ -1,85 +1,93 @@
-import React from "react";
+import React, { useState } from "react";
+import { HiOutlinePhone, HiOutlineMail, HiOutlineIdentification, HiArrowRight } from "react-icons/hi";
+
 import { Navbar, Footer, HeadComponent } from "../components";
 import { sitevars } from "../constants";
 
 const ContactUs = () => {
+  const [form, setForm] = useState({ name: "", email: "", message: "" });
+
+  const update = (e) => setForm({ ...form, [e.target.name]: e.target.value });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const subject = encodeURIComponent(`Consulta de ${form.name}`);
+    const body = encodeURIComponent(`${form.message}\n\n${form.name} – ${form.email}`);
+    window.location.href = `mailto:${sitevars.email}?subject=${subject}&body=${body}`;
+  };
+
+  const details = [
+    { icon: HiOutlinePhone, title: "Télefono", value: sitevars.phone, href: `https://wa.me/${sitevars.phone_url}` },
+    { icon: HiOutlineMail, title: "Nuestro Correo", value: sitevars.email, href: `mailto:${sitevars.email}` },
+    { icon: HiOutlineIdentification, title: "Ruc", value: sitevars.ruc.number, extra: sitevars.ruc.name },
+  ];
+
   return (
     <div>
-
-      <HeadComponent page="Inicio" description="Somos una empresa importadora de melatonina americana. Estamos comprometidos a mejorar la salud y esperanza de vida aprovechando los beneficios que ofrece la propia naturaleza." keywords="suplementos para dormir, melatonina, natrol, medicina, no puedo dormir, antibioticos, medicina a delivery, todo el peru" />
+      <HeadComponent page="Contáctanos" description="Somos una empresa importadora de melatonina americana. Estamos comprometidos a mejorar la salud y esperanza de vida aprovechando los beneficios que ofrece la propia naturaleza." keywords="suplementos para dormir, melatonina, natrol, medicina, no puedo dormir, antibioticos, medicina a delivery, todo el peru" />
 
       <Navbar />
-      <div className="container py-9 pt-[3rem]">
-        <div className="text-center">
-          <h1 className="text-primary text-4xl font-bold mb-6">
-            Envianos un mensaje
-          </h1>
-          <hr className="border-t-[.6rem] border-accent w-60 mx-auto mb-9" />
-        </div>
 
-        <form action="#" className="w-full max-w-[600px] mx-auto md:mb-10 flex flex-col gap-3" method="post">
-          <input
-            type="text"
-            placeholder="Su Nombre"
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          />
-          <input
-            type="email"
-            placeholder="Su correo"
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          />
-          <textarea
-            placeholder="Escriba su Mensaje"
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          ></textarea>
-          <button
-            type="button"
-            className="w-full p-2 border block w-100 text-center ease-in duration-150 hover:bg-primary hover:text-white hover:border-primary bg-accent border-accent text-primary"
+      <section className="section">
+        <div className="container grid gap-14 md:grid-cols-[1fr_1.3fr] md:gap-20">
+          <div>
+            <span className="mb-5 block h-[3px] w-12 bg-accent" />
+            <h1 className="heading text-ink md:text-5xl">Envianos un mensaje</h1>
+            <p className="lead mt-5 max-w-md">
+              Somos una empresa importadora de melatonina americana. Te respondemos a la brevedad.
+            </p>
+
+            <dl className="mt-10 border-t border-line">
+              {details.map(({ icon: Icon, title, value, href, extra }) => (
+                <div key={title} className="flex items-start gap-4 border-b border-line py-5">
+                  <Icon size={22} className="mt-0.5 shrink-0 text-primary" />
+                  <div>
+                    <dt className="text-sm text-muted">{title}</dt>
+                    <dd className="mt-0.5 font-semibold text-ink">
+                      {href ? (
+                        <a href={href} className="transition-colors hover:text-primary">{value}</a>
+                      ) : (
+                        value
+                      )}
+                    </dd>
+                    {extra ? <dd className="text-sm text-muted">{extra}</dd> : null}
+                  </div>
+                </div>
+              ))}
+            </dl>
+          </div>
+
+          <form
+            onSubmit={handleSubmit}
+            className="flex flex-col gap-5 rounded-sm border border-line bg-surface/60 p-6 sm:p-10"
           >
-            Enviar Mensaje
-          </button>
-        </form>
-
-        <div className="flex flex-col gap-10 sm:gap-6 sm:grid sm:grid-cols-2 md:grid-cols-3 py-9">
-          <div className="flex flex-col items-center justify-center">
-            <div className="bg-primary w-[20vw] h-[20vw] sm:w-[15vw] sm:h-[15vw] md:w-[9rem] md:h-[9rem] flex items-center justify-center rounded-full text-white mb-4">
-              <box-icon type="solid" name="phone" size="3rem" color="white"></box-icon>
-            </div>
-
-            <div className="text-primary text-center">
-              <h3 className="font-bold text-3xl sm:text-2xl">
-                Télefono
-              </h3>
-              <p>{sitevars.phone}</p>
-            </div>
-          </div>
-
-          <div className="flex flex-col items-center justify-center">
-            <div className="bg-primary w-[20vw] h-[20vw] sm:w-[15vw] sm:h-[15vw] md:w-[9rem] md:h-[9rem] flex items-center justify-center rounded-full text-white mb-4">
-              <box-icon type="solid" name="envelope" size="3rem" color="white"></box-icon>
-            </div>
-
-            <div className="text-primary text-center">
-              <h3 className="font-bold text-3xl sm:text-2xl">Nuestro Correo</h3>
-              <p>{sitevars.email}</p>
-            </div>
-          </div>
-
-          <div className="flex flex-col items-center justify-center">
-            <div className="bg-primary w-[20vw] h-[20vw] sm:w-[15vw] sm:h-[15vw] md:w-[9rem] md:h-[9rem] flex items-center justify-center rounded-full text-white mb-4">
-              <box-icon type="solid" name="id-card" size="3rem" color="white"></box-icon>
-            </div>
-
-            <div className="text-primary text-center">
-              <h3 className="font-bold text-3xl sm:text-2xl">
-                Ruc
-              </h3>
-              <p>{sitevars.ruc.number}</p>
-              <p className="text-sm">{sitevars.ruc.name}</p>
-            </div>
-          </div>
+            <label className="flex flex-col gap-2 text-sm font-medium text-ink">
+              Nombre
+              <input name="name" type="text" required value={form.name} onChange={update} placeholder="Su Nombre" className="field font-normal" />
+            </label>
+            <label className="flex flex-col gap-2 text-sm font-medium text-ink">
+              Correo
+              <input name="email" type="email" required value={form.email} onChange={update} placeholder="Su correo" className="field font-normal" />
+            </label>
+            <label className="flex flex-col gap-2 text-sm font-medium text-ink">
+              Mensaje
+              <textarea
+                name="message"
+                required
+                rows={6}
+                value={form.message}
+                onChange={update}
+                placeholder="Escriba su Mensaje"
+                className="field h-auto py-3 font-normal"
+              ></textarea>
+            </label>
+            <button type="submit" className="btn-dark mt-2 w-full sm:w-auto sm:self-start">
+              Enviar Mensaje <HiArrowRight size={18} />
+            </button>
+          </form>
         </div>
-      </div>
+      </section>
+
       <Footer />
     </div>
   );

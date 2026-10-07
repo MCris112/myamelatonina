@@ -1,37 +1,55 @@
-import {useState, useEffect} from 'react'
-import { useRouter } from 'next/router'
+import { useState, useEffect } from 'react'
 import Image from 'next/legacy/image'
 
 import { sitevars } from '../constants';
 
-const Loading = ({show}) => {
-    const router = useRouter();
+const MIN_VISIBLE = 600
+const FADE = 400
 
-    const [loading, setLoading] = useState(false);
+/**
+ * Splash screen for the first page load only. It's rendered in the static HTML so it
+ * covers the page until it hydrates, then fades out. Client-side navigation never shows it.
+ */
+const Loading = () => {
+    const [state, setState] = useState('visible');
 
     useEffect(() => {
-        const handleStart = (url) => (url !== router.asPath) && setLoading(true);
-        const handleComplete = (url) => (url === router.asPath) && setLoading(false);
+        const start = performance.now();
+        let fadeTimer;
 
-        router.events.on('routeChangeStart', handleStart)
-        router.events.on('routeChangeComplete', handleComplete)
-        router.events.on('routeChangeError', handleComplete)
+        const hide = () => {
+            const wait = Math.max(0, MIN_VISIBLE - (performance.now() - start));
+            fadeTimer = window.setTimeout(() => setState('fading'), wait);
+        };
+
+        if (document.readyState === 'complete') hide();
+        else window.addEventListener('load', hide, { once: true });
 
         return () => {
-            router.events.off('routeChangeStart', handleStart)
-            router.events.off('routeChangeComplete', handleComplete)
-            router.events.off('routeChangeError', handleComplete)
-        }
-    })
+            window.removeEventListener('load', hide);
+            window.clearTimeout(fadeTimer);
+        };
+    }, []);
 
-    if(show) setLoading(true)
-    
-    return loading && (
-    <div className="fixed top-0 left-0 w-full h-full bg-primary z-[999] flex items-center justify-center">
-        <div className="max-w-[80vw] loading_screen">
-            <Image src={sitevars.logo} className="object-contain"/>
+    useEffect(() => {
+        if (state !== 'fading') return;
+        const timer = window.setTimeout(() => setState('hidden'), FADE);
+        return () => window.clearTimeout(timer);
+    }, [state]);
+
+    if (state === 'hidden') return null;
+
+    return (
+        <div
+            aria-hidden="true"
+            className={`fixed inset-0 z-[999] flex items-center justify-center bg-ink transition-opacity duration-[400ms] ${
+                state === 'fading' ? 'pointer-events-none opacity-0' : 'opacity-100'
+            }`}
+        >
+            <div className="w-[260px] max-w-[70vw] loading_screen">
+                <Image src={sitevars.logo} alt="" className="object-contain" priority />
+            </div>
         </div>
-    </div>
     );
 }
 
